@@ -1,7 +1,7 @@
 # API
 
 
-#### `GET` /http://serverIP:port/DBAPIServer/getProductList.[xml | json]
+#### `GET` /DBAPIServer/getProductList.[xml | json]
 - 특정 지역의 네트워크 리소스 할당이 가능한 최대 대역폭 요청
 - Request:
 ```json
