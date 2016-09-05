@@ -1,6 +1,6 @@
 # 상품(Product)
 
-### another Product ... updating 
+### another Product 
 다른 회사의 e-commerce manager 들과, billing solution의  model 참고
  - magento
  - woocommerce
@@ -10,8 +10,9 @@
   "id": "123/456",
   "name": "my product",
   "type": "simple",
-  "description" : "produt for vod",
-  "cateogy" : "vod",
+  "description" : "simple product for vod",
+  "slogan" : "CHOOSUK SALE",
+  "category" : "vod",
   "lifeTimeStartDate" : "2016-09-05",
   "lifeTimeEndDate" : "2016-09-06"
   
