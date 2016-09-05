@@ -1,5 +1,17 @@
 # 상품(Product)
 
+### another Product
+``` json
+{
+  "id": "123/456",
+  "name": "my product",
+  "type": "VOD",
+  "imageFileUri": "www.castis.com/imageFolder/1/product1.png",
+  "description" : "sales for vod",
+  "lifeTimeStartDate" : "2016-09-05",
+  "lifeTimeEndDate" : "2016-09-06"
+}
+```
 
 ### Product
 | 이름 | 타입 | 설명 | 프로파일 |
