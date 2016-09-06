@@ -1,11 +1,12 @@
 
 # 상품(Product)
 
-### another Product 
 다른 회사의 e-commerce manager 들과, billing solution의  model 참고
  - magento
  - woocommerce
- 
+
+## Product general
+
 ``` json
 {
   "id": "123/456",
@@ -46,3 +47,16 @@
   "thumnailsHeight" : 120,                
 }
 ```
+
+## Product price
+
+``` json
+// from woocommerce
+{
+  "price" : 200.10,
+  "currency" : "KRW",
+}  
+
+
+
+
