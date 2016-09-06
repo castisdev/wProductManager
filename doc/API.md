@@ -45,33 +45,6 @@
 	]
 }
 ```
-```xml
-<response>
-	<version>1</version> 
-	<transactionId>304</transactionId> 
-	<resultCode>100</resultCode>
-	<errorString />
-	<totalCount>2</totalCount>
-	<productList>
-	<product>
-		<id>123|987654</id>
-		<externalId>SVOD_01</externalId>
-		<name>캐치온디맨드</name>
-		<type>SVOD</type>
-		<policyList>
-		 <policy>
-		   <id>4736</id>
-		   <type>static</type>
-		   <price>10000</price>
-		   <licenseStart>2011-01-01 00:00:00</licenseStart>
-		   <licenseEnd>2016-01-01 00:00:00</licenseEnd>
-		 </policy>
-		</policyList>
-	</product>
-	</productList>
-</response>
-
-```
 
 ### SaveProduct
 #### `POST` /DBAPIServer/saveProduct.[xml | json]
@@ -142,27 +115,6 @@
 		}
 }
 ```
-```xml
-<response>
-	<resultCode>100</resultCode>
-	<errorString />
-	<product>
-		<id>123|987654</id>
-		<externalId>SVOD_01</externalId>
-		<name>캐치온디맨드</name>
-		<type>SVOD</type>
-		<policyList>
-		 <policy>
-		   <id>4736</id>
-		   <type>static</type>
-		   <price>10000</price>
-		   <licenseStart>2011-01-01 00:00:00</licenseStart>
-		   <licenseEnd>2016-01-01 00:00:00</licenseEnd>
-		 </policy>
-		</policyList>
-	</product>
-</response>
-```
 
 ### UpdateProduct
 #### `POST` /DBAPIServer/updateProduct.[xml | json]
@@ -217,12 +169,6 @@
 	"errorString" : ""
  }
 ```
-```xml
-<response> 
-	<resultCode>100</resultCode>
-	<errorString />
-</response>
-```
 
 ### SaveProductPolicy 
 #### `POST` /DBAPIServer/saveProductPolicy .[xml | json]
@@ -247,12 +193,6 @@
 	"resultCode" : 100, 
 	"errorString" : ""
  }
-```
-```xml
-<response> 
-	<resultCode>100</resultCode>
-	<errorString />
-</response>
 ```
 
 ### UpdateProductPolicy 
@@ -279,12 +219,6 @@
 	"errorString" : ""
  }
 ```
-```xml
-<response> 
-	<resultCode>100</resultCode>
-	<errorString />
-</response>
-```
 
 ### DeleteProductPolicy 
 #### `POST` /DBAPIServer/deleteProductPolicy .[xml | json]
@@ -305,10 +239,4 @@
 	"resultCode" : 100, 
 	"errorString" : ""
  }
-```
-```xml
-<response> 
-	<resultCode>100</resultCode>
-	<errorString />
-</response>
 ```
