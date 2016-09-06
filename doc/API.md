@@ -15,10 +15,12 @@
 }
 ```
 - Response
-  - 100	: 성공 (Success)
-  - 200	: 알 수 없는 에러 (General Error)
-  - 204	: 잘못된 요청파라미터 값 (Invalid Parameter)
-  - 211	: 일반 DB 에러 (DB General Error)
+  - 200 성공
+  - 400 Bad Request - field validation 실패시
+  - 401 Unauthorized - API 인증,인가 실패
+  - 404 Not found ? 해당 리소스가 없음
+  - 500 Internal Server Error - 서버 에러
+
 ```json
 {
 	"version" : 1, 
@@ -54,10 +56,11 @@
 }
 ```
 - Response
-  - 100	: 성공 (Success)
-  - 200	: 알 수 없는 에러 (General Error)
-  - 204	: 잘못된 요청파라미터 값 (Invalid Parameter)
-  - 211	: 일반 DB 에러 (DB General Error)
+  - 200 성공
+  - 400 Bad Request - field validation 실패시
+  - 401 Unauthorized - API 인증,인가 실패
+  - 404 Not found ? 해당 리소스가 없음
+  - 500 Internal Server Error - 서버 에러
 ```json
 {
 	"resultCode" : 100, 
@@ -76,10 +79,11 @@
 }
 ```
 - Response
-  - 100	: 성공 (Success)
-  - 200	: 알 수 없는 에러 (General Error)
-  - 204	: 잘못된 요청파라미터 값 (Invalid Parameter)
-  - 211	: 일반 DB 에러 (DB General Error)
+  - 200 성공
+  - 400 Bad Request - field validation 실패시
+  - 401 Unauthorized - API 인증,인가 실패
+  - 404 Not found ? 해당 리소스가 없음
+  - 500 Internal Server Error - 서버 에러
 ```json
 {
 	"resultCode" : 100, 
@@ -124,10 +128,11 @@
 }
 ```
 - Response
-  - 100	: 성공 (Success)
-  - 200	: 알 수 없는 에러 (General Error)
-  - 204	: 잘못된 요청파라미터 값 (Invalid Parameter)
-  - 211	: 일반 DB 에러 (DB General Error)
+  - 200 성공
+  - 400 Bad Request - field validation 실패시
+  - 401 Unauthorized - API 인증,인가 실패
+  - 404 Not found ? 해당 리소스가 없음
+  - 500 Internal Server Error - 서버 에러
 ```json
 {
 	"resultCode" : 100, 
@@ -145,10 +150,11 @@
 }
 ```
 - Response
-  - 100	: 성공 (Success)
-  - 200	: 알 수 없는 에러 (General Error)
-  - 204	: 잘못된 요청파라미터 값 (Invalid Parameter)
-  - 211	: 일반 DB 에러 (DB General Error)
+  - 200 성공
+  - 400 Bad Request - field validation 실패시
+  - 401 Unauthorized - API 인증,인가 실패
+  - 404 Not found ? 해당 리소스가 없음
+  - 500 Internal Server Error - 서버 에러
 ```json
 {
 	"resultCode" : 100, 
@@ -167,10 +173,11 @@
 }
 ```
 - Response
-  - 100	: 성공 (Success)
-  - 200	: 알 수 없는 에러 (General Error)
-  - 204	: 잘못된 요청파라미터 값 (Invalid Parameter)
-  - 211	: 일반 DB 에러 (DB General Error)
+  - 200 성공
+  - 400 Bad Request - field validation 실패시
+  - 401 Unauthorized - API 인증,인가 실패
+  - 404 Not found ? 해당 리소스가 없음
+  - 500 Internal Server Error - 서버 에러
 ```json
 {
 	"resultCode" : 100, 
@@ -201,10 +208,11 @@
 }
 ```
 - Response
-  - 100	: 성공 (Success)
-  - 200	: 알 수 없는 에러 (General Error)
-  - 204	: 잘못된 요청파라미터 값 (Invalid Parameter)
-  - 211	: 일반 DB 에러 (DB General Error)
+  - 200 성공
+  - 400 Bad Request - field validation 실패시
+  - 401 Unauthorized - API 인증,인가 실패
+  - 404 Not found ? 해당 리소스가 없음
+  - 500 Internal Server Error - 서버 에러
 ```json
 {
 	"resultCode" : 100, 
@@ -226,10 +234,11 @@
 }
 ```
 - Response
-  - 100	: 성공 (Success)
-  - 200	: 알 수 없는 에러 (General Error)
-  - 204	: 잘못된 요청파라미터 값 (Invalid Parameter)
-  - 211	: 일반 DB 에러 (DB General Error)
+  - 200 성공
+  - 400 Bad Request - field validation 실패시
+  - 401 Unauthorized - API 인증,인가 실패
+  - 404 Not found ? 해당 리소스가 없음
+  - 500 Internal Server Error - 서버 에러
 ```json
 {
 	"resultCode" : 100, 
@@ -247,10 +256,11 @@
 }
 ```
 - Response
-  - 100	: 성공 (Success)
-  - 200	: 알 수 없는 에러 (General Error)
-  - 204	: 잘못된 요청파라미터 값 (Invalid Parameter)
-  - 211	: 일반 DB 에러 (DB General Error)
+  - 200 성공
+  - 400 Bad Request - field validation 실패시
+  - 401 Unauthorized - API 인증,인가 실패
+  - 404 Not found ? 해당 리소스가 없음
+  - 500 Internal Server Error - 서버 에러
 ```json
 {
 	"resultCode" : 100, 
