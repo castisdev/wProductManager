@@ -26,10 +26,19 @@
 // item type : product, service, donation
 
 ```
+## Product status
+``` json
+{
+  "status" : "published",
+  "visibility" : "public",
+  "publishedDate" : "2016-09-10T10:20:10.001",
+}
+
+```
+
 ## Product display
 
 ``` json
-// from woocommerce
 {
   "catalogImageUri" : "www.castis.com/images/product/123/1456/product_for_catalog.png",
   "catalogImageWidth" : 200,
@@ -49,13 +58,29 @@
 ```
 
 ## Product price
+ - from woocommerce
 
 ``` json
-// from woocommerce
+
 {
-  "price" : 200.10,
+  "price" : 200.0,
   "currency" : "KRW",
-}  
+  "salePrice" : 150.0,
+  "saleFrom" : "2016-09-07",
+  "saleTo" : "2016-10-07"
+}
+```
+
+## Product linking
+
+``` json
+
+{
+ "up-sells" : ["123/4123413", "13/4213"], 
+ "cross-sells" : ["hello/world", "product/hello"],
+ "grouping" : ["p1", "p2"],
+}
+```
 
 
 
