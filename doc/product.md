@@ -1,18 +1,18 @@
 # 상품(Product)
 
 ### Product
-| 이름 | 타입 | 설명 | 프로파일 |
+| 이름 | 타입 | 설명 |
 | --- | --- | --- | --- |
-| id	 | String | 	상품 ID | 	0 | 
-| name	 | String	 | 상품명	 | 0 | 
-| type	 | String	 | 가입형 상품</br>패키지형 상품 	 | 0 |
- | smallImageFile	 | String	 | 상품 포스터 이미지 파일명	(작은 사이즈) | 1 | 
-| imageFile	 | String	 | 상품 포스터 이미지 파일명	 | 1 | 
-| externalId	 | String	 | 협의된 연동용 상품 ID	 | 1 | 
-| viewingLength	 | String	 | 구매가 유효한 기간. </br>DDD:HH:mm 형태 혹은 DD:HH:mm 형태 	 | 1 | 
-| viewablePeriodState	 | Int	 | 무제한시청(평생소장) 여부</br>0 : 기본값</br>1 : 무제한시청(평생소장). viewingLength값이 무시된다.  | 1 | 	
-| policyList		 | productPolicy | productPolicy의 리스트 |  	2 | 
-| description	 | String	 | 상품 설명 | 	3 | 
+| id	 | String | 	상품 ID |
+| name	 | String	 | 상품명	 | 
+| type	 | String	 | 가입형 상품</br>패키지형 상품 	 |
+| smallImageFile	 | String	 | 상품 포스터 이미지 파일명	(작은 사이즈) |
+| imageFile	 | String	 | 상품 포스터 이미지 파일명	 |
+| externalId	 | String	 | 협의된 연동용 상품 ID	 |
+| viewingLength	 | String	 | 구매가 유효한 기간. </br>DDD:HH:mm 형태 혹은 DD:HH:mm 형태 	 | 
+| viewablePeriodState	 | Int	 | 무제한시청(평생소장) 여부</br>0 : 기본값</br>1 : 무제한시청(평생소장). viewingLength값이 무시된다.  |
+| policyList		 | productPolicy | productPolicy의 리스트 |
+| description	 | String	 | 상품 설명 |
 
 ###ProductPolicy
 | 이름 | 타입 | 설명 |
