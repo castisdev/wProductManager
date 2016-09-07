@@ -5,7 +5,7 @@
  - magento
  - woocommerce
 
-## Product general
+## general
 
 ``` json
 {
@@ -26,7 +26,7 @@
 // item type : product, service, donation
 
 ```
-## Product status
+## status
 ``` json
 {
   "status" : "published",
@@ -36,7 +36,7 @@
 
 ```
 
-## Product display
+## display
 
 ``` json
 {
@@ -57,8 +57,7 @@
 }
 ```
 
-## Product price
- - from woocommerce
+## price
 
 ``` json
 
@@ -71,7 +70,7 @@
 }
 ```
 
-## Product linking
+## linking
 
 ``` json
 
