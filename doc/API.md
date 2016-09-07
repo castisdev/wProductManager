@@ -9,9 +9,8 @@
   "type": "all",
   "profile": 0,
   "sortType": "nameAscend",
-  "pageSize": 10,
-  "pageIndex": 0,
-  "startItemIndex": 0
+  "offset": 0,
+  "limit": 10
 }
 ```
 - Response
@@ -169,7 +168,9 @@
 ```json
 {
   "name": "product name",
-  "profile": 0
+  "profile": 0,
+  "offset": 0,
+  "limit": 10
 }
 ```
 - Response
