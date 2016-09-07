@@ -13,7 +13,7 @@
   "name": "my product",
   "type": "simple",
   "description" : "simple product for vod",
-  "slogan" : "CHOOSUK SALE",
+  "slogan" : "CHOO-SUK SALE",
   "category" : "vod",
   "lifeTimeStartDate" : "2016-09-05",
   "lifeTimeEndDate" : "2016-09-06"
