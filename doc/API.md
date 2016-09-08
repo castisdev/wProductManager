@@ -1,7 +1,7 @@
 # API
 
 ### GetProductList
-#### `GET` /product/products
+#### `GET` /product/v1/products
 - 제공하는 상품 목록을 조회한다.
 - Request:
 ```json
@@ -31,7 +31,7 @@
 ```
 
 ### SaveProduct
-#### `POST` /product/products
+#### `POST` /product/v1/products
 -  상품을 생성한다.
 - Request:
 ```json
@@ -59,7 +59,7 @@ OK
 ```
 
 ### GetProduct
-#### `GET` /product/products/{id}
+#### `GET` /product/v1/products/{id}
 - 상품 정보를 조회한다.
 - Response
   - 200 성공
@@ -76,7 +76,7 @@ OK
 ```
 
 ### UpdateProduct
-#### `PUT` /product/products
+#### `PUT` /product/v1/products
 - 상품 정보를 업데이트 한다.
 - Request:
 ```json
@@ -104,7 +104,7 @@ OK
 ```
 
 ### DeleteProduct
-#### `DELETE` /product/products/{id}
+#### `DELETE` /product/v1/products/{id}
 - 상품을 삭제한다.
 - Response
   - 200 성공
@@ -119,7 +119,7 @@ OK
 ```
 
 ### SearchProduct
-#### `GET` /product/products
+#### `GET` /product/v1/products
 - 상품을 이름으로 검색한다.
 - Request:
 ```json
@@ -148,7 +148,7 @@ OK
 ```
 
 ### SaveProductPolicy 
-#### `POST` /product/policies
+#### `POST` /product/v1/policies
 - 상품의 정책 정보를 저장한다.
 - Request:
 ```json
@@ -173,7 +173,7 @@ OK
 ```
 
 ### UpdateProductPolicy 
-#### `PUT` /product/policies
+#### `PUT` /product/v1/policies
 - 상품의 정책 정보를 업데이트 한다.
 - Request:
 ```json
@@ -198,7 +198,7 @@ OK
 ```
 
 ### DeleteProductPolicy 
-#### `DELETE` /product/policies/{id}
+#### `DELETE` /product/v1/policies/{id}
 - 상품의 정책 정보를 삭제한다.
 
 - Response
