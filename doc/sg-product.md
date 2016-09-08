@@ -81,6 +81,7 @@
 }
 ```
 
+
 ### 상품 조회 (with id)
 - **GET** /ProductManager/v1/products/:id
 - **GET** /ProductManager/v1/products/AA00201609080002
@@ -120,6 +121,7 @@
 }
 ```
 
+
 ### 상품 생성
 - **POST** /ProductManager/v1/products/
 
@@ -132,7 +134,6 @@
     {"categoryId":17, "categoryName":"드라마"}
   ],
   "price":"4500",
-  "pricing_policies":[],
   "image":"http://localhost:8080/ProductManager/PosterImage/tunnel.png",
   "description":"'[HD]터널' 입니다."
 }
@@ -140,18 +141,16 @@
 
 - Response
  - 201 Created
-- Response (error)
- - 400 Bad Request
- - 500 Internal Server Error
 
-### 상품 수정
+
+### 상품 수정 (with id)
 - **PUT** /ProductManager/v1/products/:id
 - **PUT** /ProductManager/v1/products/AA00201609080005
 
 ```json
 {
   "pricing_policies":[
-        {"policy_id":13, "policy_name":"[할인]공유 특집", "policy_type":"discount", "price":1000}
+        {"policy_id":13, "policy_name":"[할인]하정우 특집", "policy_type":"discount", "price":1000}
   ],
   "details":[
     {
@@ -164,6 +163,10 @@
 
 - Response
  - 200 OK
-- Response (error)
- - 400 Bad Request
- - 500 Internal Server Error
+
+### 상품 삭제 (with id)
+- **DELETE** /ProductManager/v1/products/:id
+- **DELETE** /ProductManager/v1/products/AA00201609080002
+
+- Response
+ - 204 No Content
