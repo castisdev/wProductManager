@@ -18,64 +18,105 @@
 {
   "productList":[
     {
-      "show_id":"www.hchoice.co.kr|M0018210LFO157334201",
-      "show_title":"최종병기 활",
-      "release_year":"2011",
-      "rating":"7.9",
+      "id":"AA00201201010001",
+      "name":"최종병기 활",
+      "type":"vod",
       "categories":[
         {"categoryId":11, "categoryName":"액션"},
         {"categoryId":15, "categoryName":"전쟁"}
       ],
-      "show_cast":"박해일,류승룡,김무열,문재원,이한위",
-      "director":"김한민",
-      "summary":"50만 포로가 끌려간 병자호란, 치열했던 전쟁의 한 복판에 역사가 기록하지 못한 위대한 신궁이 있었다.",
-      "poster":"http://localhost:8080/ProductManager/PosterImage/war_of_the_arrows.png",
-      "mediatype":0,
-      "runtime":"122"
+      "price":"2500",
+      "pricing_policies":[
+        {"policy_id":12, "policy_name":"[할인]박해일 특집", "policy_type":"discount", "price":1000}
+      ],
+      "image":"http://localhost:8080/ProductManager/PosterImage/war_of_the_arrows.png",
+      "description":"'[HD]최종병기 활' 입니다.",
+      "details":[
+        {
+          "assets":[
+            {"asset_id":"www.hchoice.co.kr|M0018210LFO157334201"}
+          ],
+          "release_year":"2011",
+          "rating":"7.9",
+          "actors":"박해일,류승룡,김무열,문재원,이한위",
+          "director":"김한민",
+          "summary":"50만 포로가 끌려간 병자호란, 치열했던 전쟁의 한 복판에 역사가 기록하지 못한 위대한 신궁이 있었다.",
+          "mediatype":0,
+          "runtime":"122",
+          "viewingLength":"001:00:00",
+          "viewablePeriodState":0
+        }
+      ]
     },
     {
-      "show_id":"www.hchoice.co.kr|M0018210LFO116090701",
-      "show_title":"부산행",
-      "release_year":"2016",
-      "rating":"8.5",
+      "id":"AA00201609080002",
+      "name":"부산행",
+      "type":"vod",
       "categories":[
         {"categoryId":11, "categoryName":"액션"},
         {"categoryId":12, "categoryName":"스릴러"}
       ],
-      "show_cast":"공유,정유미,마동석,김수안,김의성",
-      "director":"연상호",
-      "summary":"정체불명의 바이러스가 전국으로 확산되고 대한민국 긴급재난경보령이 선포된 가운데, 열차에 몸을 실은 사람들은 단 하나의 안전한 도시 부산까지 살아가기 위한 치열한 사투를 벌이게 된다.",
-      "poster":"http://localhost:8080/ProductManager/PosterImage/train_to_busan.png",
-      "mediatype":0,
-      "runtime":"118"
+      "price":"4500",
+      "pricing_policies":[],
+      "image":"http://localhost:8080/ProductManager/PosterImage/train_to_busan.png",
+      "description":"'[HD]부산행' 입니다.",
+      "details":[
+        {
+          "assets":[
+            {"asset_id":"www.hchoice.co.kr|M0018210LFO116090701"}
+          ],
+          "release_year":"2016",
+          "rating":"8.5",
+          "actors":"공유,정유미,마동석,김수안,김의성",
+          "director":"연상호",
+          "summary":"정체불명의 바이러스가 전국으로 확산되고 대한민국 긴급재난경보령이 선포된 가운데, 열차에 몸을 실은 사람들은 단 하나의 안전한 도시 부산까지 살아가기 위한 치열한 사투를 벌이게 된다.",
+          "mediatype":0,
+          "runtime":"118",
+          "viewingLength":"001:00:00",
+          "viewablePeriodState":0
+        }
+      ]
     }
   ]
 }
 ```
 
-### 상품 조회 (with show_id)
-- **GET** /ProductManager/v1/products/:show_id
-- **GET** /ProductManager/v1/products/www.hchoice.co.kr|M0018210LFO116090701
+### 상품 조회 (with id)
+- **GET** /ProductManager/v1/products/:id
+- **GET** /ProductManager/v1/products/AA00201609080002
 
 - Response
  - 200 OK
  
 ```json
 {
-  "show_id":"www.hchoice.co.kr|M0018210LFO116090701",
-  "show_title":"부산행",
-  "release_year":"2016",
-  "rating":"8.5",
+  "id":"AA00201609080002",
+  "name":"부산행",
+  "type":"vod",
   "categories":[
     {"categoryId":11, "categoryName":"액션"},
     {"categoryId":12, "categoryName":"스릴러"}
   ],
-  "show_cast":"공유,정유미,마동석,김수안,김의성",
-  "director":"연상호",
-  "summary":"정체불명의 바이러스가 전국으로 확산되고 대한민국 긴급재난경보령이 선포된 가운데, 열차에 몸을 실은 사람들은 단 하나의 안전한 도시 부산까지 살아가기 위한 치열한 사투를 벌이게 된다.",
-  "poster":"http://localhost:8080/ProductManager/PosterImage/train_to_busan.png",
-  "mediatype":0,
-  "runtime":"118"
+  "price":"4500",
+  "pricing_policies":[],
+  "image":"http://localhost:8080/ProductManager/PosterImage/train_to_busan.png",
+  "description":"'[HD]부산행' 입니다.",
+  "details":[
+    {
+      "assets":[
+        {"asset_id":"www.hchoice.co.kr|M0018210LFO116090701"}
+      ],
+      "release_year":"2016",
+      "rating":"8.5",
+      "actors":"공유,정유미,마동석,김수안,김의성",
+      "director":"연상호",
+      "summary":"정체불명의 바이러스가 전국으로 확산되고 대한민국 긴급재난경보령이 선포된 가운데, 열차에 몸을 실은 사람들은 단 하나의 안전한 도시 부산까지 살아가기 위한 치열한 사투를 벌이게 된다.",
+      "mediatype":0,
+      "runtime":"118",
+      "viewingLength":"001:00:00",
+      "viewablePeriodState":0
+    }
+  ]
 }
 ```
 
@@ -84,20 +125,45 @@
 
 ```json
 {
-  "show_id":"www.hchoice.co.kr|M0018210LFO116090802",
-  "show_title":"터널",
-  "release_year":"2016",
+  "id":"AA00201609080005",
+  "name":"터널",
+  "type":"vod",
   "categories":[
     {"categoryId":17, "categoryName":"드라마"}
   ],
-  "show_cast":"하정우,배두나,오달수,정석용,박혁권",
-  "director":"김성훈",
-  "summary":"자동차 영업대리점의 과장 정수(하정우), 큰 계약 건을 앞두고 들뜬 기분으로 집으로 가던 중 갑자기 무너져 내린 터널 안에 홀로 갇히고 만다.",
-  "poster":"http://localhost:8080/ProductManager/PosterImage/tunnel.png",
-  "mediatype":0,
-  "runtime":"126"
+  "price":"4500",
+  "pricing_policies":[],
+  "image":"http://localhost:8080/ProductManager/PosterImage/tunnel.png",
+  "description":"'[HD]터널' 입니다."
 }
 ```
 
 - Response
  - 201 Created
+- Response (error)
+ - 400 Bad Request
+ - 500 Internal Server Error
+
+### 상품 수정
+- **PUT** /ProductManager/v1/products/:id
+- **PUT** /ProductManager/v1/products/AA00201609080005
+
+```json
+{
+  "pricing_policies":[
+        {"policy_id":13, "policy_name":"[할인]공유 특집", "policy_type":"discount", "price":1000}
+  ],
+  "details":[
+    {
+      "viewingLength":"007:00:00",
+      "viewablePeriodState":0
+    }
+  ]
+}
+```
+
+- Response
+ - 200 OK
+- Response (error)
+ - 400 Bad Request
+ - 500 Internal Server Error
