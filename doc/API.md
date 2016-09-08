@@ -76,12 +76,11 @@ OK
 ```
 
 ### UpdateProduct
-#### `PUT` /product/v1/products
+#### `PUT` /product/v1/products/{id}
 - 상품 정보를 업데이트 한다.
 - Request:
 ```json
 {
-  "id": "123|987654",
   "name": "testProduct",
   "smallImageFile": "testsmallImage.jpg",
   "imageFile": "test.jpg",
@@ -173,12 +172,11 @@ OK
 ```
 
 ### UpdateProductPolicy 
-#### `PUT` /product/v1/policies
+#### `PUT` /product/v1/policies/{id}
 - 상품의 정책 정보를 업데이트 한다.
 - Request:
 ```json
 {
-	"id": "12",
 	"type" : "static ", 
 	"price" : 100, 
 	"licenseStart" : "2016-09-05 00:00:00", 
