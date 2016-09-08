@@ -132,7 +132,7 @@
   "name":"터널",
   "type":"vod",
   "categories":[
-    {"categoryId":17, "categoryName":"드라마"}
+    {"categoryId":17}
   ],
   "price":"4500",
   "image":"http://localhost:8080/ProductManager/PosterImage/tunnel.png",
@@ -151,7 +151,7 @@
 ```json
 {
   "pricing_policies":[
-        {"policy_id":13, "policy_name":"[할인]하정우 특집", "policy_type":"discount", "price":1000}
+        {"policy_id":13}
   ],
   "details":[
     {
