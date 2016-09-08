@@ -9,7 +9,7 @@
 ## API
 
 ### 전체 상품 조회
-#### `GET` /ProductManager/v1/products
+- **GET** /ProductManager/v1/products
 
 - Response
  - 200 OK
@@ -54,8 +54,8 @@
 ```
 
 ### 상품 조회 (with show_id)
-#### `GET` /ProductManager/v1/products/:show_id
-#### `GET` /ProductManager/v1/products/www.hchoice.co.kr|M0018210LFO116090701
+- **GET** /ProductManager/v1/products/:show_id
+- **GET** /ProductManager/v1/products/www.hchoice.co.kr|M0018210LFO116090701
 
 - Response
  - 200 OK
@@ -80,7 +80,7 @@
 ```
 
 ### 상품 생성
-#### `POST` /ProductManager/v1/products/
+- **POST** /ProductManager/v1/products/
 
 ```json
 {
