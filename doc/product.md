@@ -6,10 +6,9 @@
 | id	 | String | 	상품 ID |
 | name	 | String	 | 상품명	 |
 | type	 | String	 | 상품 타입 	 |
-| description	 | String	 | 상품 설명 |
+| price	 | ProductPrice	 | 해당 상품 정책에 의한 가격 |
 | properties | ProductProperties	 | 상품 속성 |
 | policies | ProductPolicy	 | 상품 정책 |
-| images	 | productImage	 | 상품 포스터 이미지 파일명	 |
 
 ### ProductProperties
 | 이름 | 타입 | 설명 |
@@ -18,10 +17,10 @@
 | length	 | String	 | product length |
 | height	 | String	 | product height |
 | weight	 | String	 | product weight
-| policyList		 | productPolicy | productPolicy의 리스트 |
-| price	 | ProductPrice	 | 해당 상품 정책에 의한 가격 |
 | visibility	 | String	 | product visibility |
 | externalId	 | String	 | 협의된 연동용 상품 ID |
+| images	 | productImage	 | 상품 포스터 이미지 파일명	 |
+| description	 | String	 | 상품 설명 |
 
 ###ProductPolicy
 | 이름 | 타입 | 설명 |
