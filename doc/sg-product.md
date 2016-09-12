@@ -25,7 +25,7 @@
     {
       "id":"AA00201201010001",
       "name":"최종병기 활",
-      "type":"vod",
+      "type":"RVOD",
       "created":"2012-01-01T13:55:10",
       "modified":"2016-09-07T17:24:41",
       "categories":[
@@ -49,7 +49,6 @@
           "actors":"박해일,류승룡,김무열,문재원,이한위",
           "director":"김한민",
           "summary":"50만 포로가 끌려간 병자호란, 치열했던 전쟁의 한 복판에 역사가 기록하지 못한 위대한 신궁이 있었다.",
-          "mediatype":0,
           "runtime":"122",
           "viewingLength":"001:00:00",
           "viewablePeriodState":0
@@ -59,8 +58,8 @@
     {
       "id":"AA00201609080002",
       "name":"부산행",
-      "type":"vod",
-      "created":"2016-01-08T18:01:12",
+      "type":"RVOD",
+      "created":"2016-09-08T18:01:12",
       "modified":"2016-09-08T18:01:12",
       "categories":[
         {"categoryId":11, "categoryName":"액션"},
@@ -81,7 +80,6 @@
           "actors":"공유,정유미,마동석,김수안,김의성",
           "director":"연상호",
           "summary":"정체불명의 바이러스가 전국으로 확산되고 대한민국 긴급재난경보령이 선포된 가운데, 열차에 몸을 실은 사람들은 단 하나의 안전한 도시 부산까지 살아가기 위한 치열한 사투를 벌이게 된다.",
-          "mediatype":0,
           "runtime":"118",
           "viewingLength":"001:00:00",
           "viewablePeriodState":0
@@ -94,8 +92,8 @@
 
 
 ### 상품 조회 (with id)
-- **GET** /ProductManager/v1/products/:id
-- **GET** /ProductManager/v1/products/AA00201609080002
+- **GET** /ProductManager/v1/products?id=:id
+- **GET** /ProductManager/v1/products?id=AA00201609080002
 
 - Response
  - 200 OK
@@ -104,8 +102,8 @@
 {
   "id":"AA00201609080002",
   "name":"부산행",
-  "type":"vod",
-  "created":"2016-01-08T18:01:12",
+  "type":"RVOD",
+  "created":"2016-09-08T18:01:12",
   "modified":"2016-09-08T18:01:12",
   "categories":[
     {"categoryId":11, "categoryName":"액션"},
@@ -126,12 +124,48 @@
       "actors":"공유,정유미,마동석,김수안,김의성",
       "director":"연상호",
       "summary":"정체불명의 바이러스가 전국으로 확산되고 대한민국 긴급재난경보령이 선포된 가운데, 열차에 몸을 실은 사람들은 단 하나의 안전한 도시 부산까지 살아가기 위한 치열한 사투를 벌이게 된다.",
-      "mediatype":0,
       "runtime":"118",
       "viewingLength":"001:00:00",
       "viewablePeriodState":0
     }
   ]
+}
+```
+
+
+### 상품 조회 (with type)
+- **GET** /ProductManager/v1/products?type=:type
+- **GET** /ProductManager/v1/products?type=SVOD
+
+- Response
+ - 200 OK
+ 
+```json
+{
+  "id": "AA00201609120001",
+  "name": "MBC 월정액",
+  "type": "SVOD",
+  "created": "2016-09-12T18:01:12",
+  "modified": "2016-09-12T18:01:12",
+  "categories": [{
+    "categoryId": 2,
+    "categoryName": "월정액"
+  }],
+  "price": "9900",
+  "pricing_policies": [],
+  "image": "http://localhost:8080/ProductManager/PosterImage/MBC.png",
+  "description": "MBC 월정액 입니다.",
+  "details": [{		
+    "viewingLength": "031:00:00",
+    "viewablePeriodState": 0,
+    "externalProductId": "SVOD_MBC",
+    "relatedCategories": [
+      {
+        "categoryId": 52,
+        "categoryName": "MBC"
+      }
+    ]
+ 	}]
 }
 ```
 
@@ -143,7 +177,7 @@
 {
   "id":"AA00201609080005",
   "name":"터널",
-  "type":"vod",
+  "type":"RVOD",
   "categories":[
     {"categoryId":17}
   ],
@@ -179,3 +213,170 @@
 
 - Response
  - 204 No Content
+
+****
+## 상품 종류
+- **RVOD**
+```json
+{
+  "id":"AA00201609030001",
+  "name":"무한도전 496회",
+  "type":"RVOD",
+  "created":"2016-09-03T19:55:10",
+  "modified":"2016-09-03T19:55:41",
+  "categories":[
+    {"categoryId":87, "categoryName":"무한도전"}
+  ],
+  "price":"1500",
+  "pricing_policies":[],
+  "image":"http://localhost:8080/ProductManager/PosterImage/infinite_challenge.png",
+  "description":"무한도전 496회, 2016 무한상사",
+  "details":[
+    {
+      "assets":[
+        {"asset_id":"www.hchoice.co.kr|M0018210LFO160903201"}
+      ],
+      "release_year":"2016",
+      "average_rating":"9.5",
+      "rating_count":"210",
+      "actors":"유재석,박명수,정준하,하하,황광희",
+      "director":"김태호",
+      "summary":"2016 무한상사",
+      "runtime":"80",
+      "viewingLength":"001:00:00",
+      "viewablePeriodState":0,
+      "episode_name":"무한도전",
+      "episode_number":496
+    }
+  ]
+}
+```
+- **SVOD**
+```json
+{
+  "id": "AA00201609120002",
+  "name": "MBC 월정액",
+  "type": "SVOD",
+  "created": "2016-09-12T18:01:12",
+  "modified": "2016-09-12T18:01:12",
+  "categories": [{
+    "categoryId": 2,
+    "categoryName": "월정액"
+  }],
+  "price": "9900",
+  "pricing_policies": [],
+  "image": "http://localhost:8080/ProductManager/PosterImage/MBC.png",
+  "description": "MBC 월정액 입니다.",
+  "details": [{		
+    "viewingLength": "031:00:00",
+    "viewablePeriodState": 0,
+    "externalProductId": "SVOD_MBC",
+    "relatedCategories": [
+      {
+        "categoryId": 52,
+        "categoryName": "MBC"
+      }
+    ]
+ 	}]
+}
+```
+- **FOD**
+```json
+{
+  "id":"AA00201201010001",
+  "name":"2016 무한상사 예고편",
+  "type":"FOD",
+  "created":"2012-09-03T13:55:10",
+  "modified":"2016-09-03T17:24:41",
+  "categories":[
+    {"categoryId":1, "categoryName":"무료VOD"},
+    {"categoryId":87, "categoryName":"무한도전"}
+  ],
+  "price":"0",
+  "pricing_policies":[],
+  "image":"http://localhost:8080/ProductManager/PosterImage/2016_infinite_company.png",
+  "description":"2016 무한상사 예고편",
+  "details":[
+    {
+      "assets":[
+        {"asset_id":"www.hchoice.co.kr|M0018210LFO160903112"}
+      ],
+      "release_year":"2016",
+      "summary":"2016 무한상사, 위기의 회사원",
+      "runtime":"1",
+      "viewingLength":"001:00:00",
+      "viewablePeriodState":0
+    }
+  ]
+}
+```
+- **SVOD Package**
+```json
+{
+  "id": "AA00201609120006",
+  "name": "지상파 통합 월정액",
+  "type": "SVODPackage",
+  "created": "2016-09-12T18:01:12",
+  "modified": "2016-09-12T18:01:12",
+  "categories": [{
+    "categoryId": 3,
+    "categoryName": "월정액묶음"
+  }],
+  "price": "25900",
+  "pricing_policies": [],
+  "image": "http://localhost:8080/ProductManager/PosterImage/KBS_MBC_SBS.png",
+  "description": "지상파 통합 월정액 입니다.",
+  "details": [{		
+    "viewingLength": "031:00:00",
+    "viewablePeriodState": 0,
+    "externalProductId": "SVODPackage_1",
+    "relatedProducts": [
+      {
+        "id": "AA00201609120001",
+        "name": "KBS 월정액"
+      },
+      {
+        "id": "AA00201609120002",
+        "name": "MBC 월정액"
+      },
+      {
+        "id": "AA00201609120003",
+        "name": "SBS 월정액"
+      }
+    ]
+ 	}]
+}
+```
+- **Bundle**
+```json
+{
+  "id":"AA00201607010001",
+  "name":"어벤저스 몰아보기",
+  "type":"Bundle",
+  "created":"2016-07-01T19:55:10",
+  "modified":"2016-07-01T19:55:41",
+  "categories":[
+    {"categoryId":11, "categoryName":"액션"}
+  ],
+  "price":"11900",
+  "pricing_policies":[],
+  "image":"http://localhost:8080/ProductManager/PosterImage/Avengers.png",
+  "description":"아이언맨, 캡틴아메리카, 헐크, 토르",
+  "details":[
+    {
+      "assets":[
+        {"asset_id":"www.hchoice.co.kr|M0018210LFO160701101"},
+        {"asset_id":"www.hchoice.co.kr|M0018210LFO160701102"},
+        {"asset_id":"www.hchoice.co.kr|M0018210LFO160701103"},
+        {"asset_id":"www.hchoice.co.kr|M0018210LFO160701104"},
+      ],
+      "average_rating":"8.9",
+      "rating_count":"115",
+      "summary":"아이언맨, 캡틴아메리카, 헐크, 토르",
+      "runtime":"482",
+      "viewingLength":"001:00:00",
+      "viewablePeriodState":0
+    }
+  ]
+}
+```
