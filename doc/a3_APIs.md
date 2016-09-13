@@ -3,6 +3,52 @@
 `POST` /v1/products/product
  - Parameters
  - Request Sample
+```
+{
+    "products" : [
+        {
+            "name":"단일상품",
+            "description":"",
+            "item_list" : {
+                "items" : [
+                    {
+                        "name":"아이템"
+                    }
+                ]
+            },
+            "pricing_plan_list" : {
+                "pring_plans" : [
+                    {
+                        "name" : "기본가격정책",
+                        "price":"1000",
+                        "currency":"WON",
+                        "sales_for_where": ["all"],
+                        "sales_for_who": ["all"],
+                        "sales_for_how": ["online","offline"],
+                        "sales_for_when": {
+                            "start_time":"2016-09-13T12:00:00",
+                            "end_time":"2016-09-14T12:00:00"
+                            }
+                    },
+                    {
+                        "name" : "가격정책",
+                        "price":"500",
+                        "currency":"WON",
+                        "sales_for_where": ["서울", "부산"],
+                        "sales_for_who": ["남자", "20대"],
+                        "sales_for_how": ["online"],
+                        "sales_for_when": {
+                            "start_time":"2016-09-13T12:00:00",
+                            "end_time":"2016-09-14T12:00:00"
+                            }
+                    }
+                ]
+            }
+        }
+    ]
+}
+```
+
  - Response Sample
 
 #### 상품 정보 갱신 (Update a Product)
