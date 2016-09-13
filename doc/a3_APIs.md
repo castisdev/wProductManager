@@ -103,6 +103,32 @@
  - Request Sample
  - Response Sample
 
+### 상품 프로모션 정보(Promotion)
+#### 프로모션 생성
+`POST` /v1/products/promotion/
+ - Parameters
+ - Request Sample
+ - Response Sample
+
+
+#### 프로모션 조회
+`GET` /v1/products/promotion/{promotion-id}
+ - Parameters
+ - Request Sample
+ - Response Sample
+
+#### 프로모션 업데이트
+`PUT` /v1/products/promotion/
+ - Parameters
+ - Request Sample
+ - Response Sample
+
+#### 프로모션 삭제
+`DELETE` /v1/products/promotion/
+ - Parameters
+ - Request Sample
+ - Response Sample
+
 
 ### 상품 선물(Give a Product)
 `POST` /v1/products/product/{product-id}/give
