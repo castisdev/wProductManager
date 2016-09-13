@@ -34,13 +34,15 @@
       ],
       "price":"2500",
       "pricing_policies":[
-        {"policy_id":1, "policy_name":"편당보기", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null},
+        {"policy_id":1, "policy_name":"고정금액", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null},
         {"policy_id":12, "policy_name":"[할인]박해일 특집", "policy_type":"fixed_discount", "amount":1000, "expiry_date":null}
       ],
       "image":"http://localhost:8080/ProductManager/PosterImage/war_of_the_arrows.png",
       "description":"'[HD]최종병기 활' 입니다.",
       "average_rating":"7.9",
       "rating_count":"642",
+      "upsell_ids": [],
+      "cross_sell_ids": [],
       "details":[
         {
           "assets":[
@@ -68,12 +70,14 @@
       ],
       "price":"4500",
       "pricing_policies":[
-        {"policy_id":1, "policy_name":"편당보기", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null}
+        {"policy_id":1, "policy_name":"고정금액", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null}
       ],
       "image":"http://localhost:8080/ProductManager/PosterImage/train_to_busan.png",
       "description":"'[HD]부산행' 입니다.",
       "average_rating":"8.5",
       "rating_count":"17",
+      "upsell_ids": [],
+      "cross_sell_ids": [],
       "details":[
         {
           "assets":[
@@ -114,12 +118,14 @@
   ],
   "price":"4500",
   "pricing_policies":[
-    {"policy_id":1, "policy_name":"편당보기", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null}
+    {"policy_id":1, "policy_name":"고정금액", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null}
   ],
   "image":"http://localhost:8080/ProductManager/PosterImage/train_to_busan.png",
   "description":"'[HD]부산행' 입니다.",
   "average_rating":"8.5",
   "rating_count":"17",
+  "upsell_ids": [],
+  "cross_sell_ids": [],
   "details":[
     {
       "assets":[
@@ -164,6 +170,8 @@
   "description": "MBC 월정액 입니다.",
   "average_rating":"9.1",
   "rating_count":"80",
+  "upsell_ids": [],
+  "cross_sell_ids": [],
   "details": [{		
     "viewingLength": "031:00:00",
     "viewablePeriodState": 0,
@@ -238,12 +246,14 @@
   ],
   "price":"1500",
   "pricing_policies":[
-    {"policy_id":1, "policy_name":"편당보기", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null}
+    {"policy_id":1, "policy_name":"고정금액", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null}
   ],
   "image":"http://localhost:8080/ProductManager/PosterImage/infinite_challenge.png",
   "description":"무한도전 496회, 2016 무한상사",
   "average_rating":"9.5",
   "rating_count":"210",
+  "upsell_ids": [],
+  "cross_sell_ids": [],
   "details":[
     {
       "assets":[
@@ -282,6 +292,8 @@
   "description": "MBC 월정액 입니다.",
   "average_rating":"9.1",
   "rating_count":"80",
+  "upsell_ids": [],
+  "cross_sell_ids": [],
   "details": [{		
     "viewingLength": "031:00:00",
     "viewablePeriodState": 0,
@@ -309,12 +321,14 @@
   ],
   "price":"0",
   "pricing_policies":[
-    "policy_id":3, "policy_name":"무료VOD", "policy_type":"free", "amount":-1, "expiry_date":null}
+    {"policy_id":3, "policy_name":"무료VOD", "policy_type":"free", "amount":-1, "expiry_date":null}
   ],
   "image":"http://localhost:8080/ProductManager/PosterImage/2016_infinite_company.png",
   "description":"2016 무한상사 예고편",
   "average_rating":"0.0",
   "rating_count":"0",
+  "upsell_ids": [],
+  "cross_sell_ids": [],
   "details":[
     {
       "assets":[
@@ -349,6 +363,8 @@
   "description": "지상파 통합 월정액 입니다.",
   "average_rating":"8.2",
   "rating_count":"15",
+  "upsell_ids": [],
+  "cross_sell_ids": [],
   "details": [{		
     "viewingLength": "031:00:00",
     "viewablePeriodState": 0,
@@ -383,12 +399,14 @@
   ],
   "price":"11900",
   "pricing_policies":[
-    {"policy_id":1, "policy_name":"편당보기", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null}
+    {"policy_id":1, "policy_name":"고정금액", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null}
   ],
   "image":"http://localhost:8080/ProductManager/PosterImage/Avengers.png",
   "description":"아이언맨, 캡틴아메리카, 헐크, 토르",
   "average_rating":"9.1",
   "rating_count":"124",
+  "upsell_ids": [],
+  "cross_sell_ids": [],
   "details":[
     {
       "assets":[
@@ -406,3 +424,66 @@
 }
 ```
 - **광고**
+```json
+{
+  "id":"AA00201609130211",
+  "name":"이슬톡톡 광고",
+  "type":"Advertisement",
+  "created":"2016-09-13T19:55:10",
+  "modified":"2016-09-13T19:55:41",
+  "categories":[
+    {"categoryId":210, "categoryName":"광고"}
+  ],
+  "price":"3000000",
+  "pricing_policies":[
+    {"policy_id":27, "policy_name":"광고청약", "policy_type":"advertising_subscription", "amount":-1, "expiry_date":"2016-12-19T00:00:00"}
+  ],
+  "image":"http://localhost:8080/ProductManager/PosterImage/Avengers.png",
+  "description":"달의연인, 프로듀사 등을 재생하기 전에 광고로 나감",
+  "average_rating":"9.1",
+  "rating_count":"4",
+  "upsell_ids": [],
+  "cross_sell_ids": [],
+  "details":[
+    {
+      "assets":[
+        {"asset_id":"www.hchoice.co.kr|M0018210LFO1609130101"}
+      ],
+      "summary":"기분좋게 발그레 이슬톡톡",
+      "runtime":"1"
+    }
+  ]
+}
+```
+- **Clothing**
+```json
+{
+  "id":"AA00201609130001",
+  "name":"T-shirts",
+  "type":"Clothing",
+  "created":"2016-09-13T11:55:10",
+  "modified":"2016-09-13T11:55:41",
+  "categories":[
+    {"categoryId":114, "categoryName":"T-shirts"}
+  ],
+  "price":"11500",
+  "pricing_policies":[
+    {"policy_id":21, "policy_name":"[고정금액] 추석할인", "policy_type":"fixed_amount", "amount":7500, "expiry_date":"2016-09-19T00:00:00"}
+  ],
+  "image":"http://localhost:8080/ProductManager/PosterImage/t-shirts.png",
+  "description":"2016 신상 티셔츠",
+  "average_rating":"9.5",
+  "rating_count":"210",
+  "upsell_ids": [],
+  "cross_sell_ids": [],
+  "details":[
+   {
+      "attributes":[
+      		{ "id":6, "name":"Color", "options":["Black","White","Blue"] },
+      		{ "id":1, "name":"Size", "options":["S","M","L","XL"] }
+	     ],
+	     "in_stock":true
+   }
+  ]
+}
+```
