@@ -39,14 +39,14 @@
       ],
       "image":"http://localhost:8080/ProductManager/PosterImage/war_of_the_arrows.png",
       "description":"'[HD]최종병기 활' 입니다.",
+      "average_rating":"7.9",
+      "rating_count":"642",
       "details":[
         {
           "assets":[
             {"asset_id":"www.hchoice.co.kr|M0018210LFO157334201"}
           ],
           "release_year":"2011",
-          "average_rating":"7.9",
-          "rating_count":"142",
           "actors":"박해일,류승룡,김무열,문재원,이한위",
           "director":"김한민",
           "summary":"50만 포로가 끌려간 병자호란, 치열했던 전쟁의 한 복판에 역사가 기록하지 못한 위대한 신궁이 있었다.",
@@ -72,14 +72,14 @@
       ],
       "image":"http://localhost:8080/ProductManager/PosterImage/train_to_busan.png",
       "description":"'[HD]부산행' 입니다.",
+      "average_rating":"8.5",
+      "rating_count":"17",
       "details":[
         {
           "assets":[
             {"asset_id":"www.hchoice.co.kr|M0018210LFO116090701"}
           ],
           "release_year":"2016",
-          "average_rating":"8.5",
-          "rating_count":"17",
           "actors":"공유,정유미,마동석,김수안,김의성",
           "director":"연상호",
           "summary":"정체불명의 바이러스가 전국으로 확산되고 대한민국 긴급재난경보령이 선포된 가운데, 열차에 몸을 실은 사람들은 단 하나의 안전한 도시 부산까지 살아가기 위한 치열한 사투를 벌이게 된다.",
@@ -118,14 +118,14 @@
   ],
   "image":"http://localhost:8080/ProductManager/PosterImage/train_to_busan.png",
   "description":"'[HD]부산행' 입니다.",
+  "average_rating":"8.5",
+  "rating_count":"17",
   "details":[
     {
       "assets":[
         {"asset_id":"www.hchoice.co.kr|M0018210LFO116090701"}
       ],
       "release_year":"2016",
-      "average_rating":"8.5",
-      "rating_count":"17",
       "actors":"공유,정유미,마동석,김수안,김의성",
       "director":"연상호",
       "summary":"정체불명의 바이러스가 전국으로 확산되고 대한민국 긴급재난경보령이 선포된 가운데, 열차에 몸을 실은 사람들은 단 하나의 안전한 도시 부산까지 살아가기 위한 치열한 사투를 벌이게 된다.",
@@ -162,6 +162,8 @@
   ],
   "image": "http://localhost:8080/ProductManager/PosterImage/MBC.png",
   "description": "MBC 월정액 입니다.",
+  "average_rating":"9.1",
+  "rating_count":"80",
   "details": [{		
     "viewingLength": "031:00:00",
     "viewablePeriodState": 0,
@@ -240,14 +242,14 @@
   ],
   "image":"http://localhost:8080/ProductManager/PosterImage/infinite_challenge.png",
   "description":"무한도전 496회, 2016 무한상사",
+  "average_rating":"9.5",
+  "rating_count":"210",
   "details":[
     {
       "assets":[
         {"asset_id":"www.hchoice.co.kr|M0018210LFO160903201"}
       ],
       "release_year":"2016",
-      "average_rating":"9.5",
-      "rating_count":"210",
       "actors":"유재석,박명수,정준하,하하,황광희",
       "director":"김태호",
       "summary":"2016 무한상사",
@@ -278,6 +280,8 @@
   ],
   "image": "http://localhost:8080/ProductManager/PosterImage/MBC.png",
   "description": "MBC 월정액 입니다.",
+  "average_rating":"9.1",
+  "rating_count":"80",
   "details": [{		
     "viewingLength": "031:00:00",
     "viewablePeriodState": 0,
@@ -309,6 +313,8 @@
   ],
   "image":"http://localhost:8080/ProductManager/PosterImage/2016_infinite_company.png",
   "description":"2016 무한상사 예고편",
+  "average_rating":"0.0",
+  "rating_count":"0",
   "details":[
     {
       "assets":[
@@ -341,6 +347,8 @@
   ],
   "image": "http://localhost:8080/ProductManager/PosterImage/KBS_MBC_SBS.png",
   "description": "지상파 통합 월정액 입니다.",
+  "average_rating":"8.2",
+  "rating_count":"15",
   "details": [{		
     "viewingLength": "031:00:00",
     "viewablePeriodState": 0,
@@ -379,6 +387,8 @@
   ],
   "image":"http://localhost:8080/ProductManager/PosterImage/Avengers.png",
   "description":"아이언맨, 캡틴아메리카, 헐크, 토르",
+  "average_rating":"9.1",
+  "rating_count":"124",
   "details":[
     {
       "assets":[
@@ -387,8 +397,6 @@
         {"asset_id":"www.hchoice.co.kr|M0018210LFO160701103"},
         {"asset_id":"www.hchoice.co.kr|M0018210LFO160701104"},
       ],
-      "average_rating":"8.9",
-      "rating_count":"115",
       "summary":"아이언맨, 캡틴아메리카, 헐크, 토르",
       "runtime":"482",
       "viewingLength":"001:00:00",
