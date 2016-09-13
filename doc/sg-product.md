@@ -34,7 +34,8 @@
       ],
       "price":"2500",
       "pricing_policies":[
-        {"policy_id":12, "policy_name":"[할인]박해일 특집", "policy_type":"discount_fixed", "amount":1000, "expiry_date":null}
+        {"policy_id":1, "policy_name":"편당보기", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null},
+        {"policy_id":12, "policy_name":"[할인]박해일 특집", "policy_type":"fixed_discount", "amount":1000, "expiry_date":null}
       ],
       "image":"http://localhost:8080/ProductManager/PosterImage/war_of_the_arrows.png",
       "description":"'[HD]최종병기 활' 입니다.",
@@ -66,7 +67,9 @@
         {"categoryId":12, "categoryName":"스릴러"}
       ],
       "price":"4500",
-      "pricing_policies":[],
+      "pricing_policies":[
+        {"policy_id":1, "policy_name":"편당보기", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null}
+      ],
       "image":"http://localhost:8080/ProductManager/PosterImage/train_to_busan.png",
       "description":"'[HD]부산행' 입니다.",
       "details":[
@@ -91,9 +94,9 @@
 ```
 
 
-### 상품 조회 (with id)
-- **GET** /ProductManager/v1/products?id=:id
-- **GET** /ProductManager/v1/products?id=AA00201609080002
+### 단일 상품 조회 (with id)
+- **GET** /ProductManager/v1/products/:id
+- **GET** /ProductManager/v1/products/AA00201609080002
 
 - Response
  - 200 OK
@@ -110,7 +113,9 @@
     {"categoryId":12, "categoryName":"스릴러"}
   ],
   "price":"4500",
-  "pricing_policies":[],
+  "pricing_policies":[
+    {"policy_id":1, "policy_name":"편당보기", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null}
+  ],
   "image":"http://localhost:8080/ProductManager/PosterImage/train_to_busan.png",
   "description":"'[HD]부산행' 입니다.",
   "details":[
@@ -152,7 +157,9 @@
     "categoryName": "월정액"
   }],
   "price": "9900",
-  "pricing_policies": [],
+  "pricing_policies": [
+    {"policy_id":1, "policy_name":"월정액", "policy_type":"monthly_subscription", "amount":-1, "expiry_date":null}
+  ],
   "image": "http://localhost:8080/ProductManager/PosterImage/MBC.png",
   "description": "MBC 월정액 입니다.",
   "details": [{		
@@ -228,7 +235,9 @@
     {"categoryId":87, "categoryName":"무한도전"}
   ],
   "price":"1500",
-  "pricing_policies":[],
+  "pricing_policies":[
+    {"policy_id":1, "policy_name":"편당보기", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null}
+  ],
   "image":"http://localhost:8080/ProductManager/PosterImage/infinite_challenge.png",
   "description":"무한도전 496회, 2016 무한상사",
   "details":[
@@ -264,7 +273,9 @@
     "categoryName": "월정액"
   }],
   "price": "9900",
-  "pricing_policies": [],
+  "pricing_policies": [
+    {"policy_id":2, "policy_name":"월정액", "policy_type":"monthly_subscription", "amount":-1, "expiry_date":null}
+  ],
   "image": "http://localhost:8080/ProductManager/PosterImage/MBC.png",
   "description": "MBC 월정액 입니다.",
   "details": [{		
@@ -293,7 +304,9 @@
     {"categoryId":87, "categoryName":"무한도전"}
   ],
   "price":"0",
-  "pricing_policies":[],
+  "pricing_policies":[
+    "policy_id":3, "policy_name":"무료VOD", "policy_type":"free", "amount":-1, "expiry_date":null}
+  ],
   "image":"http://localhost:8080/ProductManager/PosterImage/2016_infinite_company.png",
   "description":"2016 무한상사 예고편",
   "details":[
@@ -323,7 +336,9 @@
     "categoryName": "월정액묶음"
   }],
   "price": "25900",
-  "pricing_policies": [],
+  "pricing_policies": [
+    {"policy_id":2, "policy_name":"월정액", "policy_type":"monthly_subscription", "amount":-1, "expiry_date":null}
+  ],
   "image": "http://localhost:8080/ProductManager/PosterImage/KBS_MBC_SBS.png",
   "description": "지상파 통합 월정액 입니다.",
   "details": [{		
@@ -359,7 +374,9 @@
     {"categoryId":11, "categoryName":"액션"}
   ],
   "price":"11900",
-  "pricing_policies":[],
+  "pricing_policies":[
+    {"policy_id":1, "policy_name":"편당보기", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null}
+  ],
   "image":"http://localhost:8080/ProductManager/PosterImage/Avengers.png",
   "description":"아이언맨, 캡틴아메리카, 헐크, 토르",
   "details":[
