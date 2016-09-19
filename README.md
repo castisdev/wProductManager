@@ -3,3 +3,11 @@
 - RESTful API
 -  HTTP response code 사용
 -  Partial response 사용
+
+## Product와 관련있는 것들
+ - Coupons
+ - Orders
+ - Refunds
+ - Product attributes
+ - Product categories
+ - Tax rates
