@@ -7,12 +7,36 @@
 {
     "products" : [
         {
-            "name":"단일상품",
-            "description":"",
+            "name":"텐트01",            
+            "description":"백패킹용 텐트",
+            "classifications": {
+                                  "large":"여행",
+                                  "medium":"캠핑",
+                                  "small":"텐트"
+            },
+            "image":"tent.jpg",
+            "creation_time":"2016-09-13T12:00:00",           
+            "specifications": {
+                                  "color":"red",
+                                  "size":"100x100x100",
+                                  "capacity":"4"
+            },
             "item_list" : {
                 "items" : [
                     {
-                        "name":"아이템"
+                          "id":"ITEM01",
+                          "name":"아이템",
+                          "type":"텐트",
+                          "cost":"400",
+                          "currency":"WON",
+                          "origin":"korea",
+                          "brand":"castis",       
+                          "specifications": {
+                                              "color":"red",
+                                              "size":"100x100x100",
+                                              "capacity":"4"
+                          },
+                         "image":"tent.jpg"
                     }
                 ]
             },
@@ -22,6 +46,7 @@
                         "name" : "기본가격정책",
                         "price":"1000",
                         "currency":"WON",
+                        "default":"true", 
                         "sales_for_where": ["all"],
                         "sales_for_who": ["all"],
                         "sales_for_how": ["online","offline"],
@@ -44,8 +69,89 @@
                     }
                 ]
             }
-        }
-    ]
+        }, 
+        {
+                 "name":"텐트용품 묶음상품",            
+                 "description":"백패킹용 상품 스페셜",
+                 "classifications": {
+                         "large":"여행",
+                         "medium":"캠핑",
+                         "small":"텐트"
+                    }
+                 "image":"tent.jpg",
+                 "creation_time":"2016-09-13T12:00:00"
+                  "specifications": {
+                         "color":"red",
+                         "size":"100x100x100",
+                         "capacity":"4"
+                   },
+                 "item_list" : {
+                      "items" : [
+                         {
+                              "id":"ITEM01",
+                              "name":"고성능텐트",
+                              "type":"텐트",
+                              "cost":"1000",
+                              "currency":"WON",
+                              "origin":"korea",
+                              "brand":"castis",                      
+                              "specifications": {
+                                   "color":"red",
+                                   "size":"100x100x100",
+                                   "capacity":"4"
+                              },
+                              "image":"tent.jpg"
+                         },
+                         {
+                              "id":"ITEM02",
+                              "name":"고성능의자",
+                              "type":"의자",
+                              "cost":"400",
+                             "currency":"WON",  
+                              "origin":"china",
+                              "brand":"castis1",                              
+                              "specifications": {
+                                   "color":"green",
+                                   "size":"30x30x30",
+                                   "capacity":"1"
+                              },
+                              "image":"chair.jpg"
+                         },
+                          {
+                              "id":"ITEM03",
+                              "name":"고성능타프",
+                              "type":"타프",
+                              "cost":"600",
+                              "currency":"WON",
+                              "origin":"usa",
+                              "brand":"castis2",                             
+                              "specifications": {
+                                   "color":"blue",
+                                   "size":"400x500"
+                              },
+                              "image":"tarp.jpg"
+                         }
+                     ]
+                 },
+                 "pricing_plan_list" : {
+                     "pring_plans" : [
+                         {
+                             "name" : "기본가격정책",
+                             "price":"1000",
+                             "currency":"WON",
+                             "default":"true",
+                             "sales_for_where": ["all"],
+                             "sales_for_who": ["all"],
+                             "sales_for_how": ["online","offline"],
+                             "sales_for_when": {
+                                 "start_time":"2016-09-13T12:00:00",
+                                 "end_time":"2016-09-14T12:00:00"
+                             }
+                         }
+                     ]     
+                 }
+         }
+   ]
 }
 ```
 
