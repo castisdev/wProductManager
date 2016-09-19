@@ -199,6 +199,9 @@
     {"categoryId":17}
   ],
   "price":"4500",
+  "pricing_policies":[
+    {"policy_id":1}
+  ],
   "image":"http://localhost:8080/ProductManager/PosterImage/tunnel.png",
   "description":"'[HD]터널' 입니다."
 }
@@ -230,6 +233,7 @@
 
 - Response
  - 204 No Content
+
 
 ****
 ## 상품 종류
@@ -294,17 +298,16 @@
   "rating_count":"80",
   "upsell_ids": [],
   "cross_sell_ids": [],
-  "details": [{		
+  "details": [
+   {		
     "viewingLength": "031:00:00",
     "viewablePeriodState": 0,
     "externalProductId": "SVOD_MBC",
     "relatedCategories": [
-      {
-        "categoryId": 52,
-        "categoryName": "MBC"
-      }
+      { "categoryId": 52, "categoryName": "MBC" }
     ]
- 	}]
+   }
+  ]
 }
 ```
 - **FOD**
@@ -383,7 +386,7 @@
         "name": "SBS 월정액"
       }
     ]
- 	}]
+  }]
 }
 ```
 - **Bundle**
@@ -482,7 +485,7 @@
       		{ "id":6, "name":"Color", "options":["Black","White","Blue"] },
       		{ "id":1, "name":"Size", "options":["S","M","L","XL"] }
 	     ],
-	     "in_stock":true
+      "in_stock":true
    }
   ]
 }
