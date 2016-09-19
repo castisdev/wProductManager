@@ -1,4 +1,73 @@
 # 상품(Product)
+```json
+{
+  "id": "162",
+  "name": "Premium Quality",
+  "permalink": "https://example.com/product/premium-quality-3/",
+  "date_created": "2016-05-31T23:40:07",
+  "date_modified": "2016-05-31T23:40:07",
+  "type": "simple", //simple, grouped, external, variable
+  "status": "publish", //draft, pending, private and publish
+  "featured": false,
+  "description": "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>\n",
+  "short_description": "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>\n",
+  "price": "21.99",
+  "regular_price": "21.99",
+  "sale_price": "",
+  "date_on_sale_from": "",
+  "date_on_sale_to": "",
+  "on_sale": false,
+  "purchasable": true,
+  "total_sales": 0,
+  "tax_status": "taxable", //taxable, shipping (Shipping only) and none
+  "tax_class": "",
+  "sold_individually": false,
+  "weight": "",
+  "dimensions": {
+    "length": "",
+    "width": "",
+    "height": ""
+  },
+  "categories": [
+    {
+      "id": 9,
+      "name": "Clothing",
+      "slug": "clothing"
+    },
+    {
+      "id": 14,
+      "name": "T-shirts",
+      "slug": "t-shirts"
+    }
+  ],
+  "images": [
+    {
+      "id": 163,
+      "date_created": "2016-05-31T23:40:07",
+      "date_modified": "2016-05-31T23:40:07",
+      "src": "https://example.com/wp-content/uploads/2016/05/T_2_front.jpg",
+      "name": "",
+      "alt": "",
+      "position": 0
+    },
+    {
+      "id": 164,
+      "date_created": "2016-05-31T23:40:10",
+      "date_modified": "2016-05-31T23:40:10",
+      "src": "https://example.com/wp-content/uploads/2016/05/T_2_back.jpg",
+      "name": "",
+      "alt": "",
+      "position": 1
+    }
+  ],
+  "attributes": [],
+  "default_attributes": [],
+  "variations": [],
+  "grouped_products": [],
+  "menu_order": 0
+}
+```
+
 
 ### Product
 | 이름 | 타입 | 설명 |
