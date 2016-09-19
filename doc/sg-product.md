@@ -43,8 +43,7 @@
       "rating_count":"642",
       "upsell_ids": [],
       "cross_sell_ids": [],
-      "details":[
-        {
+      "details":{
           "assets":[
             {"asset_id":"www.hchoice.co.kr|M0018210LFO157334201"}
           ],
@@ -55,8 +54,7 @@
           "runtime":"122",
           "viewingLength":"001:00:00",
           "viewablePeriodState":0
-        }
-      ]
+       }
     },
     {
       "id":"AA00201609080002",
@@ -78,7 +76,7 @@
       "rating_count":"17",
       "upsell_ids": [],
       "cross_sell_ids": [],
-      "details":[
+      "details":
         {
           "assets":[
             {"asset_id":"www.hchoice.co.kr|M0018210LFO116090701"}
@@ -91,7 +89,6 @@
           "viewingLength":"001:00:00",
           "viewablePeriodState":0
         }
-      ]
     }
   ]
 }
@@ -126,7 +123,7 @@
   "rating_count":"17",
   "upsell_ids": [],
   "cross_sell_ids": [],
-  "details":[
+  "details":
     {
       "assets":[
         {"asset_id":"www.hchoice.co.kr|M0018210LFO116090701"}
@@ -139,7 +136,6 @@
       "viewingLength":"001:00:00",
       "viewablePeriodState":0
     }
-  ]
 }
 ```
 
@@ -172,7 +168,7 @@
   "rating_count":"80",
   "upsell_ids": [],
   "cross_sell_ids": [],
-  "details": [{		
+  "details": {		
     "viewingLength": "031:00:00",
     "viewablePeriodState": 0,
     "externalProductId": "SVOD_MBC",
@@ -182,7 +178,7 @@
         "categoryName": "MBC"
       }
     ]
- 	}]
+ }
 }
 ```
 
@@ -258,7 +254,7 @@
   "rating_count":"210",
   "upsell_ids": [],
   "cross_sell_ids": [],
-  "details":[
+  "details":
     {
       "assets":[
         {"asset_id":"www.hchoice.co.kr|M0018210LFO160903201"}
@@ -273,7 +269,6 @@
       "episode_name":"무한도전",
       "episode_number":496
     }
-  ]
 }
 ```
 - **SVOD**
@@ -298,7 +293,7 @@
   "rating_count":"80",
   "upsell_ids": [],
   "cross_sell_ids": [],
-  "details": [
+  "details": 
    {		
     "viewingLength": "031:00:00",
     "viewablePeriodState": 0,
@@ -307,7 +302,6 @@
       { "categoryId": 52, "categoryName": "MBC" }
     ]
    }
-  ]
 }
 ```
 - **FOD**
@@ -332,7 +326,7 @@
   "rating_count":"0",
   "upsell_ids": [],
   "cross_sell_ids": [],
-  "details":[
+  "details":
     {
       "assets":[
         {"asset_id":"www.hchoice.co.kr|M0018210LFO160903112"}
@@ -343,7 +337,6 @@
       "viewingLength":"001:00:00",
       "viewablePeriodState":0
     }
-  ]
 }
 ```
 - **SVOD Package**
@@ -368,7 +361,7 @@
   "rating_count":"15",
   "upsell_ids": [],
   "cross_sell_ids": [],
-  "details": [{		
+  "details": {		
     "viewingLength": "031:00:00",
     "viewablePeriodState": 0,
     "externalProductId": "SVODPackage_1",
@@ -386,7 +379,7 @@
         "name": "SBS 월정액"
       }
     ]
-  }]
+  }
 }
 ```
 - **Bundle**
@@ -410,20 +403,19 @@
   "rating_count":"124",
   "upsell_ids": [],
   "cross_sell_ids": [],
-  "details":[
+  "details":
     {
-      "assets":[
-        {"asset_id":"www.hchoice.co.kr|M0018210LFO160701101"},
-        {"asset_id":"www.hchoice.co.kr|M0018210LFO160701102"},
-        {"asset_id":"www.hchoice.co.kr|M0018210LFO160701103"},
-        {"asset_id":"www.hchoice.co.kr|M0018210LFO160701104"},
-      ],
-      "summary":"아이언맨, 캡틴아메리카, 헐크, 토르",
-      "runtime":"482",
-      "viewingLength":"001:00:00",
-      "viewablePeriodState":0
+      "viewingLength" : "001:00:00",
+      "viewablePeriodState" : 0,
+      "externalProductId" : "Bundle_1",
+      "relatedProducts" : [ 
+            {"id" : "AA00201609190001","name" : "아이언맨"}, 
+            {"id" : "AA00201609190002","name" : "아이언맨2"}, 
+            {"id" : "AA00201609190003","name" : "캡틴아메리카:퍼스트 어벤져"}, 
+            {"id" : "AA00201609190004","name" : "인크레더블 헐크"}, 
+            {"id" : "AA00201609190005","name" : "토르:천둥의 신"}
+        ]
     }
-  ]
 }
 ```
 - **광고**
@@ -447,7 +439,7 @@
   "rating_count":"4",
   "upsell_ids": [],
   "cross_sell_ids": [],
-  "details":[
+  "details":
     {
       "assets":[
         {"asset_id":"www.hchoice.co.kr|M0018210LFO1609130101"}
@@ -455,7 +447,6 @@
       "summary":"기분좋게 발그레 이슬톡톡",
       "runtime":"1"
     }
-  ]
 }
 ```
 - **Clothing**
@@ -479,7 +470,7 @@
   "rating_count":"210",
   "upsell_ids": [],
   "cross_sell_ids": [],
-  "details":[
+  "details":
    {
       "attributes":[
       		{ "id":6, "name":"Color", "options":["Black","White","Blue"] },
@@ -487,6 +478,5 @@
 	     ],
       "in_stock":true
    }
-  ]
 }
 ```
