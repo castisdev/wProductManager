@@ -27,11 +27,11 @@
 			  {"category_id":12, "category_name":"최신영화"}
 			 ],
 			"policy":[
-				{
-					"is_licensing_policy":true,
-					"policy_start_date":"2016-09-10T00:00:00",
-					"policy_end_date":"2018-12-31T11:59:59"
-				},
+			  {
+			    "is_licensing_policy":true,
+			    "policy_start_date":"2016-09-10T00:00:00",
+			    "policy_end_date":"2018-12-31T11:59:59"
+			  },
 			  {
 			    "sale_price":1000, 
 			    "policy_start_date":"2016-09-10T00:00:00",
@@ -110,11 +110,11 @@
 			  {"category_id":5, "category_name":"액션"}
 			],
 			"policy":[
-				{
-					"is_licensing_policy":true,
-					"policy_start_date":"2016-09-10T00:00:00",
-					"policy_end_date":"2018-12-31T11:59:59"
-				},
+			  {
+			    "is_licensing_policy":true,
+			    "policy_start_date":"2016-09-10T00:00:00",
+			    "policy_end_date":"2018-12-31T11:59:59"
+			  },
 			  {
 			    "sale_price":1000,
 			    "policy_start_date":"2016-09-10T00:00:00",
@@ -142,11 +142,11 @@
 			  {"category_id":222, "category_name":"[추석 특집관]"},
 			],
 			"policy":[
-				{
-					"is_licensing_policy":true,
-					"policy_start_date":"2016-09-10T00:00:00",
-					"policy_end_date":"2016-09-31T11:59:59"
-				},
+			  {
+			    "is_licensing_policy":true,
+			    "policy_start_date":"2016-09-10T00:00:00",
+			    "policy_end_date":"2016-09-31T11:59:59"
+			  },
 			  {
 			    "price":27500, 
 			    "policy_start_date":"2016-09-10T00:00:00",
