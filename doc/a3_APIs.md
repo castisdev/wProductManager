@@ -9,6 +9,7 @@
         {
             "name":"텐트01",            
             "description":"백패킹용 텐트",
+            "isPackage":"false",
             "classifications": {
                                   "large":"여행",
                                   "medium":"캠핑",
@@ -73,6 +74,7 @@
         {
                  "name":"텐트용품 묶음상품",            
                  "description":"백패킹용 상품 스페셜",
+                 "isPackage":"true",
                  "classifications": {
                          "large":"여행",
                          "medium":"캠핑",
