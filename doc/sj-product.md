@@ -104,7 +104,7 @@
 {
 	"products":[
 		{
-			"id":"AAA100000000",
+			"id":"EVE100000232",
 			"name":"[추석특집] 액션 모아보기",
 			"type":"bundle",
 			"description":"길고 긴 추석 밤, 액션과 함께!",
