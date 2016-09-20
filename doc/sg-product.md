@@ -259,6 +259,20 @@
 
 
 ****
+## Product
+| 이름 | 타입 | 설명 |
+| --- | --- | --- | --- |
+| id	 | String | 	상품 ID |
+| name	 | String	 | 상품명	 |
+| type	 | String	 | 상품 타입 	 |
+| properties | ProductProperties	 | 상품 속성 |
+| policies | ProductPolicy	 | 상품 정책 |
+| id	 | String | 	상품 ID |
+| id	 | String | 	상품 ID |
+| id	 | String | 	상품 ID |
+| id	 | String | 	상품 ID |
+| id	 | String | 	상품 ID |
+
 ## 상품 종류
 - **RVOD**
 ```json
@@ -499,7 +513,7 @@
   "cross_sell_ids": [],
   "details":
     {
-      "advertisement_type":"Bundle"
+      "advertisement_type":"Bundle",
       "summary":"거부할 수 없는 감동! 리니지2 레볼루션, 끝없이 펼쳐지는 해상전투! 한계를 뒤어넘는 리얼함을 느껴라! 해전1942",
       "runtime":"3",
       "related_products" : [
