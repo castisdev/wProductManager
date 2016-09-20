@@ -132,7 +132,7 @@
 			  },
 			  {
 			    "product_id":"CCK710900223",
-			    "category_id"12
+			    "category_id":12
 			  },
 			  {
 			    "product_id":"AAA100000002",
