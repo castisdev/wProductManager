@@ -40,8 +40,8 @@
       ],
       "image":"http://localhost:8080/ProductManager/PosterImage/war_of_the_arrows.png",
       "description":"'[HD]최종병기 활' 입니다.",
-      "average_rating":"7.9",
-      "rating_count":"642",
+      "average_rating":7.9,
+      "rating_count":642,
       "upsell_ids": [],
       "cross_sell_ids": [],
       "details":{
@@ -73,8 +73,8 @@
       ],
       "image":"http://localhost:8080/ProductManager/PosterImage/train_to_busan.png",
       "description":"'[HD]부산행' 입니다.",
-      "average_rating":"8.5",
-      "rating_count":"17",
+      "average_rating":8.5,
+      "rating_count":17,
       "upsell_ids": [],
       "cross_sell_ids": [],
       "details":
@@ -120,8 +120,8 @@
   ],
   "image":"http://localhost:8080/ProductManager/PosterImage/train_to_busan.png",
   "description":"'[HD]부산행' 입니다.",
-  "average_rating":"8.5",
-  "rating_count":"17",
+  "average_rating":8.5,
+  "rating_count":17,
   "upsell_ids": [],
   "cross_sell_ids": [],
   "details":
@@ -167,8 +167,8 @@
 	  ],
 	  "image": "http://localhost:8080/ProductManager/PosterImage/MBC.png",
 	  "description": "MBC 월정액 입니다.",
-	  "average_rating":"9.1",
-	  "rating_count":"80",
+	  "average_rating":9.1,
+	  "rating_count":80,
 	  "upsell_ids": [],
 	  "cross_sell_ids": [],
 	  "details": {		
@@ -280,8 +280,8 @@
 | pricing_policies	 | PricingPolicy | 	상품 가격 정책 |	|
 | image	 | String | 	상품 이미지 |	|
 | description	 | String | 	상품 설명 |	|
-| average_rating	 | String | 	상품 평점 |	|
-| rating_count	 | String | 	상품 평점 참여수   |	|
+| average_rating	 | Double | 	상품 평점 |	|
+| rating_count	 | Integer | 	상품 평점 참여수   |	|
 | upsell_ids	 | String[] | 	상위 상품 ID 목록 |	|
 | cross_sell_ids	 | String[] | 	교차판매 상품 ID 목록 |	|
 | details	 | Object | 	상품 상세 속성 |	|
@@ -320,8 +320,8 @@
   ],
   "image":"http://localhost:8080/ProductManager/PosterImage/infinite_challenge.png",
   "description":"무한도전 496회, 2016 무한상사",
-  "average_rating":"9.5",
-  "rating_count":"210",
+  "average_rating":9.5,
+  "rating_count":210,
   "upsell_ids": [],
   "cross_sell_ids": [],
   "details":
@@ -359,8 +359,8 @@
   ],
   "image": "http://localhost:8080/ProductManager/PosterImage/MBC.png",
   "description": "MBC 월정액 입니다.",
-  "average_rating":"9.1",
-  "rating_count":"80",
+  "average_rating":9.1,
+  "rating_count":80,
   "upsell_ids": [],
   "cross_sell_ids": [],
   "details": 
@@ -392,8 +392,8 @@
   ],
   "image":"http://localhost:8080/ProductManager/PosterImage/2016_infinite_company.png",
   "description":"2016 무한상사 예고편",
-  "average_rating":"0.0",
-  "rating_count":"0",
+  "average_rating":0.0,
+  "rating_count":0,
   "upsell_ids": [],
   "cross_sell_ids": [],
   "details":
@@ -427,8 +427,8 @@
   ],
   "image": "http://localhost:8080/ProductManager/PosterImage/KBS_MBC_SBS.png",
   "description": "지상파 통합 월정액 입니다.",
-  "average_rating":"8.2",
-  "rating_count":"15",
+  "average_rating":8.2,
+  "rating_count":15,
   "upsell_ids": [],
   "cross_sell_ids": [],
   "details": {		
@@ -469,8 +469,8 @@
   ],
   "image":"http://localhost:8080/ProductManager/PosterImage/Avengers.png",
   "description":"아이언맨, 캡틴아메리카, 헐크, 토르",
-  "average_rating":"9.1",
-  "rating_count":"124",
+  "average_rating":9.1,
+  "rating_count":124,
   "upsell_ids": [],
   "cross_sell_ids": [],
   "details":
@@ -506,8 +506,8 @@
   ],
   "image":"http://localhost:8080/ProductManager/PosterImage/isultoktok.png",
   "description":"달의연인, 프로듀사 등을 재생하기 전에 광고로 나감",
-  "average_rating":"9.1",
-  "rating_count":"4",
+  "average_rating":9.1,
+  "rating_count":4,
   "upsell_ids": [],
   "cross_sell_ids": [],
   "details":
@@ -536,8 +536,8 @@
   ],
   "image":"http://localhost:8080/ProductManager/PosterImage/game_ad_bundle.png",
   "description":"온게임넷 콘텐트 시청 전에 광고로 나감",
-  "average_rating":"8.3",
-  "rating_count":"7",
+  "average_rating":8.3,
+  "rating_count":7,
   "upsell_ids": [],
   "cross_sell_ids": [],
   "details":
@@ -569,8 +569,8 @@
   ],
   "image":"http://localhost:8080/ProductManager/PosterImage/t-shirts.png",
   "description":"2016 신상 티셔츠",
-  "average_rating":"9.5",
-  "rating_count":"210",
+  "average_rating":9.5,
+  "rating_count":210,
   "upsell_ids": [],
   "cross_sell_ids": [],
   "details":
