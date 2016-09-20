@@ -23,8 +23,7 @@
 				"poster":"http://ip address:port num/ProductManager/v1/products/resources/posterImage/2016/AAA100000000.png"
 			},
 			"categories":[
-			{
-			}
+			{}
 			],
 			"policy":[],
 			"creation_date":"",
