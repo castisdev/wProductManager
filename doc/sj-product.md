@@ -22,10 +22,14 @@
 				"release_year":2016,
 				"poster":"http://ip address:port num/ProductManager/v1/products/resources/posterImage/2016/AAA100000000.png"
 			},
-			"categories":[],
+			"categories":[
+			  {
+			    "category_id":12,
+			    "category_name":"최신영화"
+			  }
+			 ],
 			"policy":[],
 			"creation_date":"",
-			"related_products":[]
 		}
 	]
 }
@@ -92,7 +96,6 @@
 			],
 			"policy":[],
 			"creation_date":"",
-			"related_products":[]
 		}
 	]
 }
@@ -105,9 +108,9 @@
 	"products":[
 		{
 			"id":"EVE100000232",
-			"name":"[추석특집] 액션 모아보기",
+			"name":"[추석특집] 최신 액션 모아보기",
 			"type":"bundle",
-			"description":"길고 긴 추석 밤, 액션과 함께!",
+			"description":"길고 긴 추석 연휴, 최신 액션과 함께!",
 			"details":{
 			},
 			"categories":[
@@ -122,7 +125,19 @@
 			  {
 			    "product_id":"AAA100000000",
 			    "category_id":12
-			  }
+			  },
+			  {
+			    "product_id":"AAB100023450",
+			    "category_id":12
+			  },
+			  {
+			    "product_id":"CCK710900223",
+			    "category_id"12
+			  },
+			  {
+			    "product_id":"AAA100000002",
+			    "category_id":12
+			  },
 			]
 		}
 	]
