@@ -24,13 +24,14 @@
 				"poster":"http://ip address:port num/ProductManager/v1/products/resources/posterImage/2016/AAA100000000.png"
 			},
 			"categories":[
-			  {
-			    "category_id":12,
-			    "category_name":"최신영화"
-			  }
+			  {"category_id":12, "category_name":"최신영화"}
 			 ],
-			"policy":[],
-			"creation_date":"",
+			"policy":[
+			  "sale_price":1000, 
+			  "policy_start_date":"2016-09-10T00:00:00",
+			  "policy_end_date":"2016-09-15T00:00:00"
+			],
+			"creation_date":"2016-09-13T12:30:00",
 		}
 	]
 }
@@ -98,17 +99,16 @@
 				"poster":"http://ip address:port num/ProductManager/v1/products/resources/posterImage/2016/AAA100000000.png"
 			},
 			"categories":[
-			  {
-			    "category_id":12,
-			    "category_name":"최신영화"
-			  },
-			  {
-			    "category_id":5,
-			    "category_name":"액션"
-			  }
+			  {"category_id":12, "category_name":"최신영화"},
+			  {"category_id":5, "category_name":"액션"}
 			],
-			"policy":[],
-			"creation_date":"",
+			"policy":[
+			  "sale_price":1000, 
+			  "policy_start_date":"2016-09-10T00:00:00",
+			  "policy_end_date":"2016-09-15T00:00:00"
+			],
+			"creation_date":"2016-09-13T12:30:00",
+		}
 		}
 	]
 }
@@ -126,30 +126,19 @@
 			"regular_price":25000,
 			"description":"길고 긴 추석 연휴, 최신 액션과 함께!",
 			"categories":[
-			  {
-			    "category_id":222,
-			    "category_name":"[추석 특집관]"
-			  },
+			  {"category_id":222, "category_name":"[추석 특집관]"},
 			],
-			"policy":[],
-			"creation_date":"",
+			"policy":[
+			  "price":27500, 
+			  "policy_start_date":"2016-09-10T00:00:00",
+			  "policy_end_date":"2016-09-30T00:00:00"
+			],
+			"creation_date":"2016-09-20T14:30:05",
 			"related_products":[
-			  {
-			    "product_id":"AAA100000000",
-			    "category_id":12
-			  },
-			  {
-			    "product_id":"AAB100023450",
-			    "category_id":12
-			  },
-			  {
-			    "product_id":"CCK710900223",
-			    "category_id":12
-			  },
-			  {
-			    "product_id":"AAA100000002",
-			    "category_id":12
-			  },
+			  {"product_id":"AAA100000000"},
+			  {"product_id":"AAB100023450"},
+			  {"product_id":"CCK710900223"},
+			  {"product_id":"AAA100000002"},
 			]
 		}
 	]
