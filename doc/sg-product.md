@@ -298,7 +298,7 @@
     "viewingLength": "031:00:00",
     "viewablePeriodState": 0,
     "externalProductId": "SVOD_MBC",
-    "relatedCategories": [
+    "related_categories": [
       { "categoryId": 52, "categoryName": "MBC" }
     ]
    }
@@ -365,7 +365,7 @@
     "viewingLength": "031:00:00",
     "viewablePeriodState": 0,
     "externalProductId": "SVODPackage_1",
-    "relatedProducts": [
+    "related_products": [
       {
         "id": "AA00201609120001",
         "name": "KBS 월정액"
@@ -408,17 +408,18 @@
       "viewingLength" : "001:00:00",
       "viewablePeriodState" : 0,
       "externalProductId" : "Bundle_1",
-      "relatedProducts" : [ 
-            {"id" : "AA00201609190001","name" : "아이언맨"}, 
-            {"id" : "AA00201609190002","name" : "아이언맨2"}, 
-            {"id" : "AA00201609190003","name" : "캡틴아메리카:퍼스트 어벤져"}, 
-            {"id" : "AA00201609190004","name" : "인크레더블 헐크"}, 
-            {"id" : "AA00201609190005","name" : "토르:천둥의 신"}
+      "related_products" : [ 
+            {"id":"AA00201609190001", "name":"아이언맨"}, 
+            {"id":"AA00201609190002", "name":"아이언맨2"}, 
+            {"id":"AA00201609190003", "name":"캡틴아메리카:퍼스트 어벤져"}, 
+            {"id":"AA00201609190004", "name":"인크레더블 헐크"}, 
+            {"id":"AA00201609190005", "name":"토르:천둥의 신"}
         ]
     }
 }
 ```
 - **광고**
+ - 단일 광고
 ```json
 {
   "id":"AA00201609130211",
@@ -433,7 +434,7 @@
   "pricing_policies":[
     {"policy_id":27, "policy_name":"광고청약", "policy_type":"advertising_subscription", "amount":-1, "expiry_date":"2016-12-19T00:00:00"}
   ],
-  "image":"http://localhost:8080/ProductManager/PosterImage/Avengers.png",
+  "image":"http://localhost:8080/ProductManager/PosterImage/isultoktok.png",
   "description":"달의연인, 프로듀사 등을 재생하기 전에 광고로 나감",
   "average_rating":"9.1",
   "rating_count":"4",
@@ -441,11 +442,43 @@
   "cross_sell_ids": [],
   "details":
     {
+      "advertisement_type":"single",
       "assets":[
         {"asset_id":"www.hchoice.co.kr|M0018210LFO1609130101"}
       ],
       "summary":"기분좋게 발그레 이슬톡톡",
       "runtime":"1"
+    }
+}
+ - 
+{
+  "id":"AA00201609200201",
+  "name":"게임 광고 묶음",
+  "type":"Advertisement",
+  "created":"2016-09-19T19:55:10",
+  "modified":"2016-09-19T19:55:41",
+  "categories":[
+    {"categoryId":210, "categoryName":"광고"}
+  ],
+  "price":"8000000",
+  "pricing_policies":[
+    {"policy_id":27, "policy_name":"광고청약", "policy_type":"advertising_subscription", "amount":-1, "expiry_date":"2016-12-19T00:00:00"}
+  ],
+  "image":"http://localhost:8080/ProductManager/PosterImage/game_ad_bundle.png",
+  "description":"온게임넷 콘텐트 시청 전에 광고로 나감",
+  "average_rating":"8.3",
+  "rating_count":"7",
+  "upsell_ids": [],
+  "cross_sell_ids": [],
+  "details":
+    {
+      "advertisement_type":"bundle"
+      "summary":"거부할 수 없는 감동! 리니지2 레볼루션, 끝없이 펼쳐지는 해상전투! 한계를 뒤어넘는 리얼함을 느껴라! 해전1942",
+      "runtime":"3",
+      "related_advertisements" : [
+            {"id":"AA00201609200204", "name":"리니지2 레볼루션"}, 
+            {"id":"AA00201609200205", "name":"해전1942"}
+      ]
     }
 }
 ```
