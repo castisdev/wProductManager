@@ -150,37 +150,42 @@
  
 ```json
 {
-  "id": "AA00201609120001",
-  "name": "MBC 월정액",
-  "type": "SVOD",
-  "created": "2016-09-12T18:01:12",
-  "modified": "2016-09-12T18:01:12",
-  "categories": [{
-    "category_id": 2,
-    "category_name": "월정액"
-  }],
-  "price": "9900",
-  "pricing_policies": [
-    {"policy_id":1, "policy_name":"월정액", "policy_type":"monthly_subscription", "amount":-1, "expiry_date":null}
-  ],
-  "image": "http://localhost:8080/ProductManager/PosterImage/MBC.png",
-  "description": "MBC 월정액 입니다.",
-  "average_rating":"9.1",
-  "rating_count":"80",
-  "upsell_ids": [],
-  "cross_sell_ids": [],
-  "details": {		
-    "viewingLength": "031:00:00",
-    "viewablePeriodState": 0,
-    "externalProductId": "SVOD_MBC",
-    "relatedCategories": [
-      {
-        "category_id": 52,
-        "category_name": "MBC"
-      }
-    ]
- }
+  "productList":[
+    {
+	  "id": "AA00201609120001",
+	  "name": "MBC 월정액",
+	  "type": "SVOD",
+	  "created": "2016-09-12T18:01:12",
+	  "modified": "2016-09-12T18:01:12",
+	  "categories": [{
+	    "category_id": 2,
+	    "category_name": "월정액"
+	  }],
+	  "price": "9900",
+	  "pricing_policies": [
+	    {"policy_id":1, "policy_name":"월정액", "policy_type":"monthly_subscription", "amount":-1, "expiry_date":null}
+	  ],
+	  "image": "http://localhost:8080/ProductManager/PosterImage/MBC.png",
+	  "description": "MBC 월정액 입니다.",
+	  "average_rating":"9.1",
+	  "rating_count":"80",
+	  "upsell_ids": [],
+	  "cross_sell_ids": [],
+	  "details": {		
+	    "viewingLength": "031:00:00",
+	    "viewablePeriodState": 0,
+	    "externalProductId": "SVOD_MBC",
+	    "relatedCategories": [
+	      {
+	        "category_id": 52,
+	        "category_name": "MBC"
+	      }
+	    ]
+	 }
+    }
+  ]
 }
+  
 ```
 
 
@@ -270,13 +275,15 @@
 | modified | String	 | 상품 수정 시각 | 'yyyy-MM-ddTHH:mm:ss'	|
 | categories	 | Category | 	카테고리 리스트 |	|
 | price	 | String | 	상품 가격 |	|
+| tax_status	 | String | 	상품 세금 상태 | taxable(과세 대상), shipping(배송만?), none(비과세)	|
+| tax_class	 | String | 	상품 세금 등급 |	|
 | pricing_policies	 | PricingPolicy | 	상품 가격 정책 |	|
 | image	 | String | 	상품 이미지 |	|
 | description	 | String | 	상품 설명 |	|
 | average_rating	 | String | 	상품 평점 |	|
 | rating_count	 | String | 	상품 평점 참여수   |	|
-| upsell_ids	 | String | 	상위 상품 ID |	|
-| cross_sell_ids	 | String | 	교차판매 상품 ID |	|
+| upsell_ids	 | String[] | 	상위 상품 ID 목록 |	|
+| cross_sell_ids	 | String[] | 	교차판매 상품 ID 목록 |	|
 | details	 | Object | 	상품 상세 속성 |	|
 
 ## Category
@@ -294,7 +301,7 @@
 | amount | Integer	 | 금액/비율  | -1: Product의 price 값을 따름	|
 | expiry_date | String	 | 정책 만료일 | 'yyyy-MM-ddTHH:mm:ss'	|
 
-
+****
 ## 상품 종류
 - **RVOD**
 ```json
