@@ -260,38 +260,38 @@
 
 ****
 ## Product
-| 이름 | 타입 | 설명 |
-| --- | --- | --- | --- |
-| id	 | String | 	상품 ID |
-| name	 | String	 | 상품명	 |
-| type	 | String	 | 상품 타입 	 |
-| created | String	 | 상품 생성 시각 |
-| modified | String	 | 상품 수정 시각 |
-| categories	 | Category | 	상품 ID |
-| price	 | String | 	상품 ID |
-| pricing_policies	 | PricingPolicy | 	상품 ID |
-| image	 | String | 	상품 ID |
-| description	 | String | 	상품 ID |
-| average_rating	 | String | 	상품 ID |
-| rating_count	 | String | 	상품 ID |
-| upsell_ids	 | String | 	상품 ID |
-| cross_sell_ids	 | String | 	상품 ID |
-| details	 | Object | 	상품 ID |
+| 이름 | 타입 | 설명 |	|
+| --- | --- | --- | --- | --- |
+| id	 | String | 	상품 ID |	|
+| name	 | String	 | 상품명	 |	|
+| type	 | String	 | 상품 타입 	 | FOD(무료VOD), RVOD(편당보기VOD), SVOD(월정액VOD), SVODPackage(월정액 묶음), Bundle(VOD 묶음상품), Advertisement(광고), Clothing(의류), ...	|
+| created | String	 | 상품 생성 시각 |	|
+| modified | String	 | 상품 수정 시각 |	|
+| categories	 | Category | 	카테고리 리스트 |	|
+| price	 | String | 	상품 가격 |	|
+| pricing_policies	 | PricingPolicy | 	상품 가격 정책 |	|
+| image	 | String | 	상품 이미지 |	|
+| description	 | String | 	상품 설명 |	|
+| average_rating	 | String | 	상품 평점 |	|
+| rating_count	 | String | 	상품 평점 참여수   |	|
+| upsell_ids	 | String | 	상위 상품 ID |	|
+| cross_sell_ids	 | String | 	교차판매 상품 ID |	|
+| details	 | Object | 	상품 상세 속성 |	|
 
 ## Category
-| 이름 | 타입 | 설명 |
-| --- | --- | --- | --- |
-| category_id	 | Integer | 	카테고리 ID |
-| category_name	 | String	 | 카테고리명	 |
+| 이름 | 타입 | 설명 |	|
+| --- | --- | --- | --- | --- |
+| category_id	 | Integer | 	카테고리 ID |	|
+| category_name	 | String	 | 카테고리명	 |	|
 
 ## PricingPolicy
-| 이름 | 타입 | 설명 |
-| --- | --- | --- | --- |
-| policy_id	 | Integer | 	정책 ID |
-| policy_name	 | String	 | 정책명	 |
-| policy_type	 | String	 | 정책 타입 	 |
-| amount | Integer	 | 금액/비율  |
-| expiry_date | String	 | 정책 만료일 |
+| 이름 | 타입 | 설명 |	|
+| --- | --- | --- | --- | --- |
+| policy_id	 | Integer | 	정책 ID |	|
+| policy_name	 | String	 | 정책명	 |	|
+| policy_type	 | String	 | 정책 타입 	 | free(무료), fixed_amount(고정금액), fixed_discount(고정금액 할인), rated_discount(고정비율 할인), monthly_subscription(월정액), advertising_subscription(광고청약) 	|
+| amount | Integer	 | 금액/비율  |	|
+| expiry_date | String	 | 정책 만료일 |	|
 
 
 ## 상품 종류
