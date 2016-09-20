@@ -47,7 +47,61 @@
 ### 상품 조회
 #### 전체 상품 조회
 - **GET** /ProductManager/v1/products
-
+```json
+{
+	"products":[
+		{
+			"id":"AAB100023450",
+			"name":"매그니피센트7",
+			"type":"RVOD",
+			"regular_price":12000,
+			"description":"정의를 원하죠. 하지만 복수를 택하겠어요",
+			"details":{
+				"director":"안톤 후쿠아",
+				"cast":"덴젤워싱턴(샘 치좀), 크리스프랫(조슈아 패러데이), 이병헌(빌리 락스)...",
+				"genre":"action",
+				"rating":"15",
+				"runtime":133,
+				"release_year":2016,
+				"poster":"http://ip address:port num/ProductManager/v1/products/resources/posterImage/2016/AAB10002345.png"
+			},
+			"categories":[
+			  {"category_id":12, "category_name":"최신영화"}
+			 ],
+			"policy":[
+			  {
+			    "is_licensing_policy":true,
+			    "policy_start_date":"2016-09-20T00:00:00",
+			    "policy_end_date":"2018-12-31T11:59:59"
+			  }
+			],
+			"creation_date":"2016-09-16T02:00:00",
+		},
+		"products":[
+		{
+			"id":"SVD222222222",
+			"name":"MBC",
+			"type":"SVOD",
+			"regular_price":5000,
+			"description":"MBC 모든 유료 다시보기 무제한",
+			"categories":[
+			  {"category_id":20, "category_name":"월정액"}
+			 ],
+			"policy":[
+			  {
+			    "is_licensing_policy":true,
+			    "policy_start_date":"0000-00-00T00:00:00",
+			    "policy_end_date":"9999-12-31T11:59:59"
+			  }
+			],
+			"creation_date":"2016-09-20T10:00:00",
+			"related_products":[
+			  {"category_id":"25", "category_name":"MBC"},
+			]
+		}
+	]
+}
+```
 #### 선택 상품 조회 (id)
 - **GET** /ProductManager/v1/products/{id}
 
