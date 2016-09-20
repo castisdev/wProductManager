@@ -266,8 +266,8 @@
 | id	 | String | 	상품 ID |	|
 | name	 | String	 | 상품명	 |	|
 | type	 | String	 | 상품 타입 	 | FOD(무료VOD), RVOD(편당보기VOD), SVOD(월정액VOD), <br/> SVODPackage(월정액 묶음), Bundle(묶음 상품), <br/> Advertisement(광고), Clothing(의류), ...	|
-| created | String	 | 상품 생성 시각 |	|
-| modified | String	 | 상품 수정 시각 |	|
+| created | String	 | 상품 생성 시각 | 'yyyy-MM-ddTHH:mm:ss'	|
+| modified | String	 | 상품 수정 시각 | 'yyyy-MM-ddTHH:mm:ss'	|
 | categories	 | Category | 	카테고리 리스트 |	|
 | price	 | String | 	상품 가격 |	|
 | pricing_policies	 | PricingPolicy | 	상품 가격 정책 |	|
@@ -291,8 +291,8 @@
 | policy_id	 | Integer | 	정책 ID |	|
 | policy_name	 | String	 | 정책명	 |	|
 | policy_type	 | String	 | 정책 타입 	 | free(무료), fixed_amount(고정금액), fixed_discount(고정금액 할인), <br/> rated_discount(고정비율 할인), monthly_subscription(월정액), <br/> advertising_subscription(광고청약) 	|
-| amount | Integer	 | 금액/비율  |	|
-| expiry_date | String	 | 정책 만료일 |	|
+| amount | Integer	 | 금액/비율  | -1: Product의 price 값을 따름	|
+| expiry_date | String	 | 정책 만료일 | 'yyyy-MM-ddTHH:mm:ss'	|
 
 
 ## 상품 종류
