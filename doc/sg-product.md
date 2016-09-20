@@ -207,6 +207,33 @@
  - 201 Created
 
 
+### 상품 생성 (SVODPackage, Bundle)
+- **POST** /ProductManager/v1/products/
+
+```json
+{
+  "id": "AA00201609120006",
+  "name": "지상파 통합 월정액",
+  "type": "SVODPackage",
+  "categories":[
+    {"categoryId":3}
+  ],
+  "price":"25900",
+  "pricing_policies":[
+    {"policy_id":2}
+  ],
+  "image":"http://localhost:8080/ProductManager/PosterImage/KBS_MBC_SBS.png",
+  "description":"지상파 통합 월정액 입니다.",
+  "related_products":[
+    {"id":"AA00201609120001"},{"id":"AA00201609120002"},{"id":"AA00201609120003"}
+  ]
+}
+```
+
+- Response
+ - 201 Created
+
+
 ### 상품 수정 (with id)
 - **PUT** /ProductManager/v1/products/:id
 - **PUT** /ProductManager/v1/products/AA00201609080005
