@@ -29,8 +29,8 @@
       "created":"2012-01-01T13:55:10",
       "modified":"2016-09-07T17:24:41",
       "categories":[
-        {"categoryId":11, "categoryName":"액션"},
-        {"categoryId":15, "categoryName":"전쟁"}
+        {"category_id":11, "category_name":"액션"},
+        {"category_id":15, "category_name":"전쟁"}
       ],
       "price":"2500",
       "pricing_policies":[
@@ -63,8 +63,8 @@
       "created":"2016-09-08T18:01:12",
       "modified":"2016-09-08T18:01:12",
       "categories":[
-        {"categoryId":11, "categoryName":"액션"},
-        {"categoryId":12, "categoryName":"스릴러"}
+        {"category_id":11, "category_name":"액션"},
+        {"category_id":12, "category_name":"스릴러"}
       ],
       "price":"4500",
       "pricing_policies":[
@@ -110,8 +110,8 @@
   "created":"2016-09-08T18:01:12",
   "modified":"2016-09-08T18:01:12",
   "categories":[
-    {"categoryId":11, "categoryName":"액션"},
-    {"categoryId":12, "categoryName":"스릴러"}
+    {"category_id":11, "category_name":"액션"},
+    {"category_id":12, "category_name":"스릴러"}
   ],
   "price":"4500",
   "pricing_policies":[
@@ -155,8 +155,8 @@
   "created": "2016-09-12T18:01:12",
   "modified": "2016-09-12T18:01:12",
   "categories": [{
-    "categoryId": 2,
-    "categoryName": "월정액"
+    "category_id": 2,
+    "category_name": "월정액"
   }],
   "price": "9900",
   "pricing_policies": [
@@ -174,8 +174,8 @@
     "externalProductId": "SVOD_MBC",
     "relatedCategories": [
       {
-        "categoryId": 52,
-        "categoryName": "MBC"
+        "category_id": 52,
+        "category_name": "MBC"
       }
     ]
  }
@@ -192,7 +192,7 @@
   "name":"터널",
   "type":"RVOD",
   "categories":[
-    {"categoryId":17}
+    {"category_id":17}
   ],
   "price":"4500",
   "pricing_policies":[
@@ -216,7 +216,7 @@
   "name": "지상파 통합 월정액",
   "type": "SVODPackage",
   "categories":[
-    {"categoryId":3}
+    {"category_id":3}
   ],
   "price":"25900",
   "pricing_policies":[
@@ -265,13 +265,34 @@
 | id	 | String | 	상품 ID |
 | name	 | String	 | 상품명	 |
 | type	 | String	 | 상품 타입 	 |
-| properties | ProductProperties	 | 상품 속성 |
-| policies | ProductPolicy	 | 상품 정책 |
-| id	 | String | 	상품 ID |
-| id	 | String | 	상품 ID |
-| id	 | String | 	상품 ID |
-| id	 | String | 	상품 ID |
-| id	 | String | 	상품 ID |
+| created | String	 | 상품 생성 시각 |
+| modified | String	 | 상품 수정 시각 |
+| categories	 | Category | 	상품 ID |
+| price	 | String | 	상품 ID |
+| pricing_policies	 | PricingPolicy | 	상품 ID |
+| image	 | String | 	상품 ID |
+| description	 | String | 	상품 ID |
+| average_rating	 | String | 	상품 ID |
+| rating_count	 | String | 	상품 ID |
+| upsell_ids	 | String | 	상품 ID |
+| cross_sell_ids	 | String | 	상품 ID |
+| details	 | Object | 	상품 ID |
+
+## Category
+| 이름 | 타입 | 설명 |
+| --- | --- | --- | --- |
+| category_id	 | Integer | 	카테고리 ID |
+| category_name	 | String	 | 카테고리명	 |
+
+## PricingPolicy
+| 이름 | 타입 | 설명 |
+| --- | --- | --- | --- |
+| policy_id	 | Integer | 	정책 ID |
+| policy_name	 | String	 | 정책명	 |
+| policy_type	 | String	 | 정책 타입 	 |
+| amount | Integer	 | 금액/비율  |
+| expiry_date | String	 | 정책 만료일 |
+
 
 ## 상품 종류
 - **RVOD**
@@ -283,7 +304,7 @@
   "created":"2016-09-03T19:55:10",
   "modified":"2016-09-03T19:55:41",
   "categories":[
-    {"categoryId":87, "categoryName":"무한도전"}
+    {"category_id":87, "category_name":"무한도전"}
   ],
   "price":"1500",
   "pricing_policies":[
@@ -321,8 +342,8 @@
   "created": "2016-09-12T18:01:12",
   "modified": "2016-09-12T18:01:12",
   "categories": [{
-    "categoryId": 2,
-    "categoryName": "월정액"
+    "category_id": 2,
+    "category_name": "월정액"
   }],
   "price": "9900",
   "pricing_policies": [
@@ -340,7 +361,7 @@
     "viewablePeriodState": 0,
     "externalProductId": "SVOD_MBC",
     "related_categories": [
-      { "categoryId": 52, "categoryName": "MBC" }
+      { "category_id": 52, "category_name": "MBC" }
     ]
    }
 }
@@ -354,8 +375,8 @@
   "created":"2012-09-03T13:55:10",
   "modified":"2016-09-03T17:24:41",
   "categories":[
-    {"categoryId":1, "categoryName":"무료VOD"},
-    {"categoryId":87, "categoryName":"무한도전"}
+    {"category_id":1, "category_name":"무료VOD"},
+    {"category_id":87, "category_name":"무한도전"}
   ],
   "price":"0",
   "pricing_policies":[
@@ -389,8 +410,8 @@
   "created": "2016-09-12T18:01:12",
   "modified": "2016-09-12T18:01:12",
   "categories": [{
-    "categoryId": 3,
-    "categoryName": "월정액묶음"
+    "category_id": 3,
+    "category_name": "월정액묶음"
   }],
   "price": "25900",
   "pricing_policies": [
@@ -432,7 +453,7 @@
   "created":"2016-07-01T19:55:10",
   "modified":"2016-07-01T19:55:41",
   "categories":[
-    {"categoryId":11, "categoryName":"액션"}
+    {"category_id":11, "category_name":"액션"}
   ],
   "price":"11900",
   "pricing_policies":[
@@ -469,7 +490,7 @@
   "created":"2016-09-13T19:55:10",
   "modified":"2016-09-13T19:55:41",
   "categories":[
-    {"categoryId":210, "categoryName":"광고"}
+    {"category_id":210, "category_name":"광고"}
   ],
   "price":"3000000",
   "pricing_policies":[
@@ -499,7 +520,7 @@
   "created":"2016-09-19T19:55:10",
   "modified":"2016-09-19T19:55:41",
   "categories":[
-    {"categoryId":210, "categoryName":"광고"}
+    {"category_id":210, "category_name":"광고"}
   ],
   "price":"8000000",
   "pricing_policies":[
@@ -532,7 +553,7 @@
   "created":"2016-09-13T11:55:10",
   "modified":"2016-09-13T11:55:41",
   "categories":[
-    {"categoryId":114, "categoryName":"T-shirts"}
+    {"category_id":114, "category_name":"T-shirts"}
   ],
   "price":"11500",
   "pricing_policies":[
