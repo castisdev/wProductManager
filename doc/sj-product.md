@@ -27,6 +27,7 @@
 			],
 			"policy":[],
 			"creation_date":"",
+			"related_product":[]
 		}
 	]
 }
