@@ -207,7 +207,7 @@
  - 201 Created
 
 
-### 상품 생성 (SVODPackage, Bundle)
+### 묶음 상품 생성 (SVODPackage, Bundle, Advertisement(Bundle))
 - **POST** /ProductManager/v1/products/
 
 ```json
@@ -469,7 +469,7 @@
   "cross_sell_ids": [],
   "details":
     {
-      "advertisement_type":"single",
+      "advertisement_type":"Single",
       "assets":[
         {"asset_id":"www.hchoice.co.kr|M0018210LFO1609130101"}
       ],
@@ -477,7 +477,7 @@
       "runtime":"1"
     }
 }
- - 
+ - 광고 묶음
 {
   "id":"AA00201609200201",
   "name":"게임 광고 묶음",
@@ -499,10 +499,10 @@
   "cross_sell_ids": [],
   "details":
     {
-      "advertisement_type":"bundle"
+      "advertisement_type":"Bundle"
       "summary":"거부할 수 없는 감동! 리니지2 레볼루션, 끝없이 펼쳐지는 해상전투! 한계를 뒤어넘는 리얼함을 느껴라! 해전1942",
       "runtime":"3",
-      "related_advertisements" : [
+      "related_products" : [
             {"id":"AA00201609200204", "name":"리니지2 레볼루션"}, 
             {"id":"AA00201609200205", "name":"해전1942"}
       ]
