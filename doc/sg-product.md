@@ -95,7 +95,6 @@
 }
 ```
 
-
 ### 단일 상품 조회 (with id)
 - **GET** /ProductManager/v1/products/:id
 - **GET** /ProductManager/v1/products/AA00201609080002
@@ -139,7 +138,6 @@
     }
 }
 ```
-
 
 ### 상품 조회 (with type)
 - **GET** /ProductManager/v1/products?type=:type
@@ -188,7 +186,6 @@
   
 ```
 
-
 ### 상품 생성
 - **POST** /ProductManager/v1/products/
 
@@ -211,7 +208,6 @@
 
 - Response
  - 201 Created
-
 
 ### 묶음 상품 생성 (SVODPackage, Bundle, Advertisement(Bundle))
 - **POST** /ProductManager/v1/products/
@@ -238,7 +234,6 @@
 
 - Response
  - 201 Created
-
 
 ### 상품 수정 (with id)
 - **PUT** /ProductManager/v1/products/:id
@@ -348,7 +343,9 @@
 
 
 ****
+
 ## Product
+- **Product**
 | 이름 | 타입 | 설명 |	|
 | --- | --- | --- | --- | --- |
 | id	 | String | 	상품 ID |	|
@@ -369,13 +366,13 @@
 | cross_sell_ids	 | String[] | 	교차판매 상품 ID 목록 |	|
 | details	 | Object | 	상품 상세 속성 |	|
 
-## Category
+- **Category**
 | 이름 | 타입 | 설명 |
 | --- | --- | --- | --- |
 | category_id	 | Integer | 	카테고리 ID |
 | category_name	 | String	 | 카테고리명	 |
 
-## PricingPolicy
+- **PricingPolicy**
 | 이름 | 타입 | 설명 |	|
 | --- | --- | --- | --- | --- |
 | policy_id	 | Integer | 	정책 ID |	|
@@ -385,6 +382,7 @@
 | expiry_date | String	 | 정책 만료일 | 'yyyy-MM-ddTHH:mm:ss'	|
 
 ****
+
 ## 상품 종류
 - **RVOD**
 ```json
