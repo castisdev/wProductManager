@@ -369,10 +369,15 @@
  policy_start_date | date | 정책의 시작일. </br> 단, type=license일 때만, 해당 정보가 라이선스시작일.
  policy_end_date | date | 정책의 만료일. </br> 단, type=license일 때만, 해당 정보가 라이선스만료일.
  
- products의 regular_price는 정규가격. 실제가격은 polices에 의해 변동 가능.</br> 
- 할인가격이 있는 경우, 실제가격은 </br> 
- 1. 고정가격 없는 경우, products의 regular_price - price = 실제가격. </br> 
- 2. 고정가격 있는 경우, </br> (type=fixedPrice의 price) - (type=discountedPrice의 price) = 실제가격.
+ products의 regular_price는 정규가격. 실제가격은 polices에 의해 변동 가능.</br>
+ 1. 할인가격이 없는 경우, 실제가격은 </br> 
+ 1) 고정가격 없는 경우, 실제가격 = products의 regular_price </br>
+ 2) 고정가격 있는 경우, 실제가격 = polices의 price (type=fixedPrice) </br>
+
+ 2. 할인가격이 있는 경우, 실제가격은 </br> 
+ 1) 고정가격 없는 경우, 실제가격 = products의 regular_price - price </br> 
+ 2) 고정가격 있는 경우, </br> 실제가격 = (type=fixedPrice의 price) - (type=discountedPrice의 price)
+ 
  
  ---
 
