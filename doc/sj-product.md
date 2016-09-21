@@ -372,3 +372,9 @@
  products의 regular_price는 정규가격. 실제가격은 polices에 의해 변동 가능.
  ---
 ## REFERENCE
+ - **REST API**
+ 	- [REST API란] (http://meetup.toast.com/posts/92)
+ - **Elasticsearch**
+ 	- [Elasticsearch 개념 및 예제] (http://opennote46.tistory.com/143)
+ - **기타**
+  - [구글 Postman - API테스트를 위한 툴] (http://ourcstory.tistory.com/6)
