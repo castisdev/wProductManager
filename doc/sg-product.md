@@ -339,8 +339,8 @@
  - 200 OK
 
 ### 가격정책 삭제 (with policy_id)
-- **DELETE** /ProductManager/v1/products/:policy_id
-- **DELETE** /ProductManager/v1/products/21
+- **DELETE** /ProductManager/v1/products/pricing-policies/:policy_id
+- **DELETE** /ProductManager/v1/products/pricing-policies/21
 
 - Response
  - 204 No Content
