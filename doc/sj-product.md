@@ -80,7 +80,7 @@
 		},
 		{
 			"id":"SVD222222222",
-			"name":"MBC",
+			"name":"MBC 월정액",
 			"type":"SVOD",
 			"regular_price":5000,
 			"description":"MBC 모든 유료 다시보기 무제한",
@@ -182,6 +182,30 @@
 }
 ```
 ##### SVOD
+```json
+{
+			"id":"SVD222222222",
+			"name":"MBC 월정액",
+			"type":"SVOD",
+			"regular_price":5000,
+			"description":"MBC 모든 유료 다시보기 무제한",
+			"categories":[
+			  {"category_id":20, "category_name":"월정액"}
+			 ],
+			"policies":[
+			  {
+			    "type":"license",
+			    "policy_start_date":"0000-00-00T00:00:00",
+			    "policy_end_date":"9999-12-31T11:59:59"
+			  }
+			],
+			"creation_date":"2016-09-20T10:00:00",
+			"related_products":[
+			  {"category_id":"25", "category_name":"MBC"},
+			]
+		}
+```
+
 ##### SVODPackage
 ##### bundle
 ```json
@@ -232,6 +256,6 @@
  policy_start_date | date | 정책의 시작일. </br> 단, type=license일 때만, 해당 정보가 라이선스시작일.
  policy_end_date | date | 정책의 만료일. </br> 단, type=license일 때만, 해당 정보가 라이선스만료일.
  
- **products의 regular_price는 정규가격. 실제가격은 polices에 의해 변동 가능.**
+ products의 regular_price는 정규가격. 실제가격은 polices에 의해 변동 가능.
  
 ## REFERENCE
