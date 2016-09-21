@@ -163,7 +163,7 @@
 	  }],
 	  "price": "9900",
 	  "pricing_policies": [
-	    {"policy_id":1, "policy_name":"월정액", "policy_type":"monthly_subscription", "amount":-1, "expiry_date":null}
+	    {"policy_id":2, "policy_name":"월정액", "policy_type":"monthly_subscription", "amount":-1, "expiry_date":null}
 	  ],
 	  "image": "http://localhost:8080/ProductManager/PosterImage/MBC.png",
 	  "description": "MBC 월정액 입니다.",
@@ -262,6 +262,89 @@
 
 - Response
  - 204 No Content
+ 
+
+### 전체 가격정책 조회
+- **GET** /ProductManager/v1/products/pricing-policies/
+- Response
+ - 200 OK
+ 
+```json
+{
+	"pricingPolicyList":[
+		{"policy_id":1, "policy_name":"고정금액", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null},
+		{"policy_id":2, "policy_name":"월정액", "policy_type":"monthly_subscription", "amount":-1, "expiry_date":null},
+		{"policy_id":3, "policy_name":"무료VOD", "policy_type":"free", "amount":-1, "expiry_date":null},
+		{"policy_id":12, "policy_name":"[할인]박해일 특집", "policy_type":"fixed_discount", "amount":1000, "expiry_date":null},
+		{"policy_id":21, "policy_name":"[고정금액]추석할인", "policy_type":"fixed_amount", "amount":7500, "expiry_date":"2016-09-19T00:00:00"},
+		{"policy_id":27, "policy_name":"광고청약", "policy_type":"advertising_subscription", "amount":-1, "expiry_date":"2016-12-19T00:00:00"}
+	]
+}
+```
+
+
+### 가격정책 조회 (with policy_id)
+- **GET** /ProductManager/v1/products/pricing-policies/:policy_id
+- **GET** /ProductManager/v1/products/pricing-policies/12
+- Response
+ - 200 OK
+ 
+```json
+{	
+	"policy_id":12, 
+	"policy_name":"[할인]박해일 특집", 
+	"policy_type":"fixed_discount", 
+	"amount":1000, 
+	"expiry_date":null
+}
+```
+
+
+### 가격정책 조회 (with policy_type)
+- **GET** /ProductManager/v1/products/pricing-policies?policy_type=:policy_type
+- **GET** /ProductManager/v1/products/pricing-policies?policy_type=fixed_amount
+- Response
+ - 200 OK
+ 
+```json
+{
+	"pricingPolicyList":[
+		{"policy_id":1, "policy_name":"고정금액", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null},
+		{"policy_id":21, "policy_name":"[고정금액]추석할인", "policy_type":"fixed_amount", "amount":7500, "expiry_date":"2016-09-19T00:00:00"}
+	]
+}
+```
+
+
+### 가격정책 생성
+- **POST** /ProductManager/v1/products/pricing-policies/
+
+```json
+
+```
+
+- Response
+ - 201 Created
+
+
+### 가격정책 수정 (with id)
+- **PUT** /ProductManager/v1/products/pricing-policies/:policy_id
+- **PUT** /ProductManager/v1/products/pricing-policies/21
+
+```json
+
+```
+
+- Response
+ - 200 OK
+
+### 가격정책 삭제 (with id)
+- **DELETE** /ProductManager/v1/products/:id
+- **DELETE** /ProductManager/v1/products/AA00201609080002
+
+- Response
+ - 204 No Content
+ 
 
 
 ****
@@ -297,7 +380,7 @@
 | --- | --- | --- | --- | --- |
 | policy_id	 | Integer | 	정책 ID |	|
 | policy_name	 | String	 | 정책명	 |	|
-| policy_type	 | String	 | 정책 타입 	 | free(무료), fixed_amount(고정금액), fixed_discount(고정금액 할인), <br/> rated_discount(고정비율 할인), monthly_subscription(월정액), <br/> advertising_subscription(광고청약) 	|
+| policy_type	 | String	 | 정책 타입 	 | free(무료), fixed_amount(고정금액), fixed_discount(고정금액 할인), <br/> rated_discount(비율 할인), monthly_subscription(월정액), <br/> advertising_subscription(광고청약) 	|
 | amount | Integer	 | 금액/비율  | -1: Product의 price 값을 따름	|
 | expiry_date | String	 | 정책 만료일 | 'yyyy-MM-ddTHH:mm:ss'	|
 
@@ -565,7 +648,7 @@
   ],
   "price":"11500",
   "pricing_policies":[
-    {"policy_id":21, "policy_name":"[고정금액] 추석할인", "policy_type":"fixed_amount", "amount":7500, "expiry_date":"2016-09-19T00:00:00"}
+    {"policy_id":21, "policy_name":"[고정금액]추석할인", "policy_type":"fixed_amount", "amount":7500, "expiry_date":"2016-09-19T00:00:00"}
   ],
   "image":"http://localhost:8080/ProductManager/PosterImage/t-shirts.png",
   "description":"2016 신상 티셔츠",
