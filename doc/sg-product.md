@@ -346,6 +346,7 @@
 
 ## Product
 - **Product**
+
 | 이름 | 타입 | 설명 |	|
 | --- | --- | --- | --- | --- |
 | id	 | String | 	상품 ID |	|
@@ -367,12 +368,14 @@
 | details	 | Object | 	상품 상세 속성 |	|
 
 - **Category**
+
 | 이름 | 타입 | 설명 |
 | --- | --- | --- | --- |
 | category_id	 | Integer | 	카테고리 ID |
 | category_name	 | String	 | 카테고리명	 |
 
 - **PricingPolicy**
+
 | 이름 | 타입 | 설명 |	|
 | --- | --- | --- | --- | --- |
 | policy_id	 | Integer | 	정책 ID |	|
