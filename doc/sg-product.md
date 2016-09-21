@@ -373,6 +373,7 @@
 | --- | --- | --- | --- |
 | category_id	 | Integer | 	카테고리 ID |
 | category_name	 | String	 | 카테고리명	 |
+| parent_category	 | Integer	 | 상위 카테고리	 |
 
 - **PricingPolicy**
 
