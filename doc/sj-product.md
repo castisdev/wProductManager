@@ -184,6 +184,8 @@
 ##### SVOD
 ```json
 {
+	"products":[
+		{
 			"id":"SVD222222222",
 			"name":"MBC 월정액",
 			"type":"SVOD",
@@ -204,6 +206,8 @@
 			  {"category_id":"25", "category_name":"MBC"},
 			]
 		}
+	]
+}
 ```
 
 ##### SVODPackage
