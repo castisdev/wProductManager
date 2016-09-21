@@ -228,7 +228,7 @@
  이름  | 타입 | 설명
  --- | --- | --- 
  type | string | 정책 타입. </br> license 라이선스, fixedPrice 고정가격(정가), discountedPrice 할인가격
- price | integer | 금액. products의 regular_price - price = 실제가격. </br> 단, type=fixedPrice인 price와 type=discountedPrice인 price가 있는 경우, (type=fixedPrice의 price) - (type=discountedPrice의 price) = 실제가격.
+ price | integer | 금액. </br> products의 regular_price - price = 실제가격. </br> 단, 고정가격과 할인가격 모두 있는 경우, (type=fixedPrice의 price) - (type=discountedPrice의 price) = 실제가격.
  policy_start_date | date | 정책의 시작일. </br> 단, type=license일 때만, 해당 정보가 라이선스시작일.
  policy_end_date | date | 정책의 만료일. </br> 단, type=license일 때만, 해당 정보가 라이선스만료일.
  
