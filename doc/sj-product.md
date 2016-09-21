@@ -7,7 +7,7 @@
 {
 	"products":[
 		{
-			"id":"AAA100000000",
+			"id":"RVD100000000",
 			"name":"밀정",
 			"type":"RVOD",
 			"regular_price":10000,
@@ -21,7 +21,7 @@
 				"rating":"15",
 				"runtime":140,
 				"release_year":2016,
-				"poster":"http://ip address:port num/ProductManager/v1/products/resources/posterImage/2016/AAA100000000.png"
+				"poster":"http://ip address:port num/ProductManager/v1/products/resources/posterImage/2016/RVD100000000.png"
 			},
 			"categories":[
 			  {"category_id":12, "category_name":"최신영화"}
@@ -44,7 +44,7 @@
 	]
 }
 ```
-
+---
 ### 상품 조회
 #### 전체 상품 조회
 - **GET** /ProductManager/v1/products
@@ -52,7 +52,7 @@
 {
 	"products":[
 		{
-			"id":"AAB100023450",
+			"id":"RVD100023450",
 			"name":"매그니피센트7",
 			"type":"RVOD",
 			"regular_price":12000,
@@ -64,7 +64,7 @@
 				"rating":"15",
 				"runtime":133,
 				"release_year":2016,
-				"poster":"http://ip address:port num/ProductManager/v1/products/resources/posterImage/2016/AAB10002345.png"
+				"poster":"http://ip address:port num/ProductManager/v1/products/resources/posterImage/2016/RVD10002345.png"
 			},
 			"categories":[
 			  {"category_id":12, "category_name":"최신영화"}
@@ -108,6 +108,7 @@
 #### 선택 상품 조회 (type)
 - **GET** /ProductManager/v1/products?type=:type
 
+---
 ### 상품 수정
 #### 선택 상품 수정 (id)
 - **PUT** /ProductManager/v1/products/{id}
@@ -123,10 +124,15 @@
 	]
 }
 ```
+---
 ### 상품 삭제
 #### 전체 상품 삭제
+- **DELETE** /ProductManager/v1/products
+
 #### 선택 상품 삭제 (id)
 - **DELETE** /ProductManager/v1/products/{id}
+
+---
 
 ### 상품 타입
  상품 타입 | 
@@ -137,13 +143,14 @@
  bundle |
  FOD | 
  AD |
+ AD-bundle |
 
 ##### RVOD
 ```json
 {
 	"products":[
 		{
-			"id":"AAA100000000",
+			"id":"RVD100000000",
 			"name":"밀정",
 			"type":"RVOD",
 			"regular_price":10000,
@@ -157,7 +164,7 @@
 				"rating":"15",
 				"runtime":140,
 				"release_year":2016,
-				"poster":"http://ip address:port num/ProductManager/v1/products/resources/posterImage/2016/AAA100000000.png"
+				"poster":"http://ip address:port num/ProductManager/v1/products/resources/posterImage/2016/RVD100000000.png"
 			},
 			"categories":[
 			  {"category_id":12, "category_name":"최신영화"},
@@ -257,7 +264,7 @@
 {
 	"products":[
 		{
-			"id":"EVE100000232",
+			"id":"BDL100000232",
 			"name":"[추석특집] 최신 액션 모아보기",
 			"type":"bundle",
 			"regular_price":25000,
@@ -280,10 +287,10 @@
 			],
 			"creation_date":"2016-09-20T14:30:05",
 			"related_products":[
-			  {"product_id":"AAA100000000"},
-			  {"product_id":"AAB100023450"},
-			  {"product_id":"CCK710900223"},
-			  {"product_id":"AAA100000002"},
+			  {"product_id":"RVD100000000"},
+			  {"product_id":"RVD100023450"},
+			  {"product_id":"RVD710900223"},
+			  {"product_id":"RVD100000002"},
 			]
 		}
 	]
@@ -291,7 +298,68 @@
 ```
 ##### FOD
 ##### AD
-
+```json
+{
+	"products":[
+		{
+			"id":"AD1000000000",
+			"name":"광고",
+			"type":"AD",
+			"regular_price":30000000,
+			"description":"최신 영화 10개 송출 전, 10% 확률로 해당 광고가 송출",
+			"details":{
+				"runtime":2,
+				"release_year":2016
+			},
+			"categories":[
+			  {"category_id":100, "category_name":"광고"}
+			],
+			"policies":[
+			  {
+			    "type":"license",
+			    "policy_start_date":"2016-09-01T00:00:00",
+			    "policy_end_date":"2016-09-31T11:59:59"
+			  }
+			],
+			"creation_date":"2016-09-13T12:30:00"
+		}
+	]
+}
+```
+##### AD-bundle
+```json
+{
+	"products":[
+		{
+			"id":"ADB100000000",
+			"name":"광고 묶음",
+			"type":"AD-bundle",
+			"regular_price":50000000,
+			"description":"최신 영화 10개 송출 전, 10% 확률로 해당 광고가 연속해서 송출",
+			"details":{
+				"runtime":5,
+				"release_year":2016
+			},
+			"categories":[
+			  {"category_id":100, "category_name":"광고"}
+			],
+			"policies":[
+			  {
+			    "type":"license",
+			    "policy_start_date":"2016-10-03T00:00:00",
+			    "policy_end_date":"2016-10-31T11:59:59"
+			  }
+			],
+			"creation_date":"2016-09-13T12:30:00",
+			"related_products":[
+			  {"product_id":"AD1000000000"},
+			  {"product_id":"AD1000000001"},
+			]
+		}
+	]
+}
+```
+---
 ### 상품 정책
 #### polices (상품 정책 properties)
  이름  | 타입 | 설명
@@ -302,5 +370,5 @@
  policy_end_date | date | 정책의 만료일. </br> 단, type=license일 때만, 해당 정보가 라이선스만료일.
  
  products의 regular_price는 정규가격. 실제가격은 polices에 의해 변동 가능.
- 
+ ---
 ## REFERENCE
