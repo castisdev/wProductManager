@@ -28,12 +28,13 @@
 			 ],
 			"policies":[
 			  {
-			    "is_licensing_policy":true,
+			    "type":"license",
 			    "policy_start_date":"2016-09-10T00:00:00",
 			    "policy_end_date":"2018-12-31T11:59:59"
 			  },
 			  {
-			    "sale_price":1000, 
+			  	"type":"discountedPrice",
+			    "price":1000, 
 			    "policy_start_date":"2016-09-10T00:00:00",
 			    "policy_end_date":"2016-09-15T00:00:00"
 			  }
@@ -70,7 +71,7 @@
 			 ],
 			"policies":[
 			  {
-			    "is_licensing_policy":true,
+			    "type":"license",
 			    "policy_start_date":"2016-09-20T00:00:00",
 			    "policy_end_date":"2018-12-31T11:59:59"
 			  }
@@ -88,7 +89,7 @@
 			 ],
 			"policies":[
 			  {
-			    "is_licensing_policy":true,
+			    "type":"license",
 			    "policy_start_date":"0000-00-00T00:00:00",
 			    "policy_end_date":"9999-12-31T11:59:59"
 			  }
@@ -164,11 +165,12 @@
 			],
 			"policies":[
 			  {
-			    "is_licensing_policy":true,
+			    "type":"license",
 			    "policy_start_date":"2016-09-10T00:00:00",
 			    "policy_end_date":"2018-12-31T11:59:59"
 			  },
 			  {
+			  	"type":"discountedPrice",
 			    "sale_price":1000,
 			    "policy_start_date":"2016-09-10T00:00:00",
 			    "policy_end_date":"2016-09-15T00:00:00"
@@ -196,11 +198,12 @@
 			],
 			"policies":[
 			  {
-			    "is_licensing_policy":true,
+			    "type":"license",
 			    "policy_start_date":"2016-09-10T00:00:00",
 			    "policy_end_date":"2016-09-31T11:59:59"
 			  },
 			  {
+			  	"type":"fixedPrice",
 			    "price":27500, 
 			    "policy_start_date":"2016-09-10T00:00:00",
 			    "policy_end_date":"2016-09-31T11:59:59"
@@ -224,11 +227,10 @@
 #### polices (상품 정책 properties)
  이름  | 타입 | 설명
  --- | --- | --- 
- is_licensing_policy | boolean | 상품의 라이선스 정보인지 유무. </br> default는 false. 
- price | integer | 고정금액.
- sale_price | integer | 할인금액. </br> 해당 값이 있는 경우, products의 regular_price - sale__price = 실제가격. </br> 단, policies에 price가 있는 경우는 price - sale_price = 실제가격.
- policy_start_date | date | 정책의 시작일. </br> 단, is_licensing_policy=true일 때만, 해당 정보가 라이선스시작일.
- policy_end_date | date | 정책의 만료일. </br> 단, is_licensing_policy=true일 때만, 해당 정보가 라이선스만료일.
+ type | string | 정책 타입. </br> license 라이선스, fixedPrice 고정가격(정가), discountedPrice 할인가격
+ price | integer | 금액. products의 regular_price - price = 실제가격. </br> 단, type=fixedPrice인 price와 type=discountedPrice인 price가 있는 경우, (type=fixedPrice의 price) - (type=discountedPrice의 price) = 실제가격.
+ policy_start_date | date | 정책의 시작일. </br> 단, type=license일 때만, 해당 정보가 라이선스시작일.
+ policy_end_date | date | 정책의 만료일. </br> 단, type=license일 때만, 해당 정보가 라이선스만료일.
  
  **products의 regular_price는 정규가격. 실제가격은 polices에 의해 변동 가능.**
  
