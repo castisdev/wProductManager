@@ -221,7 +221,7 @@
 {
 	"products":[
 		{
-			"id":"SVD222222222",
+			"id":"SVP111111111",
 			"name":"지상파 월정액",
 			"type":"SVODPackage",
 			"regular_price":13000,
