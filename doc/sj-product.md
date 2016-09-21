@@ -226,9 +226,9 @@
  --- | --- | --- 
  is_licensing_policy | boolean | 상품의 라이센스 정보인지 유무. default는 false. 
  price | integer | 해당 값이 있는 경우, 고정금액으로 사용
- sale_price | integer | 할인금액. 해당 값이 있는 경우, products의 regular_price - sale__price = 실제가격. 단, polices에 price가 있는 경우는 price - sale_price = 실제가격.
- policy_start_date | date | 정책의 시작일. is_licensing_policy=true일 때만, 해당 정보가 라이선스시작일.
- policy_end_date | date | 정책의 만료일. is_licensing_policy=true일 때만, 해당 정보가 라이선스만료일.
+ sale_price | integer | 할인금액. 해당 값이 있는 경우, products의 regular_price - sale__price = 실제가격. 단, policies에 price가 있는 경우는 price - sale_price = 실제가격.
+ policy_start_date | date | 정책의 시작일. 단, is_licensing_policy=true일 때만, 해당 정보가 라이선스시작일.
+ policy_end_date | date | 정책의 만료일. 단, is_licensing_policy=true일 때만, 해당 정보가 라이선스만료일.
  
  **products의 regular_price는 정규가격. 실제가격은 polices에 의해 변동 가능.**
  
