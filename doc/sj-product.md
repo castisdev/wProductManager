@@ -170,6 +170,12 @@
 			    "policy_end_date":"2018-12-31T11:59:59"
 			  },
 			  {
+			  	"type":"fixedPrice",
+			    "price":12000, 
+			    "policy_start_date":"2016-09-10T00:00:00",
+			    "policy_end_date":"2016-09-31T11:59:59"
+			  },
+			  {
 			  	"type":"discountedPrice",
 			    "sale_price":1000,
 			    "policy_start_date":"2016-09-10T00:00:00",
@@ -211,6 +217,41 @@
 ```
 
 ##### SVODPackage
+```json
+{
+	"products":[
+		{
+			"id":"SVD222222222",
+			"name":"지상파 월정액",
+			"type":"SVODPackage",
+			"regular_price":13000,
+			"description":"MBC, KBS, SBS 지상파 3사의 모든 유료 다시보기 무제한",
+			"categories":[
+			  {"category_id":20, "category_name":"월정액"}
+			 ],
+			"policies":[
+			  {
+			    "type":"license",
+			    "policy_start_date":"0000-00-00T00:00:00",
+			    "policy_end_date":"9999-12-31T11:59:59"
+			  },
+			  {
+			  	"type":"fixedPrice",
+			    "price":14000, 
+			    "policy_start_date":"2016-09-20T00:00:00",
+			    "policy_end_date":"2016-12-31T11:59:59"
+			  }
+			],
+			"creation_date":"2016-09-21T10:00:00",
+			"related_products":[
+			  {"category_id":"25", "category_name":"MBC"},
+			  {"category_id":"26", "category_name":"KBS"},
+			  {"category_id":"27", "category_name":"SBS"}
+			]
+		}
+	]
+}
+```
 ##### bundle
 ```json
 {
