@@ -327,7 +327,7 @@
  - 201 Created
 
 
-### 가격정책 수정 (with id)
+### 가격정책 수정 (with policy_id)
 - **PUT** /ProductManager/v1/products/pricing-policies/:policy_id
 - **PUT** /ProductManager/v1/products/pricing-policies/21
 
@@ -338,9 +338,9 @@
 - Response
  - 200 OK
 
-### 가격정책 삭제 (with id)
-- **DELETE** /ProductManager/v1/products/:id
-- **DELETE** /ProductManager/v1/products/AA00201609080002
+### 가격정책 삭제 (with policy_id)
+- **DELETE** /ProductManager/v1/products/:policy_id
+- **DELETE** /ProductManager/v1/products/21
 
 - Response
  - 204 No Content
