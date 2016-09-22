@@ -493,6 +493,55 @@
 }
 ```
 ---
+
+### 상품 schema
+- **Product** 
+ 
+ 이름  | 타입 | 설명
+ --- | --- | --- 
+ id | string | 상품 id
+ name | string | 상품 이름
+ type | string | 상품 타입 </br> FOD (무료VOD) </br> RVOD (VOD) &nbsp;  bundle (묶음상품) </br> SVOD (월정액) &nbsp; SVODPackage (월정액묶음) </br> AD (광고상품) &nbsp; AD-bundle (광고상품묶음)
+ reqular_price | integer | 상품 정규가격 </br> (실제가격은 polices에 의해 변동 가능)
+ description | string | 상품 개요
+ details | **detail** | 상품 상세정보
+ categories | **category** | 상품 카테고리
+ policies | **policy** | 상품 정책
+ creation_date | date | 상품 생성일
+ related_products | **related_product** | 관련 상품 정보
+ 
+- **detail** 
+
+ 이름  | 타입 | 설명
+ --- | --- | --- 
+director | string | 감독
+cast | string | 출연진
+genre | string | 장르
+rating | string | 등급 </br> ALL(전체관람가), 12, 15, 19
+runtime | integer | 상영시간(min)
+release_year | integer | 개봉한 년도
+poster | string | 포스터이미지
+> 현재는 비디오상품의 상세정보만 가정해, 위와 같은 형태
+
+- **category**
+
+ 이름  | 타입 | 설명
+ --- | --- | --- 
+ category_id | integer | 상품이 위치한 카테고리 id정보
+ category_name | string | 상품이 위치한 카테고리명
+ 
+- **policy**
+> 아래 **'상품정책'**에 설명
+
+- **related_product**
+
+ 이름  | 타입 | 설명
+ --- | --- | --- 
+ product_id | string | 관련된 상품 id
+ category_id | integer | 관련된 카테고리 id
+ category_name | string | 관련된 카테고리명
+
+--- 
 ### 상품 정책
 #### polices (상품 정책 properties)
  이름  | 타입 | 설명
