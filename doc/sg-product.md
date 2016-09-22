@@ -16,22 +16,22 @@
  - [가격정책 수정 (with policy_id)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#가격정책-수정-with-policy_id)
  - [가격정책 삭제 (with policy_id)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#가격정책-삭제-with-policy_id)
  - [상품 주문] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#상품-주문)
-  - ground_shipping (택배 등)
-  - online
+	- ground_shipping (택배 등)
+	- online
 - [Product] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#product)
- - Product
- - Category
- - PricingPolicy
+ 	- Product
+ 	- Category
+ 	- PricingPolicy
 - [상품 종류] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#상품-종류)
- - RVOD
- - SVOD
- - FOD
- - SVOD Package
- - Bundle
- - 광고
-  - 단일 광고
-  - 광고 묶음
- - Clothing
+	 - RVOD
+	 - SVOD
+	 - FOD
+	 - SVOD Package
+	 - Bundle
+	 - 광고
+		  - 단일 광고
+		  - 광고 묶음
+	 - Clothing
 
 
 ## Reference
@@ -761,3 +761,5 @@
    }
 }
 ```
+
+[맨위로] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#productmanager)
