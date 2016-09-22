@@ -378,8 +378,7 @@
  1) 고정가격 없는 경우, 실제가격 = products의 regular_price - price </br> 
  2) 고정가격 있는 경우, </br> 실제가격 = (type=fixedPrice의 price) - (type=discountedPrice의 price)
  
- 
- ---
+---
 
 ## REFERENCE
  - **REST API**
