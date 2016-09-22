@@ -1,4 +1,7 @@
 #ProductManager
+## 목차
+- [Reference] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#reference)
+- [API] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#api)
 
 ## Reference
 - [개발자에게 사랑받는 API 만들기] (http://www.mimul.com/pebble/default/2012/08/07/1344315512542.html)
