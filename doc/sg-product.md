@@ -258,7 +258,8 @@
 - Response
  - 204 No Content
  
-
+  
+  
 ### 전체 가격정책 조회
 - **GET** /ProductManager/v1/products/pricing-policies/
 - Response
@@ -277,7 +278,6 @@
 }
 ```
 
-
 ### 가격정책 조회 (with policy_id)
 - **GET** /ProductManager/v1/products/pricing-policies/:policy_id
 - **GET** /ProductManager/v1/products/pricing-policies/12
@@ -294,7 +294,6 @@
 }
 ```
 
-
 ### 가격정책 조회 (with policy_type)
 - **GET** /ProductManager/v1/products/pricing-policies?policy_type=:policy_type
 - **GET** /ProductManager/v1/products/pricing-policies?policy_type=fixed_amount
@@ -310,7 +309,6 @@
 }
 ```
 
-
 ### 가격정책 생성
 - **POST** /ProductManager/v1/products/pricing-policies/
 
@@ -320,7 +318,6 @@
 
 - Response
  - 201 Created
-
 
 ### 가격정책 수정 (with policy_id)
 - **PUT** /ProductManager/v1/products/pricing-policies/:policy_id
@@ -339,8 +336,67 @@
 
 - Response
  - 204 No Content
- 
+  
+  
+  
+### 상품 주문
+- **POST** /ProductManager/v1/orders/
 
+- ground_shipping (택배 등)
+```json
+{
+	"payment_method": "credit_card",
+	"shipping_method": "ground_shipping",
+	"billing": {
+		"first_name": "John",
+		"last_name": "Kim",
+		"address": "K타워 3층",
+		"postcode": "08801",
+		"phone": "010-2588-2588",
+		"email": "jkim@castis.com"
+	},
+	"shipping": {
+		"first_name": "John",
+		"last_name": "Kim",
+		"address": "K타워 3층",
+		"postcode": "08801"
+	},
+	"items": [
+		{"product_id": "AA00201609130001", "options":{"color":"Black", "size":"S"}, "quantity": 1},
+		{"product_id": "AA00201609130001", "options":{"color":"Blue", "size":"L"}, "quantity": 2}
+	],
+	"shipping_lines":[
+		{"method": "CJ 대한통운", "total": 2500}
+	]
+}	
+```
+- online
+```json
+{
+	"payment_method": "kakao_pay",
+	"shipping_method": "online",
+	"billing": {
+		"first_name": "John",
+		"last_name": "Kim",
+		"address": "K타워 3층",
+		"postcode": "08801",
+		"phone": "010-2588-2588",
+		"email": "jkim@castis.com"
+	},
+	"shipping": {
+		"phone": "010-2588-2588",
+		"email": "jkim@castis.com"
+	},
+	"items": [
+		{"product_id": "AA00201609030001", "options":{}, "quantity": 1}
+	],
+	"shipping_lines":[]
+}	
+```
+
+- Response
+ - 200 OK
+  
 
 ****
 
