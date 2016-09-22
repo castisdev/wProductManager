@@ -1,8 +1,8 @@
 
 # Product Manager API
 ### 상품 생성
-- **POST** /ProductManager/v1/products
-
+- **POST** /ProductManager/v1/products </br></br>
+- request
 ```json
 {
 	"products":[
@@ -47,7 +47,8 @@
 ---
 ### 상품 조회
 #### 전체 상품 조회
-- **GET** /ProductManager/v1/products
+- **GET** /ProductManager/v1/products </br></br>
+- response
 ```json
 {
 	"products":[
@@ -104,7 +105,8 @@
 ```
 #### 선택 상품 조회 (id)
 - **GET** /ProductManager/v1/products/{id}
-- Ex. /ProductManager/v1/products/SVD222222222
+- Ex. /ProductManager/v1/products/SVD222222222 </br></br>
+- response
 ```json
 {
 	"products":[
@@ -134,7 +136,8 @@
 ```
 #### 선택 상품 조회 (type)
 - **GET** /ProductManager/v1/products?type=:type
-- Ex. /ProductManager/v1/products?type='RVOD'
+- Ex. /ProductManager/v1/products?type='RVOD' </br></br>
+- response
 ```json
 {
 	"products":[
@@ -207,7 +210,8 @@
 ### 상품 수정
 #### 선택 상품 수정 (id)
 - **PUT** /ProductManager/v1/products/{id}
-- Ex. /ProductManager/v1/products/AAA100000000
+- Ex. /ProductManager/v1/products/AAA100000000 </br></br>
+- request
 ```json
 {
 	"products":[
@@ -226,6 +230,7 @@
 
 #### 선택 상품 삭제 (id)
 - **DELETE** /ProductManager/v1/products/{id}
+- Ex. /ProductManager/v1/products/AAA100000000 </br></br>
 
 ---
 
@@ -392,6 +397,39 @@
 }
 ```
 ##### FOD
+```json
+{
+	"products":[
+		{
+			"id":"FOD100000097",
+			"name":"[예고편] 미스 페레그린과 이상한 아이들의 집",
+			"type":"FOD",
+			"regular_price":0,
+			"description":"올 가을, 세상에 없던 유일한 미스터리 판타지!",
+			"details":{
+				"director":"팀버튼",
+				"cast":"에바그린(페레그린), 사무엘L.잭슨, 에이사버터필드(제이크)...",
+				"genre":"fantasy",
+				"rating":"12",
+				"runtime":2,
+				"release_year":2016,
+				"poster":"http://ip address:port num/ProductManager/v1/products/resources/posterImage/2016/FOD100000097.png"
+			},
+			"categories":[
+			  {"category_id":100, "category_name":"최신영화 예고편"}
+			],
+			"policies":[
+			  {
+			    "type":"license",
+			    "policy_start_date":"2016-09-22T14:00:00",
+			    "policy_end_date":"2018-12-31T11:59:59"
+			  }
+			],
+			"creation_date":"2016-09-22T14:00:00",
+		}
+	]
+}
+```
 ##### AD
 ```json
 {
