@@ -342,7 +342,7 @@
 ### 상품 주문
 - **POST** /ProductManager/v1/orders/
 
-- ground_shipping (택배 등)
+ - ground_shipping (택배 등)
 ```json
 {
 	"payment_method": "credit_card",
@@ -370,7 +370,7 @@
 	]
 }	
 ```
-- online
+ - online
 ```json
 {
 	"payment_method": "kakao_pay",
@@ -661,7 +661,10 @@
       "runtime":"1"
     }
 }
+```
+
  - 광고 묶음
+```json
 {
   "id":"AA00201609200201",
   "name":"게임 광고 묶음",
