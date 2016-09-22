@@ -514,7 +514,7 @@
 ---
 
 ## 상품 설계 마인드맵
-![preview](https://raw.githubusercontent.com/ssuji/github-test/master/resources/img/product-mingmap.jpg)
+![preview](https://raw.githubusercontent.com/ssuji/github-test/master/resources/img/product-mindmap.png)
 
 ## REFERENCE
  - **REST API**
