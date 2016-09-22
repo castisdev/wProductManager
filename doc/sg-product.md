@@ -2,6 +2,37 @@
 ## 목차
 - [Reference] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#reference)
 - [API] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#api)
+ - 전체 상품 조회
+ - 단일 상품 조회 (with id)
+ - 상품 조회 (with type)
+ - 상품 생성
+ - 묶음 상품 생성 (SVODPackage, Bundle, Advertisement(Bundle))
+ - 상품 수정 (with id)
+ - 상품 삭제 (with id)
+ - 전체 가격정책 조회
+ - 가격정책 조회 (with policy_id)
+ - 가격정책 조회 (with policy_type)
+ - 가격정책 생성
+ - 가격정책 수정 (with policy_id)
+ - 가격정책 삭제 (with policy_id)
+ - 상품 주문
+  - ground_shipping (택배 등)
+  - online
+- Product
+ - Product
+ - Category
+ - PricingPolicy
+- 상품 종류 
+ - RVOD
+ - SVOD
+ - FOD
+ - SVOD Package
+ - Bundle
+ - 광고
+  - 단일 광고
+  - 광고 묶음
+ - Clothing
+
 
 ## Reference
 - [개발자에게 사랑받는 API 만들기] (http://www.mimul.com/pebble/default/2012/08/07/1344315512542.html)
