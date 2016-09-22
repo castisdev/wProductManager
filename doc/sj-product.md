@@ -416,7 +416,7 @@
 				"poster":"http://ip address:port num/ProductManager/v1/products/resources/posterImage/2016/FOD100000097.png"
 			},
 			"categories":[
-			  {"category_id":100, "category_name":"최신영화 예고편"}
+			  {"category_id":107, "category_name":"최신영화 예고편"}
 			],
 			"policies":[
 			  {
@@ -512,6 +512,9 @@
  2) 고정가격 있는 경우, </br> 실제가격 = (type=fixedPrice의 price) - (type=discountedPrice의 price)
  
 ---
+
+## 상품 설계 마인드맵
+![preview](https://raw.githubusercontent.com/ssuji/github-test/master/resources/img/product-mingmap.jpg)
 
 ## REFERENCE
  - **REST API**
