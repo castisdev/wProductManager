@@ -540,10 +540,12 @@ poster | string | 포스터이미지
  product_id | string | 관련된 상품 id
  category_id | integer | 관련된 카테고리 id
  category_name | string | 관련된 카테고리명
+> 해당 상품과 관련된 상품들의 정보 </br>
+>> '상품id'  혹은  '카테고리id' 로 관련 상품들의 정보 확인 가능
 
 --- 
 ### 상품 정책
-#### polices (상품 정책 properties)
+#### policy (상품 정책 properties)
  이름  | 타입 | 설명
  --- | --- | --- 
  type | string | 정책 타입. </br> license 라이선스, fixedPrice 고정가격(정가), discountedPrice 할인가격
@@ -551,11 +553,10 @@ poster | string | 포스터이미지
  policy_start_date | date | 정책의 시작일. </br> 단, type=license일 때만, 해당 정보가 라이선스시작일.
  policy_end_date | date | 정책의 만료일. </br> 단, type=license일 때만, 해당 정보가 라이선스만료일.
  
- products의 regular_price는 정규가격. 실제가격은 polices에 의해 변동 가능.</br>
+ > product의 regular_price는 정규가격. &nbsp; 실제가격은 polices에 의해 변동 가능.</br>
  1. 할인가격이 없는 경우, 실제가격은 </br> 
  1) 고정가격 없는 경우, 실제가격 = products의 regular_price </br>
- 2) 고정가격 있는 경우, 실제가격 = polices의 price (type=fixedPrice) </br>
-
+ 2) 고정가격 있는 경우, 실제가격 = polices의 price (type=fixedPrice) </br></br>
  2. 할인가격이 있는 경우, 실제가격은 </br> 
  1) 고정가격 없는 경우, 실제가격 = products의 regular_price - price </br> 
  2) 고정가격 있는 경우, </br> 실제가격 = (type=fixedPrice의 price) - (type=discountedPrice의 price)
