@@ -2,27 +2,27 @@
 ## 목차
 - [Reference] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#reference)
 - [API] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#api)
- - 전체 상품 조회
- - 단일 상품 조회 (with id)
- - 상품 조회 (with type)
- - 상품 생성
- - 묶음 상품 생성 (SVODPackage, Bundle, Advertisement(Bundle))
- - 상품 수정 (with id)
- - 상품 삭제 (with id)
- - 전체 가격정책 조회
- - 가격정책 조회 (with policy_id)
- - 가격정책 조회 (with policy_type)
- - 가격정책 생성
- - 가격정책 수정 (with policy_id)
- - 가격정책 삭제 (with policy_id)
- - 상품 주문
+ - [전체 상품 조회] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#전체-상품-조회)
+ - [단일 상품 조회 (with id)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#단일-상품-조회-with-id)
+ - [상품 조회 (with type)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#상품-조회-with-type)
+ - [상품 생성] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#상품-생성)
+ - [묶음 상품 생성 (SVODPackage, Bundle, Advertisement(Bundle))] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#묶음-상품-생성-svodpackage-bundle-advertisementbundle)
+ - [상품 수정 (with id)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#상품-수정-with-id)
+ - [상품 삭제 (with id)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#상품-삭제-with-id)
+ - [전체 가격정책 조회] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#전체-가격정책-조회)
+ - [가격정책 조회 (with policy_id)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#가격정책-조회-with-policy_id)
+ - [가격정책 조회 (with policy_type)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#가격정책-조회-with-policy_type)
+ - [가격정책 생성] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#가격정책-생성)
+ - [가격정책 수정 (with policy_id)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#가격정책-수정-with-policy_id)
+ - [가격정책 삭제 (with policy_id)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#가격정책-삭제-with-policy_id)
+ - [상품 주문] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#상품-주문)
   - ground_shipping (택배 등)
   - online
-- Product
+- [Product] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#product)
  - Product
  - Category
  - PricingPolicy
-- 상품 종류 
+- [상품 종류] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#상품-종류)
  - RVOD
  - SVOD
  - FOD
