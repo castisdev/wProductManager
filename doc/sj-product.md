@@ -1,5 +1,23 @@
 
 # Product Manager
+## 개발 범위
+ 1. 상품 범주
+  - 상품 (vod, 광고 상품) CRUD <br/>
+    - FOD, RVOD, bundle, SVOD, SVODPackage, AD, AD-bundle
+  - 상품 카테고리 CRUD
+  - 상품 정책 CRUD
+ 2. prototype app
+  - jdk 1.7
+  - tomcat 7
+  - spring 4
+  - mongoDB
+  - prototype app 개발 예상 MD : 5MD (설계별도)
+ 3. 현재 API 설계 진행률
+  - 65%
+    - 상품 CRUD API 완료
+    - 상품 카테고리 CRUD API 설계중
+    - 상품 정책 CRUD API 설계중
+
 ## 상품 설계 마인드맵
 ![preview](https://raw.githubusercontent.com/ssuji/github-test/master/resources/img/product-mindmap.png)
 
@@ -47,7 +65,22 @@ poster | string | 포스터이미지
 >> **PUT** /ProductManager/v1/products/categories 로 수정 가능
 
 - **policy**
-> 아래 **'상품정책'**에 설명
+
+ 이름  | 타입 | 설명
+ --- | --- | --- 
+ policy_id | integer | 정책 id
+ type | string | 정책 타입. </br> license (라이선스) &nbsp; fixedPrice (고정가격.정가) &nbsp; discountedPrice (할인가격) ```[READ-ONLY]```
+ price | integer | 금액. ```[READ-ONLY]```
+ policy_start_date | date | 정책의 시작일. </br> 단, type=license일 때만, 해당 정보가 라이선스시작일. ```[READ-ONLY]```
+ policy_end_date | date | 정책의 만료일. </br> 단, type=license일 때만, 해당 정보가 라이선스만료일. ```[READ-ONLY]```
+ 
+ > product의 regular_price는 정규가격. &nbsp; 실제가격은 polices에 의해 변동 가능.</br>
+>> 1. 할인가격이 없는 경우, 실제가격은 </br> 
+ 1) 고정가격 없는 경우, 실제가격 = products의 regular_price </br>
+ 2) 고정가격 있는 경우, 실제가격 = polices의 price (type=fixedPrice) </br></br>
+>> 2. 할인가격이 있는 경우, 실제가격은 </br> 
+ 1) 고정가격 없는 경우, 실제가격 = products의 regular_price - price </br> 
+ 2) 고정가격 있는 경우, </br> 실제가격 = (type=fixedPrice의 price) - (type=discountedPrice의 price)
 
 - **related_product**
 
@@ -61,23 +94,28 @@ poster | string | 포스터이미지
 >> '상품id'  혹은  '카테고리id' 로 관련 상품들의 정보 확인 가능
 
 --- 
-### 상품 정책
-#### policy (상품 정책 properties)
- 이름  | 타입 | 설명
+## 상품 카테고리  schema
+- **categories**
+ 
+이름  | 타입 | 설명
  --- | --- | --- 
- type | string | 정책 타입. </br> license (라이선스) &nbsp; fixedPrice (고정가격.정가) &nbsp; discountedPrice (할인가격)
- price | integer | 금액.
- policy_start_date | date | 정책의 시작일. </br> 단, type=license일 때만, 해당 정보가 라이선스시작일.
- policy_end_date | date | 정책의 만료일. </br> 단, type=license일 때만, 해당 정보가 라이선스만료일.
+id | integer | 카테고리 id
+name | string | 카테고리 이름
+parent_id | integer | 부모카테고리 id
+image | array | 카테고리
+
+---
+## 상품 정책  schema
+- **policies**
  
- > product의 regular_price는 정규가격. &nbsp; 실제가격은 polices에 의해 변동 가능.</br>
- 1. 할인가격이 없는 경우, 실제가격은 </br> 
- 1) 고정가격 없는 경우, 실제가격 = products의 regular_price </br>
- 2) 고정가격 있는 경우, 실제가격 = polices의 price (type=fixedPrice) </br></br>
- 2. 할인가격이 있는 경우, 실제가격은 </br> 
- 1) 고정가격 없는 경우, 실제가격 = products의 regular_price - price </br> 
- 2) 고정가격 있는 경우, </br> 실제가격 = (type=fixedPrice의 price) - (type=discountedPrice의 price)
- 
+이름  | 타입 | 설명
+ --- | --- | --- 
+id | integer | 정책 id
+type | string | 정책 타입. </br> license (라이선스) &nbsp; fixedPrice (고정가격.정가) &nbsp; discountedPrice (할인가격)
+price | integer | 금액.
+start_date | date | 정책의 시작일. </br> 단, type=license일 때만, 해당 정보가 라이선스시작일. 
+end_date | date | 정책의 만료일. </br> 단, type=license일 때만, 해당 정보가 라이선스만료일.
+
 ---
 ## API
 구분 | API | 설명
