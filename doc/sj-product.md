@@ -42,7 +42,7 @@ poster | string | 포스터이미지
  이름  | 타입 | 설명
  --- | --- | --- 
  category_id | integer | 상품이 위치한 카테고리 id정보
- category_name | string | 상품이 위치한 카테고리명
+ category_name | string | 상품이 위치한 카테고리명 ```[READ-ONLY]```
  
 - **policy**
 > 아래 **'상품정책'**에 설명
@@ -52,8 +52,9 @@ poster | string | 포스터이미지
  이름  | 타입 | 설명
  --- | --- | --- 
  product_id | string | 관련된 상품 id
+ product_name | string | 관련된 상품명 ```[READ-ONLY]```
  category_id | integer | 관련된 카테고리 id
- category_name | string | 관련된 카테고리명
+ category_name | string | 관련된 카테고리명 ```[READ-ONLY]```
 > 해당 상품과 관련된 상품들의 정보 </br>
 >> '상품id'  혹은  '카테고리id' 로 관련 상품들의 정보 확인 가능
 
@@ -474,10 +475,10 @@ poster | string | 포스터이미지
 			],
 			"creation_date":"2016-09-20T14:30:05",
 			"related_products":[
-			  {"product_id":"RVD100000000"},
-			  {"product_id":"RVD100023450"},
-			  {"product_id":"RVD710900223"},
-			  {"product_id":"RVD100000002"},
+			  {"product_id":"RVD100000000", "product_name":"밀정"},
+			  {"product_id":"RVD100023450", "product_name":"매그니피센트7"},
+			  {"product_id":"RVD710900223", "product_name":"메카닉: 리크루트"},
+			  {"product_id":"RVD100000002", "product_name":"수어사이드 스쿼드"},
 			]
 		}
 	]
@@ -575,8 +576,8 @@ poster | string | 포스터이미지
 			],
 			"creation_date":"2016-09-13T12:30:00",
 			"related_products":[
-			  {"product_id":"AD1000000000"},
-			  {"product_id":"AD1000000001"},
+			  {"product_id":"AD1000000000", "product_name":"광고"},
+			  {"product_id":"AD1000000001", "product_name":"광고2"},
 			]
 		}
 	]
