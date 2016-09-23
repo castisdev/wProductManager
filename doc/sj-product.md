@@ -80,6 +80,11 @@ poster | string | 포스터이미지
  
 ---
 ## API
+구분 | API | 설명
+--- | --- | ---
+상품 CRUD | **POST** /ProductManager/v1/products </br> **GET** /ProductManager/v1/products </br> **PUT** /ProductManager/v1/products </br> **DELETE** /ProductManager/v1/products | 상품 생성</br>상품 조회</br>상품 수정</br>상품 삭제
+상품 카테고리 CRUD | **POST** /ProductManager/v1/products/categories </br> **GET** /ProductManager/v1/products/categories </br> **PUT** /ProductManager/v1/products/categories </br> **DELETE** /ProductManager/v1/products/categories | 상품카테고리 생성</br>상품카테고리 조회</br>상품카테고리 수정</br>상품카테고리 삭제
+상품 정책 CRUD | **POST** /ProductManager/v1/products/policies </br> **GET** /ProductManager/v1/products/policies </br> **PUT** /ProductManager/v1/products/policies </br> **DELETE** /ProductManager/v1/products/policies | 상품정책 생성</br>상품정책 조회</br>상품정책 수정</br>상품정책 삭제
 ### 상품 생성
 - **POST** /ProductManager/v1/products </br></br>
 - request
