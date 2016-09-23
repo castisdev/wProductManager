@@ -15,21 +15,21 @@
  type | string | 상품 타입 </br> FOD (무료VOD) </br> RVOD (VOD) &nbsp;  bundle (묶음상품) </br> SVOD (월정액) &nbsp; SVODPackage (월정액묶음) </br> AD (광고상품) &nbsp; AD-bundle (광고상품묶음)
  reqular_price | integer | 상품 정규가격 </br> (실제가격은 polices에 의해 변동 가능)
  description | string | 상품 개요
- details | **detail** | 상품 상세정보
- categories | **category** | 상품 카테고리
- policies | **policy** | 상품 정책
+ details | **details** | 상품 상세정보
+ categories | **array** | 상품 카테고리 리스트. &nbsp; **category**의 list
+ policies | **array** | 상품 정책 리스트. &nbsp; **policy**의 list
  creation_date | date | 상품 생성일
- related_products | **related_product** | 관련 상품 정보
+ related_products | **array** | 관련 상품 정보 리스트.  &nbsp; **related_product** 의 list
  
-- **detail** 
+- **details** 
 
  이름  | 타입 | 설명
  --- | --- | --- 
 director | string | 감독
 cast | string | 출연진
 genre | string | 장르
-rating | string | 등급 </br> ALL(전체관람가), 12, 15, 19
-runtime | integer | 상영시간(min)
+rating | string | 등급 </br> ALL (전체관람가), 12, 15, 19
+runtime | integer | 상영시간 (min)
 release_year | integer | 개봉한 년도
 poster | string | 포스터이미지
 > 현재는 비디오상품의 상세정보만 가정해, 위와 같은 형태
@@ -59,7 +59,7 @@ poster | string | 포스터이미지
 #### policy (상품 정책 properties)
  이름  | 타입 | 설명
  --- | --- | --- 
- type | string | 정책 타입. </br> license 라이선스, fixedPrice 고정가격(정가), discountedPrice 할인가격
+ type | string | 정책 타입. </br> license (라이선스) &nbsp; fixedPrice (고정가격.정가) &nbsp; discountedPrice (할인가격)
  price | integer | 금액.
  policy_start_date | date | 정책의 시작일. </br> 단, type=license일 때만, 해당 정보가 라이선스시작일.
  policy_end_date | date | 정책의 만료일. </br> 단, type=license일 때만, 해당 정보가 라이선스만료일.
