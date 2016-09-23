@@ -54,7 +54,7 @@
 	- **개발 예상 MD: 5 MD**
 
 #### 현재 API 설계 진행률
-- 85%
+- 90%
 	- Product CRUD API 완료
 	- PricingPolicy CRUD API 보수 및 완성
 	- Category CRUD API 설계 및 완성
