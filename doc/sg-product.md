@@ -41,7 +41,7 @@
 - API
 	- Product (상품 생성/조회/수정/삭제)
 	- PricingPolicy (가격정책 생성/조회/수정/삭제)
-	- Category (카테고리 생성/조회/수정/삭제)
+	- ~~Category (카테고리 생성/조회/수정/삭제)~~
 - 상품 종류
 	- RVOD, SVOD, FOD, SVODPackage, Bundle, 광고, Clothing
 - ProtoType App
@@ -50,7 +50,7 @@
 	- springframework 3
 		- Spring-Data MongoDB
 	- mongoDB 3.2
-	- 상품/가격정책/카테고리의 CRUD가 가능한 app 개발 <br/><br/>
+	- 상품/가격정책/~~카테고리~~의 CRUD가 가능한 app 개발 <br/><br/>
 	- **개발 예상 MD: 5 MD**
 
 #### 현재 API 설계 진행률
@@ -376,7 +376,13 @@
 - **POST** /ProductManager/v1/products/pricing-policies/
 
 ```json
-
+{
+	"policy_id":114,
+	"policy_name":"[할인]또 오해영, 또 할인",
+	"policy_type":"fixed_discount",
+	"amount":3000,
+	"expiry_date":"2016-10-15T00:00:00"
+}
 ```
 
 - Response
@@ -384,10 +390,13 @@
 
 ### 가격정책 수정 (with policy_id)
 - **PUT** /ProductManager/v1/products/pricing-policies/:policy_id
-- **PUT** /ProductManager/v1/products/pricing-policies/21
+- **PUT** /ProductManager/v1/products/pricing-policies/114
 
 ```json
-
+{
+	"amount":2000,
+	"expiry_date":"2017-01-01T00:00:00"
+}
 ```
 
 - Response
@@ -395,11 +404,72 @@
 
 ### 가격정책 삭제 (with policy_id)
 - **DELETE** /ProductManager/v1/products/pricing-policies/:policy_id
-- **DELETE** /ProductManager/v1/products/pricing-policies/21
+- **DELETE** /ProductManager/v1/products/pricing-policies/114
 
 - Response
  - 204 No Content
 
+
+
+### 전체 카테고리 조회
+- **GET** /ProductManager/v1/products/categories/
+- Response
+ - 200 OK
+ 
+```json
+{
+	"categoryList":[
+    		{"category_id":1, "category_name":"무료VOD", "parent_category":0},
+    		{"category_id":2, "category_name":"영화", "parent_category":0},
+    		{"category_id":11, "category_name":"액션", "parent_category":2},
+        	{"category_id":15, "category_name":"전쟁", "parent_category":2}
+	]
+}
+```
+
+### 카테고리 조회 (with category_id)
+- **GET** /ProductManager/v1/products/categories/:category_id
+- **GET** /ProductManager/v1/products/categories/87
+- Response
+ - 200 OK
+ 
+```json
+{
+    	"category_id":87, "category_name":"무한도전", "parent_category":52
+}
+```
+
+### 카테고리 생성
+- **POST** /ProductManager/v1/products/categories/
+
+```json
+{
+    	"category_id":255, "category_name":"혼술남녀", "parent_category":215
+}
+```
+
+- Response
+ - 201 Created
+
+### 카테고리 수정 (with category_id)
+- **PUT** /ProductManager/v1/products/categories/:category_id
+- **PUT** /ProductManager/v1/products/categories/255
+
+```json
+{
+	"category_name":"[HD]혼술남녀"
+}
+```
+
+- Response
+ - 200 OK
+
+### 카테고리 삭제 (with category_id)
+- **DELETE** /ProductManager/v1/products/categories/:category_id
+- **DELETE** /ProductManager/v1/products/categories/255
+
+- Response
+ - 204 No Content
 
 
 ### 상품 주문
