@@ -35,28 +35,28 @@
 
 ## ProductManager 설계 및 개발
 #### 개발 범위
-> API
+- API
 	- Product (상품 생성/조회/수정/삭제)
 	- PricingPolicy (가격정책 생성/조회/수정/삭제)
 	- Category (카테고리 생성/조회/수정/삭제)
-> ProtoType App
+- ProtoType App
 	- jdk 1.7
 	- tomcat 7
 	- springframework 3
-		● Spring-Data MongoDB
+		- Spring-Data MongoDB
 	- mongoDB 3.2
 	- 상품/가격정책/카테고리의 CRUD가 가능한 app 개발
->> 개발 예상 MD: 5 MD
+> 개발 예상 MD: 5 MD
 
-> 상품 종류
+- 상품 종류
 	- RVOD, SVOD, FOD, SVODPackage, Bundle
 	- 광고와 VOD 이외의 상품(Clothing 등)은 제외
 
 #### 현재 API 설계 진행률
-> 85%
-> - Product CRUD API 완료
-> - PricingPolicy CRUD API 보수 및 완성
-> - Category CRUD API 설계 및 완성
+- 85%
+	- Product CRUD API 완료
+	- PricingPolicy CRUD API 보수 및 완성
+	- Category CRUD API 설계 및 완성
 
 
 ****
