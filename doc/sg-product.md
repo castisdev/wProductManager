@@ -33,6 +33,34 @@
 		  - 광고 묶음
 	 - Clothing
 
+## ProductManager 설계 및 개발
+#### 개발 범위
+> API
+	- Product (상품 생성/조회/수정/삭제)
+	- PricingPolicy (가격정책 생성/조회/수정/삭제)
+	- Category (카테고리 생성/조회/수정/삭제)
+> ProtoType App
+	- jdk 1.7
+	- tomcat 7
+	- springframework 3
+		● Spring-Data MongoDB
+	- mongoDB 3.2
+	- 상품/가격정책/카테고리의 CRUD가 가능한 app 개발
+>> 개발 예상 MD: 5 MD
+
+> 상품 종류
+	- RVOD, SVOD, FOD, SVODPackage, Bundle
+	- 광고와 VOD 이외의 상품(Clothing 등)은 제외
+
+#### 현재 API 설계 진행률
+> 85%
+> - Product CRUD API 완료
+> - PricingPolicy CRUD API 보수 및 완성
+> - Category CRUD API 설계 및 완성
+
+
+****
+
 
 ## Reference
 - [개발자에게 사랑받는 API 만들기] (http://www.mimul.com/pebble/default/2012/08/07/1344315512542.html)
@@ -441,7 +469,7 @@
 | --- | --- | --- | --- | --- |
 | id	 | String | 	상품 ID |	|
 | name	 | String	 | 상품명	 |	|
-| type	 | String	 | 상품 타입 	 | FOD(무료VOD), RVOD(편당보기VOD), SVOD(월정액VOD), <br/> SVODPackage(월정액 묶음), Bundle(묶음 상품), <br/> Advertisement(광고), Clothing(의류), ...	|
+| type	 | String	 | 상품 타입 	 | FOD(무료VOD), RVOD(편당보기VOD), SVOD(월정액VOD), <br/> SVODPackage(월정액 묶음), Bundle(묶음 상품), <br/> ~~Advertisement(광고)~~, ~~Clothing(의류)~~, ...	|
 | created | String	 | 상품 생성 시각 | 'yyyy-MM-ddTHH:mm:ss'	|
 | modified | String	 | 상품 수정 시각 | 'yyyy-MM-ddTHH:mm:ss'	|
 | categories	 | Category | 	카테고리 리스트 |	|
@@ -724,7 +752,7 @@
       "summary":"거부할 수 없는 감동! 리니지2 레볼루션, 끝없이 펼쳐지는 해상전투! 한계를 뒤어넘는 리얼함을 느껴라! 해전1942",
       "runtime":"3",
       "related_products" : [
-            {"id":"AA00201609200204", "name":"리니지2 레볼루션"}, 
+            {"id":"AA00201609200204", "name":"리니지2 레볼루션"},
             {"id":"AA00201609200205", "name":"해전1942"}
       ]
     }
