@@ -13,7 +13,7 @@
  id | string | 상품 id
  name | string | 상품 이름
  type | string | 상품 타입 </br> VOD (비디오) &nbsp; Clothes (옷) &nbsp; Music (음원) ...
- detailed-type | string | 상품 상세 타입 </br> FOD (무료VOD) </br> RVOD (VOD) &nbsp;  bundle (묶음상품) </br> SVOD (월정액) &nbsp; SVODPackage (월정액묶음) </br> AD (광고상품) &nbsp; AD-bundle (광고상품묶음)
+ detailed_type | string | 상품 상세 타입 </br> FOD (무료VOD) </br> RVOD (VOD) &nbsp;  bundle (묶음상품) </br> SVOD (월정액) &nbsp; SVODPackage (월정액묶음) </br> AD (광고상품) &nbsp; AD-bundle (광고상품묶음)
  reqular_price | integer | 상품 정규가격 </br> (실제가격은 polices에 의해 변동 가능)
  description | string | 상품 개요
  details | **details** | 상품 상세정보
@@ -21,7 +21,7 @@
  policies | **array** | 상품 정책 리스트. &nbsp; **policy**의 list
  creation_date | date | 상품 생성일
  related_products | **array** | 관련 상품 정보 리스트.  &nbsp; **related_product** 의 list
-> 상품의 각 type 별 detailed-type 지정 가능
+> 상품의 각 type 별 detailed_type 지정 가능
 >> 현재는 비디오상품의 상세 타입만 예시
 
 - **details** 
@@ -87,7 +87,7 @@ poster | string | 포스터이미지
 			"id":"RVD100000000",
 			"name":"밀정",
 			"type":"VOD",
-			"detailed-type":"RVOD",
+			"detailed_type":"RVOD",
 			"regular_price":10000,
 			"description":"1920년대 일제강점기, 조선인 출신 일본경찰 이정출(송강호)은 무장독립운동 단체 의열단의 뒤를 캐라는 특명으로
 			의열단의 리더 김우진(공유)에게 접근하고, 한 시대의 양 극단에 서 있는 두 사람은 서로의 정체와 의도를 알면서도 속내를 감춘 채
@@ -134,7 +134,7 @@ poster | string | 포스터이미지
 			"id":"RVD100023450",
 			"name":"매그니피센트7",
 			"type":"VOD",
-			"detailed-type":"RVOD",
+			"detailed_type":"RVOD",
 			"regular_price":12000,
 			"description":"정의를 원하죠. 하지만 복수를 택하겠어요",
 			"details":{
@@ -162,7 +162,7 @@ poster | string | 포스터이미지
 			"id":"SVD222222222",
 			"name":"MBC 월정액",
 			"type":"VOD",
-			"detailed-type":"SVOD",
+			"detailed_type":"SVOD",
 			"regular_price":5000,
 			"description":"MBC 모든 유료 다시보기 무제한",
 			"categories":[
@@ -194,7 +194,7 @@ poster | string | 포스터이미지
 			"id":"SVD222222222",
 			"name":"MBC 월정액",
 			"type":"VOD",
-			"detailed-type":"SVOD",
+			"detailed_type":"SVOD",
 			"regular_price":5000,
 			"description":"MBC 모든 유료 다시보기 무제한",
 			"categories":[
@@ -216,8 +216,8 @@ poster | string | 포스터이미지
 }
 ```
 #### 선택 상품 조회 (type)
-- **GET** /ProductManager/v1/products?type=:type
-- Ex. /ProductManager/v1/products?type='RVOD' </br></br>
+- **GET** /ProductManager/v1/products?type=:type&detailed_type=:detailed_type
+- Ex. /ProductManager/v1/products?type='VOD'&detailed_type='RVOD' </br></br>
 - response
 ```json
 {
@@ -226,7 +226,7 @@ poster | string | 포스터이미지
 			"id":"RVD100023450",
 			"name":"매그니피센트7",
 			"type":"VOD",
-			"detailed-type":"RVOD",
+			"detailed_type":"RVOD",
 			"regular_price":12000,
 			"description":"정의를 원하죠. 하지만 복수를 택하겠어요",
 			"details":{
@@ -254,7 +254,7 @@ poster | string | 포스터이미지
 			"id":"RVD100000000",
 			"name":"밀정",
 			"type":"VOD",
-			"detailed-type":"RVOD",
+			"detailed_type":"RVOD",
 			"regular_price":10000,
 			"description":"1920년대 일제강점기, 조선인 출신 일본경찰 이정출(송강호)은 무장독립운동 단체 의열단의 뒤를 캐라는 특명으로
 			의열단의 리더 김우진(공유)에게 접근하고, 한 시대의 양 극단에 서 있는 두 사람은 서로의 정체와 의도를 알면서도 속내를 감춘 채
@@ -336,7 +336,7 @@ poster | string | 포스터이미지
 			"id":"RVD100000000",
 			"name":"밀정",
 			"type":"VOD",
-			"detailed-type":"RVOD",
+			"detailed_type":"RVOD",
 			"regular_price":10000,
 			"description":"1920년대 일제강점기, 조선인 출신 일본경찰 이정출(송강호)은 무장독립운동 단체 의열단의 뒤를 캐라는 특명으로
 			의열단의 리더 김우진(공유)에게 접근하고, 한 시대의 양 극단에 서 있는 두 사람은 서로의 정체와 의도를 알면서도 속내를 감춘 채
@@ -386,7 +386,7 @@ poster | string | 포스터이미지
 			"id":"SVD222222222",
 			"name":"MBC 월정액",
 			"type":"VOD",
-			"detailed-type":"SVOD",
+			"detailed_type":"SVOD",
 			"regular_price":5000,
 			"description":"MBC 모든 유료 다시보기 무제한",
 			"categories":[
@@ -416,7 +416,7 @@ poster | string | 포스터이미지
 			"id":"SVP111111111",
 			"name":"지상파 월정액",
 			"type":"VOD",
-			"detailed-type":"SVODPackage",
+			"detailed_type":"SVODPackage",
 			"regular_price":13000,
 			"description":"MBC, KBS, SBS 지상파 3사의 모든 유료 다시보기 무제한",
 			"categories":[
@@ -453,7 +453,7 @@ poster | string | 포스터이미지
 			"id":"BDL100000232",
 			"name":"[추석특집] 최신 액션 모아보기",
 			"type":"VOD",
-			"detailed-type":"bundle",
+			"detailed_type":"bundle",
 			"regular_price":25000,
 			"description":"길고 긴 추석 연휴, 최신 액션과 함께!",
 			"categories":[
@@ -491,7 +491,7 @@ poster | string | 포스터이미지
 			"id":"FOD100000097",
 			"name":"[예고편] 미스 페레그린과 이상한 아이들의 집",
 			"type":"VOD",
-			"detailed-type":"FOD",
+			"detailed_type":"FOD",
 			"regular_price":0,
 			"description":"올 가을, 세상에 없던 유일한 미스터리 판타지!",
 			"details":{
@@ -526,7 +526,7 @@ poster | string | 포스터이미지
 			"id":"AD1000000000",
 			"name":"광고",
 			"type":"VOD",
-			"detailed-type":"AD",
+			"detailed_type":"AD",
 			"regular_price":30000000,
 			"description":"최신 영화 10개 송출 전, 10% 확률로 해당 광고가 송출",
 			"details":{
@@ -556,7 +556,7 @@ poster | string | 포스터이미지
 			"id":"ADB100000000",
 			"name":"광고 묶음",
 			"type":"VOD",
-			"detailed-type":"AD-bundle",
+			"detailed_type":"AD-bundle",
 			"regular_price":50000000,
 			"description":"최신 영화 10개 송출 전, 10% 확률로 해당 광고가 연속해서 송출",
 			"details":{
