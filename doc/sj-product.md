@@ -43,7 +43,9 @@ poster | string | 포스터이미지
  --- | --- | --- 
  category_id | integer | 상품이 위치한 카테고리 id정보
  category_name | string | 상품이 위치한 카테고리명 ```[READ-ONLY]```
- 
+> [REAE-ONLY]는 상품 수정(**PUT** /ProductManager/v1/products)시, 수정 불가
+>> **PUT** /ProductManager/v1/products/categories 로 수정 가능
+
 - **policy**
 > 아래 **'상품정책'**에 설명
 
