@@ -53,7 +53,7 @@
 
 - Response
  - 200 OK
- 
+
 ```json
 {
   "productList":[
@@ -135,7 +135,7 @@
 
 - Response
  - 200 OK
- 
+
 ```json
 {
   "id":"AA00201609080002",
@@ -179,7 +179,7 @@
 
 - Response
  - 200 OK
- 
+
 ```json
 {
   "productList":[
@@ -203,7 +203,7 @@
 	  "rating_count":80,
 	  "upsell_ids": [],
 	  "cross_sell_ids": [],
-	  "details": {		
+	  "details": {
 	    "viewingLength": "031:00:00",
 	    "viewablePeriodState": 0,
 	    "externalProductId": "SVOD_MBC",
@@ -217,7 +217,7 @@
     }
   ]
 }
-  
+
 ```
 
 ### 상품 생성
@@ -291,14 +291,14 @@
 
 - Response
  - 204 No Content
- 
-  
-  
+
+
+
 ### 전체 가격정책 조회
 - **GET** /ProductManager/v1/products/pricing-policies/
 - Response
  - 200 OK
- 
+
 ```json
 {
 	"pricingPolicyList":[
@@ -317,13 +317,13 @@
 - **GET** /ProductManager/v1/products/pricing-policies/12
 - Response
  - 200 OK
- 
+
 ```json
-{	
-	"policy_id":12, 
-	"policy_name":"[할인]박해일 특집", 
-	"policy_type":"fixed_discount", 
-	"amount":1000, 
+{
+	"policy_id":12,
+	"policy_name":"[할인]박해일 특집",
+	"policy_type":"fixed_discount",
+	"amount":1000,
 	"expiry_date":null
 }
 ```
@@ -370,12 +370,12 @@
 
 - Response
  - 204 No Content
-  
-  
-  
+
+
+
 ### 상품 주문
 - **POST** /ProductManager/v1/orders/
- 
+
 - ground_shipping (택배 등)
 ```json
 {
@@ -402,7 +402,7 @@
 	"shipping_lines":[
 		{"method": "CJ 대한통운", "total": 2500}
 	]
-}	
+}
 ```
 - online
 ```json
@@ -425,12 +425,12 @@
 		{"product_id": "AA00201609030001", "options":{}, "quantity": 1}
 	],
 	"shipping_lines":[]
-}	
+}
 ```
 
 - Response
  - 200 OK
-  
+
 
 ****
 
@@ -538,8 +538,8 @@
   "rating_count":80,
   "upsell_ids": [],
   "cross_sell_ids": [],
-  "details": 
-   {		
+  "details":
+   {
     "viewingLength": "031:00:00",
     "viewablePeriodState": 0,
     "externalProductId": "SVOD_MBC",
@@ -606,7 +606,7 @@
   "rating_count":15,
   "upsell_ids": [],
   "cross_sell_ids": [],
-  "details": {		
+  "details": {
     "viewingLength": "031:00:00",
     "viewablePeriodState": 0,
     "externalProductId": "SVODPackage_1",
@@ -653,11 +653,11 @@
       "viewingLength" : "001:00:00",
       "viewablePeriodState" : 0,
       "externalProductId" : "Bundle_1",
-      "related_products" : [ 
-            {"id":"AA00201609190001", "name":"아이언맨"}, 
-            {"id":"AA00201609190002", "name":"아이언맨2"}, 
-            {"id":"AA00201609190003", "name":"캡틴아메리카:퍼스트 어벤져"}, 
-            {"id":"AA00201609190004", "name":"인크레더블 헐크"}, 
+      "related_products" : [
+            {"id":"AA00201609190001", "name":"아이언맨"},
+            {"id":"AA00201609190002", "name":"아이언맨2"},
+            {"id":"AA00201609190003", "name":"캡틴아메리카:퍼스트 어벤져"},
+            {"id":"AA00201609190004", "name":"인크레더블 헐크"},
             {"id":"AA00201609190005", "name":"토르:천둥의 신"}
         ]
     }
