@@ -43,8 +43,7 @@
 	- PricingPolicy (가격정책 생성/조회/수정/삭제)
 	- Category (카테고리 생성/조회/수정/삭제)
 - 상품 종류
-	- RVOD, SVOD, FOD, SVODPackage, Bundle
-	- 광고와 VOD 이외의 상품(Clothing 등)은 제외
+	- RVOD, SVOD, FOD, SVODPackage, Bundle, 광고, Clothing
 - ProtoType App
 	- jdk 1.7
 	- tomcat 7
