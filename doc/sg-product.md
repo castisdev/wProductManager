@@ -45,8 +45,8 @@
 	- springframework 3
 		- Spring-Data MongoDB
 	- mongoDB 3.2
-	- 상품/가격정책/카테고리의 CRUD가 가능한 app 개발
-> 개발 예상 MD: 5 MD
+	- 상품/가격정책/카테고리의 CRUD가 가능한 app 개발 <br/><br/>
+	- **개발 예상 MD: 5 MD**
 
 - 상품 종류
 	- RVOD, SVOD, FOD, SVODPackage, Bundle
