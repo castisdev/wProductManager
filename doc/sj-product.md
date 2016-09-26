@@ -46,13 +46,13 @@
 
  이름  | 타입 | 설명
  --- | --- | --- 
-director | string | 감독
-cast | string | 출연진
-genre | string | 장르
-rating | string | 등급 </br> ALL (전체관람가), 12, 15, 19
-runtime | integer | 상영시간 (min)
-release_year | integer | 개봉한 년도
-poster | string | 포스터이미지
+ director | string | 감독
+ cast | string | 출연진
+ genre | string | 장르
+ rating | string | 등급 </br> ALL (전체관람가), 12, 15, 19
+ runtime | integer | 상영시간 (min)
+ release_year | integer | 개봉한 년도
+ poster | string | 포스터이미지
 > 현재는 비디오상품의 상세정보만 가정해, 위와 같은 형태
 
 - **category**
@@ -94,29 +94,33 @@ poster | string | 포스터이미지
 >> '상품id'  혹은  '카테고리id' 로 관련 상품들의 정보 확인 가능
 
 --- 
-## 상품 카테고리  schema
-- **categories**
- 
-이름  | 타입 | 설명
- --- | --- | --- 
-id | integer | 카테고리 id
-name | string | 카테고리 이름
-parent_id | integer | 부모카테고리 id
-image | array | 카테고리 이미지
 
+## 상품 카테고리 schema
+
+- **categories**
+
+ 이름  | 타입 | 설명
+ --- | --- | --- 
+ id | integer | 카테고리 id
+ name | string | 카테고리 이름
+ parent_id | integer | 부모카테고리 id </br> (자신이 가장 최상위카테고리일 땐, -1)
+ image | string | 카테고리 이미지 
+ display_order | integer | 메뉴에 보여지는 순서
+> display_order 작은 순서에 따라, 메뉴에 보여짐
 
 ---
-## 상품 정책  schema
-- **policies**
- 
-이름  | 타입 | 설명
+## 상품 정책 schema
+
+- **policies** 
+
+ 이름  | 타입 | 설명
  --- | --- | --- 
-id | integer | 정책 id
-name | string | 정책 이름.
-type | string | 정책 타입. </br> license (라이선스) &nbsp; fixedPrice (고정가격.정가) &nbsp; discountedPrice (할인가격)
-price | integer | 금액.
-start_date | date | 정책의 시작일. </br> 단, type=license일 때만, 해당 정보가 라이선스시작일. 
-end_date | date | 정책의 만료일. </br> 단, type=license일 때만, 해당 정보가 라이선스만료일.
+ id | integer | 정책 id
+ name | string | 정책 이름
+ type | string | 정책 타입 </br> license (라이선스) &nbsp; fixedPrice (고정가격.정가) &nbsp; discountedPrice (할인가격)
+ price | integer | 금액
+ start_date | date | 정책의 시작일 </br> 단, type=license일 때만, 해당 정보가 라이선스시작일. 
+ end_date | date | 정책의 만료일 </br> 단, type=license일 때만, 해당 정보가 라이선스만료일.
 
 ---
 ## API
@@ -632,8 +636,157 @@ end_date | date | 정책의 만료일. </br> 단, type=license일 때만, 해당
 ```
 ---
 ### 상품 카테고리 생성
- - **POST** /ProductManager/v1/products/categories </br></br>
+ - **POST** /ProductManager/v1/products/categories
+ - request
+```json
+{
+	"categories":[
+		{
+			"id":5,
+			"name":"국내 영화",
+			"parent_id":2,
+			"image":"http://ip address:port num/ProductManager/v1/products/resources/categoryImage/CA5.png",
+			"display_order":10
+		}
+	]
+}
+```
 
+---
+### 상품 카테고리 조회
+#### 전체 상품 카테고리 조회
+ - **GET** /ProductManager/v1/products/categories </br></br>
+
+ - response
+```json
+{
+	"categories":[
+		{
+			"id":2,
+			"name":"영화",
+			"parent_id":-1,
+			"image":"http://ip address:port num/ProductManager/v1/products/resources/categoryImage/CA2.png",
+			"display_order":2
+		},
+		{
+			"id":3,
+			"name":"지상파",
+			"parent_id":-1,
+			"image":"http://ip address:port num/ProductManager/v1/products/resources/categoryImage/CA3.png",
+			"display_order":1
+		},
+		{
+			"id":5,
+			"name":"MBC",
+			"parent_id":3,
+			"image":"http://ip address:port num/ProductManager/v1/products/resources/categoryImage/CA5.png",
+			"display_order":10
+		},
+		{
+			"id":10,
+			"name":"[무한도전]",
+			"parent_id":5,
+			"image":"http://ip address:port num/ProductManager/v1/products/resources/categoryImage/CA10.png",
+			"display_order":44
+		},
+		{
+			"id":11,
+			"name":"[서프라이즈]",
+			"parent_id":5,
+			"image":"http://ip address:port num/ProductManager/v1/products/resources/categoryImage/CA11.png",
+			"display_order":43
+		}
+	]
+}
+```
+
+#### 선택 상품 카테고리 조회 (id)
+ - **GET** /ProductManager/v1/products/categories/{id} </br>
+ - Ex. /ProductManager/v1/products/categories/3 </br></br>
+ 
+ - response
+```json
+{
+	"categories":[
+		{
+			"id":3,
+			"name":"지상파",
+			"parent_id":-1,
+			"image":"http://ip address:port num/ProductManager/v1/products/resources/categoryImage/CA3.png",
+			"display_order":1
+		}
+	]
+}
+```
+
+#### 선택 상품 카테고리 조회 (parent_id)
+ - **GET** /ProductManager/v1/products/categories?parent_id=:parent_id </br>
+ - Ex. /ProductManager/v1/products/categories?parent_id=5 </br></br>
+ 
+ - response
+```json
+{
+	"categories":[
+		{
+			"id":10,
+			"name":"[무한도전]",
+			"parent_id":5,
+			"image":"http://ip address:port num/ProductManager/v1/products/resources/categoryImage/CA10.png",
+			"display_order":44
+		},
+		{
+			"id":11,
+			"name":"[서프라이즈]",
+			"parent_id":5,
+			"image":"http://ip address:port num/ProductManager/v1/products/resources/categoryImage/CA11.png",
+			"display_order":43
+		},
+		{
+			"id":12,
+			"name":"[우리결혼했어요]",
+			"parent_id":5,
+			"image":"http://ip address:port num/ProductManager/v1/products/resources/categoryImage/CA12.png",
+			"display_order":46
+		},
+		{
+			"id":13,
+			"name":"[나혼자산다]",
+			"parent_id":5,
+			"image":"http://ip address:port num/ProductManager/v1/products/resources/categoryImage/CA13.png",
+			"display_order":42
+		}
+	]
+}
+```
+> noSQL 쿼리 요청 시, display_order desc 등으로 요청하면 동일 카테고리 내 카테고리 정렬 가능.
+
+---
+### 상품 카테고리 수정
+#### 선택 상품 카테고리 수정 (id)
+ - **PUT** /ProductManager/v1/products/categories/{id} </br>
+ - Ex. /ProductManager/v1/products/categories/10 </br></br>
+ 
+ - request
+```json
+{
+	"categories":[
+	{
+			"id":10,
+			"display_order":41
+		}
+	]
+}
+```
+
+---
+### 상품 카테고리 삭제
+#### 전체 상품 카테고리 삭제
+ - **DELETE** /ProductManager/v1/products/categories
+ 
+#### 선택 상품 카테고리 삭제 (id)
+ - **DELETE** /ProductManager/v1/products/categories/{id} </br>
+ - Ex. /ProductManager/v1/products/categories/100 </br></br>
+ 
 ---
 ### 상품 정책 생성
  - **POST** /ProductManager/v1/products/policies </br></br>
@@ -689,26 +842,25 @@ end_date | date | 정책의 만료일. </br> 단, type=license일 때만, 해당
 ```
 #### 선택 상품 정책 조회 (id)
  - **GET** /ProductManager/v1/products/policies/{id} </br>
- - **GET** /ProductManager/v1/products/policies/LCS100000000 </br></br>
+ - Ex. /ProductManager/v1/products/policies/LCS100000002 </br></br>
 
  - response
 ```json
 {
 	"polices":[
 		{
-			"id":"",
-			"name":"",
-			"type":"",
-			"price":"",
-			"start_date":"",
-			"end_date":""
+			"id":"LCS100000002",
+			"name":"[상품 라이선스] 수어사이드 스쿼드",
+			"type":"license",
+			"start_date":"2016-08-20T00:00:00",
+			"end_date":"2020-08-20T23:59:59"
 		}
 	]
 }
 ```
 #### 선택 상품 정책 조회 (type)
  - **GET** /ProductManager/v1/products/policies?type=:type </br>
- - **GET** /ProductManager/v1/products/policies?type='license' </br></br>
+ - Ex. /ProductManager/v1/products/policies?type='license' </br></br>
 
  - response
 ```json
@@ -742,10 +894,20 @@ end_date | date | 정책의 만료일. </br> 단, type=license일 때만, 해당
 ### 상품 정책 수정
 #### 선택 상품 정책 수정 (id)
  - **PUT** /ProductManager/v1/products/policies/{id} </br>
- - **PUT** /ProductManager/v1/products/policies/LCS100000000 </br></br>
+ - Ex. /ProductManager/v1/products/policies/FXP22222222 </br></br>
 
  - request
-
+```json
+{
+	"polices":[
+		{
+			"id":"FXP22222222",
+			"name":"[10월1째주 할인영화-고정가격] 1000",
+			"price":1000
+		}
+	]
+}
+```
 ---
 ### 상품 정책 삭제
 #### 전체 상품 정책 삭제
@@ -753,7 +915,7 @@ end_date | date | 정책의 만료일. </br> 단, type=license일 때만, 해당
  
 #### 선택 상품 정책 삭제 (id)
  - **DELETE** /ProductManager/v1/products/policies/{id} </br>
- - **DELETE** /ProductManager/v1/products/policies/LCS100000000 </br></br>
+ - Ex. /ProductManager/v1/products/policies/LCS100000000 </br></br>
 
 ---
 ### HTTP status code
