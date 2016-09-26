@@ -13,7 +13,7 @@
   - mongoDB
   - prototype app 개발 예상 MD : 5MD (설계별도)
  3. 현재 API 설계 진행률
-  - 65%
+  - 80%
     - 상품 CRUD API 완료
     - 상품 카테고리 CRUD API 설계중
     - 상품 정책 CRUD API 설계중
