@@ -54,10 +54,10 @@
 	- **개발 예상 MD: 5 MD**
 
 #### 현재 API 설계 진행률
-- 90%
+- 99%
 	- Product CRUD API 완료
-	- PricingPolicy CRUD API 보수 및 완성
-	- Category CRUD API 설계 및 완성
+	- PricingPolicy CRUD API 완료
+	- Category CRUD API 완료
 
 
 ****
@@ -540,7 +540,7 @@
 | --- | --- | --- | --- | --- |
 | id	 | String | 	상품 ID |	|
 | name	 | String	 | 상품명	 |	|
-| type	 | String	 | 상품 타입 	 | FOD(무료VOD), RVOD(편당보기VOD), SVOD(월정액VOD), <br/> SVODPackage(월정액 묶음), Bundle(묶음 상품), <br/> ~~Advertisement(광고)~~, ~~Clothing(의류)~~, ...	|
+| type	 | String	 | 상품 타입 	 | FOD(무료VOD), RVOD(편당보기VOD), SVOD(월정액VOD), <br/> SVODPackage(월정액 묶음), Bundle(묶음 상품), <br/> Advertisement(광고), Clothing(의류), ...	|
 | created | String	 | 상품 생성 시각 | 'yyyy-MM-ddTHH:mm:ss'	|
 | modified | String	 | 상품 수정 시각 | 'yyyy-MM-ddTHH:mm:ss'	|
 | categories	 | Category | 	카테고리 리스트 |	|
