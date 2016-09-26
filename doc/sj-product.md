@@ -102,7 +102,8 @@ poster | string | 포스터이미지
 id | integer | 카테고리 id
 name | string | 카테고리 이름
 parent_id | integer | 부모카테고리 id
-image | array | 카테고리
+image | array | 카테고리 이미지
+
 
 ---
 ## 상품 정책  schema
@@ -111,6 +112,7 @@ image | array | 카테고리
 이름  | 타입 | 설명
  --- | --- | --- 
 id | integer | 정책 id
+name | string | 정책 이름.
 type | string | 정책 타입. </br> license (라이선스) &nbsp; fixedPrice (고정가격.정가) &nbsp; discountedPrice (할인가격)
 price | integer | 금액.
 start_date | date | 정책의 시작일. </br> 단, type=license일 때만, 해당 정보가 라이선스시작일. 
@@ -363,7 +365,7 @@ end_date | date | 정책의 만료일. </br> 단, type=license일 때만, 해당
 
 ---
 
-### 상품 타입
+### 상품 타입 별 상품
  상품 타입 | 
  --- | 
  RVOD | 
@@ -628,6 +630,131 @@ end_date | date | 정책의 만료일. </br> 단, type=license일 때만, 해당
 	]
 }
 ```
+---
+### 상품 카테고리 생성
+ - **POST** /ProductManager/v1/products/categories </br></br>
+
+---
+### 상품 정책 생성
+ - **POST** /ProductManager/v1/products/policies </br></br>
+
+ - request
+```json
+{
+	"policies":[
+		{
+			"id":"LCS100000000",
+			"name":"[상품 라이선스] 밀정",
+			"type":"license",
+			"start_date":"2016-09-26T18:00:00",
+			"end_date":"2021-09-26T18:00:00"
+		}
+	]
+}
+```
+---
+### 상품 정책 조회
+#### 전체 상품 정책 조회
+ - **GET** /ProductManager/v1/products/policies </br></br>
+
+ - response
+```json
+{
+	"polices":[
+		{
+			"id":"LCS100000001",
+			"name":"[상품 라이선스] 매그니피센트7",
+			"type":"license",
+			"start_date":"2016-09-01T18:00:00",
+			"end_date":"2021-09-01T18:00:00"
+		},
+		{
+			"id":"FXP22222222",
+			"name":"[10월1째주 할인영화-고정가격] 3000",
+			"type":"fixedPrice",
+			"price":3000,
+			"start_date":"2016-10-01T00:00:00",
+			"end_date":"2016-10-08T23:59:59"
+		},
+		{
+			"id":"DCP33333333",
+			"name":"[추석특집-가격할인가] 5000",
+			"type":"discountedPrice",
+			"price":5000,
+			"start_date":"2016-09-10T00:00:00",
+			"end_date":"2016-09-18T23:59:59"
+		}
+	]
+}
+```
+#### 선택 상품 정책 조회 (id)
+ - **GET** /ProductManager/v1/products/policies/{id} </br>
+ - **GET** /ProductManager/v1/products/policies/LCS100000000 </br></br>
+
+ - response
+```json
+{
+	"polices":[
+		{
+			"id":"",
+			"name":"",
+			"type":"",
+			"price":"",
+			"start_date":"",
+			"end_date":""
+		}
+	]
+}
+```
+#### 선택 상품 정책 조회 (type)
+ - **GET** /ProductManager/v1/products/policies?type=:type </br>
+ - **GET** /ProductManager/v1/products/policies?type='license' </br></br>
+
+ - response
+```json
+{
+	"polices":[
+		{
+			"id":"LCS100000000",
+			"name":"[상품 라이선스] 밀정",
+			"type":"license",
+			"start_date":"2016-09-26T18:00:00",
+			"end_date":"2021-09-26T18:00:00"
+		},
+		{
+			"id":"LCS100000001",
+			"name":"[상품 라이선스] 매그니피센트7",
+			"type":"license",
+			"start_date":"2016-09-01T18:00:00",
+			"end_date":"2021-09-01T18:00:00"
+		},
+		{
+			"id":"LCS100000002",
+			"name":"[상품 라이선스] 수어사이드 스쿼드",
+			"type":"license",
+			"start_date":"2016-08-20T00:00:00",
+			"end_date":"2020-08-20T23:59:59"
+		}
+	]
+}
+```
+---
+### 상품 정책 수정
+#### 선택 상품 정책 수정 (id)
+ - **PUT** /ProductManager/v1/products/policies/{id} </br>
+ - **PUT** /ProductManager/v1/products/policies/LCS100000000 </br></br>
+
+ - request
+
+---
+### 상품 정책 삭제
+#### 전체 상품 정책 삭제
+ - **DELETE** /ProductManager/v1/products/policies
+ 
+#### 선택 상품 정책 삭제 (id)
+ - **DELETE** /ProductManager/v1/products/policies/{id} </br>
+ - **DELETE** /ProductManager/v1/products/policies/LCS100000000 </br></br>
+
 ---
 ### HTTP status code
 status code | 설명
