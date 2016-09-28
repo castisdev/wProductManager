@@ -12,9 +12,9 @@ public interface IProductDao {
 	
 	public void updateBasicProduct(BasicProduct bp) throws Exception;
 	
-	public void getBasicProduct(String productId) throws Exception;
+	public BasicProduct getBasicProduct(String productId) throws Exception;
 	
-	public void deleteBasicProduct(String productId) throws Exception;
+	public void deleteBasicProduct(BasicProduct bp) throws Exception;
 	
 	// PurcaseProduct
 	public void insertPurchaseProduct(PurchaseProduct pp) throws Exception;

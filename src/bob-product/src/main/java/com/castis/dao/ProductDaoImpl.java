@@ -1,7 +1,5 @@
 package com.castis.dao;
 
-import javax.persistence.EntityManagerFactory;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Repository;
@@ -23,15 +21,15 @@ public class ProductDaoImpl implements IProductDao {
 	}
 	
 	public void updateBasicProduct(BasicProduct bp) throws Exception{
-		
+		mongo.save(bp);
 	}
 	
-	public void getBasicProduct(String productId) throws Exception{
-		
+	public BasicProduct getBasicProduct(String productId) throws Exception{
+		return mongo.findById(productId, BasicProduct.class);
 	}
 	
-	public void deleteBasicProduct(String productId) throws Exception{
-		
+	public void deleteBasicProduct(BasicProduct bp) throws Exception{
+		mongo.remove(bp);
 	}
 	
 	// PurcaseProduct

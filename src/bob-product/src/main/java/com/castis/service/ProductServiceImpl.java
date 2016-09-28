@@ -22,15 +22,15 @@ public class ProductServiceImpl implements IProductService{
 	}
 	
 	public void updateBasicProduct(BasicProduct bp) throws Exception{
-		
+		productDao.updateBasicProduct(bp);
 	}
 	
-	public void getBasicProduct(String productId) throws Exception{
-		
+	public BasicProduct getBasicProduct(String productId) throws Exception{
+		return productDao.getBasicProduct(productId);
 	}
 	
-	public void deleteBasicProduct(String productId) throws Exception{
-		
+	public void deleteBasicProduct(BasicProduct bp) throws Exception{
+		productDao.deleteBasicProduct(bp);
 	}
 	
 	// PurcaseProduct
