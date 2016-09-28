@@ -1,17 +1,24 @@
 package com.castis.model;
 
-import javax.persistence.Entity;
+import java.util.Collection;
+import java.util.List;
+
+import javax.persistence.Embeddable;
+import javax.persistence.Embedded;
 import javax.persistence.Id;
 
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="basicProduct")
 public class BasicProduct {
 
 	@Id
 	private String id;
 	private String name;
 	private String description;
+	private boolean isPackage;
+	private Classification classifications;
+	
 	
 	
 	public BasicProduct() {
@@ -36,6 +43,23 @@ public class BasicProduct {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	
+	public boolean isPackage() {
+		return isPackage;
+	}
+
+	public void setPackage(boolean isPackage) {
+		this.isPackage = isPackage;
+	}
+	
+	public Classification getClassifications() {
+		return classifications;
+	}
+
+	public void setClassifications(Classification classifications) {
+		this.classifications = classifications;
 	}
 
 	@Override

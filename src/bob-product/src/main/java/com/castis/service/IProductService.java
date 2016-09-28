@@ -2,6 +2,7 @@ package com.castis.service;
 
 import com.castis.model.BasicProduct;
 import com.castis.model.FavoriteProduct;
+import com.castis.model.Product;
 import com.castis.model.PurchaseProduct;
 import com.castis.model.SaleProduct;
 

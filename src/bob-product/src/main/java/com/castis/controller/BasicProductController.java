@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.castis.model.BasicProduct;
+import com.castis.model.Product;
 import com.castis.service.IProductService;
 
 
@@ -28,12 +29,13 @@ public class BasicProductController {
 	
 	// Create BasicProduct
 	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<Void> saveProduct(@RequestBody BasicProduct bp, UriComponentsBuilder ucBuilder){
+	public ResponseEntity<Void> saveProduct(@RequestBody BasicProduct[] bpList, UriComponentsBuilder ucBuilder){
 		HttpHeaders headers = new HttpHeaders();
-		headers.setLocation(ucBuilder.path("/{id}").buildAndExpand(bp.getId()).toUri());
+	//	headers.setLocation(ucBuilder.path("/{id}").buildAndExpand(bp.getId()).toUri());
 		
 		try{
-			ps.insertBasicProduct(bp);
+			for(BasicProduct bp : bpList)
+				ps.insertBasicProduct(bp);
 		} catch(Exception e){
 			return new ResponseEntity<Void>(headers, HttpStatus.CONFLICT);
 		}
