@@ -59,6 +59,11 @@
 	- PricingPolicy CRUD API 완료
 	- Category CRUD API 완료
 
+#### proto-type ProductManager API
+
+- 전체 상품 조회: http://172.16.33.11:8080/ProductManager/v1/products
+- 상품 조회(with ID): http://172.16.33.11:8080/ProductManager/v1/products/AA00201609030001
+- 상품 조회(with type):
 
 ****
 
