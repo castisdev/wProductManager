@@ -59,10 +59,32 @@
 
 #### proto-type ProductManager API
 
-- 전체 상품 조회: http://172.16.33.11:8080/ProductManager/v1/products
-- 상품 조회(with ID): http://172.16.33.11:8080/ProductManager/v1/products/AA00201609030001
-- 상품 조회(with type):
-
+- 전체 상품 조회: (GET) http://172.16.33.11:8080/ProductManager/v1/products
+- 상품 조회(with ID): (GET) http://172.16.33.11:8080/ProductManager/v1/products/AA00201609030001
+- 상품 조회(with type or name): (GET) http://172.16.33.11:8080/ProductManager/v1/products?type=SVOD&name=MBC
+- 상품 생성: (POST) http://localhost:8080/ProductManager/v1/products
+```json
+{
+  "product_id":"AA00201609290002",
+  "name":"아는 형님 40화",
+  "type":"RVOD",
+  "categories":[
+    {"categoryId":133}
+  ],
+  "price":"4500",
+  "on_sale":false,
+  "payment_type":"one_off_payment",
+  "tax_status":"none",
+  "image":"http://localhost:8080/ProductManager/PosterImage/jtbc_bros_40.png",
+  "description":"아는형님 40화 입니다."
+}
+```
+- 상품 수정: (PUT) http://localhost:8080/ProductManager/v1/products/AA00201609290002
+```json
+{
+  "price":"3000"
+}
+```
 ****
 
 
