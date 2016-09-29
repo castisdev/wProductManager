@@ -1,7 +1,5 @@
 package com.castis.model;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-
 public class Classification {
 
 	private String large;

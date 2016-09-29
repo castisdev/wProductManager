@@ -1,13 +1,11 @@
 package com.castis.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
 
 import com.castis.dao.IProductDao;
 import com.castis.model.BasicProduct;
 import com.castis.model.FavoriteProduct;
-import com.castis.model.Product;
 import com.castis.model.PurchaseProduct;
 import com.castis.model.SaleProduct;
 

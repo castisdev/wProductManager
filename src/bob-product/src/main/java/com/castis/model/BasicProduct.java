@@ -1,15 +1,12 @@
 package com.castis.model;
 
-import java.util.Collection;
-import java.util.List;
-
-import javax.persistence.Embeddable;
-import javax.persistence.Embedded;
 import javax.persistence.Id;
 
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+@Document
 public class BasicProduct {
 
 	@Id
@@ -18,8 +15,15 @@ public class BasicProduct {
 	private String description;
 	private boolean isPackage;
 	private Classification classifications;
-	
-	
+	private String image;
+	@JsonProperty("creation_time")
+	private String creationTime;
+	private Specification specifications;
+	@JsonProperty("item_list")
+	private ItemList itemList;
+	@JsonProperty("pricing_plan_list")
+	private PricingPlanList pricingPlanList;
+		
 	
 	public BasicProduct() {
 		super();
@@ -44,13 +48,12 @@ public class BasicProduct {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
 	
-	public boolean isPackage() {
+	public boolean getIsPackage() {
 		return isPackage;
 	}
 
-	public void setPackage(boolean isPackage) {
+	public void setIsPackage(boolean isPackage) {
 		this.isPackage = isPackage;
 	}
 	
@@ -60,6 +63,50 @@ public class BasicProduct {
 
 	public void setClassifications(Classification classifications) {
 		this.classifications = classifications;
+	}
+	
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+	public String getCreationTime() {
+		return creationTime;
+	}
+
+	public void setCreationTime(String creationTime) {
+		this.creationTime = creationTime;
+	}
+
+	public Specification getSpecifications() {
+		return specifications;
+	}
+
+	public void setSpecifications(Specification specifications) {
+		this.specifications = specifications;
+	}
+
+	public ItemList getItemList() {
+		return itemList;
+	}
+
+	public void setItemList(ItemList itemList) {
+		this.itemList = itemList;
+	}
+
+	public PricingPlanList getPricingPlanList() {
+		return pricingPlanList;
+	}
+
+	public void setPricingPlanList(PricingPlanList pricingPlanList) {
+		this.pricingPlanList = pricingPlanList;
+	}
+
+	public void setPackage(boolean isPackage) {
+		this.isPackage = isPackage;
 	}
 
 	@Override

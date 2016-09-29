@@ -6,7 +6,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,19 +28,18 @@ public class BasicProductController {
 	
 	// Create BasicProduct
 	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<Void> saveProduct(@RequestBody BasicProduct[] bpList, UriComponentsBuilder ucBuilder){
+	public ResponseEntity<Void> saveProduct(@RequestBody Product product, UriComponentsBuilder ucBuilder){
 		HttpHeaders headers = new HttpHeaders();
-	//	headers.setLocation(ucBuilder.path("/{id}").buildAndExpand(bp.getId()).toUri());
 		
 		try{
-			for(BasicProduct bp : bpList)
+			for(BasicProduct bp : product.getProducts())
 				ps.insertBasicProduct(bp);
 		} catch(Exception e){
 			return new ResponseEntity<Void>(headers, HttpStatus.CONFLICT);
 		}
 		return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
 	}
-	
+
 	// Get BasicProduct
 	@RequestMapping(value="/{id}/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<BasicProduct> getProduct(@PathVariable("id") String id){
