@@ -7,6 +7,7 @@
 {
     "products" : [
         {
+            "id":"상품01",
             "name":"텐트01",            
             "description":"백패킹용 텐트",
             "isPackage":"false",
@@ -74,6 +75,7 @@
             }
         }, 
         {
+                 "id":"상품02",
                  "name":"텐트용품 묶음상품",            
                  "description":"백패킹용 상품 스페셜",
                  "isPackage":"true",
