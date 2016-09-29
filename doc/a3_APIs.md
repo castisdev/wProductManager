@@ -212,6 +212,122 @@
 `POST` /v1/products/sale
  - Parameters
  - Request Sample
+ 
+ ```
+ {
+  "sales": [
+      {
+        "id": "sale01",
+        "name":"상품판매",
+        "description":"특가세일",
+        "product":
+        {
+          "id": "test12",
+          "name": "텐트01",
+          "description": "백패킹용 텐트",
+          "isPackage": false,
+          "classifications": {
+            "large": "여행",
+            "medium": "캠핑",
+            "small": "텐트"
+          },
+          "image": "tent.jpg",
+          "specifications": {
+            "color": "red",
+            "size": "100x100x100",
+            "capacity": "4"
+          },
+          "creation_time": "2016-09-13T12:00:00",
+          "item_list": {
+            "items": [
+              {
+                "id": "ITEM01",
+                "name": "아이템",
+                "type": "텐트",
+                "cost": "400",
+                "currency": "WON",
+                "origin": "korea",
+                "brand": "castis",
+                "specifications": {
+                  "color": "red",
+                  "size": "100x100x100",
+                  "capacity": "4"
+                },
+                "image": "tent.jpg"
+              }
+            ]
+          },
+          "pricing_plan_list": {
+            "pricing_plans": [
+              {
+                "id": "plan01",
+                "name": "기본가격정책",
+                "price": "1000",
+                "currency": "USD",
+                "default": true,
+                "sale_for_where": [
+                  "all"
+                ],
+                "sale_for_who": [
+                  "all"
+                ],
+                "sale_for_how": [
+                  "online",
+                  "offline"
+                ],
+                "sale_for_when": {
+                  "start_time": "2016-09-13T12:00:00",
+                  "end_time": "2016-09-14T12:00:00"
+                }
+              }
+           ]
+          }
+        },
+        "available_payments":{
+          "payments":[
+            {
+              "id":"pay01",
+              "type":"credit_card",
+              "issuers":["bc","keb","shinhan"],
+              "monthly_division_count":3,
+              "interest":"false"
+            },
+            {
+              "id":"pay02",
+              "type":"online_banker",
+              "issuers":["paypal", "kakao"]
+            },
+            {
+              "id":"pay03",
+              "type":"cash"
+            }
+          ]
+        },
+        "promotions":[
+          {
+            "id":"pmo01",
+            "type":"discount",
+            "when":"sale_duration",
+            "how":{
+              "type":"fix",
+              "amount":"30"
+            },
+            "duplicable":"true"
+          },
+          {
+            "id":"pmo02",
+            "type":"1+1",
+            "when":"1day_after_purchase",
+            "what":{
+                "type":"product"
+            }
+          }
+        ]
+      }
+    ]
+}
+ ```
+ 
  - Response Sample
 
 ####판매한 상품 조회
