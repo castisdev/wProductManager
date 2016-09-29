@@ -12,19 +12,17 @@
  - [묶음 상품 생성 (SVODPackage, Bundle, Advertisement(Bundle))] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#묶음-상품-생성-svodpackage-bundle-advertisementbundle)
  - [상품 수정 (with id)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#상품-수정-with-id)
  - [상품 삭제 (with id)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#상품-삭제-with-id)
- - [전체 가격정책 조회] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#전체-가격정책-조회)
- - [가격정책 조회 (with policy_id)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#가격정책-조회-with-policy_id)
- - [가격정책 조회 (with policy_type)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#가격정책-조회-with-policy_type)
- - [가격정책 생성] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#가격정책-생성)
- - [가격정책 수정 (with policy_id)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#가격정책-수정-with-policy_id)
- - [가격정책 삭제 (with policy_id)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#가격정책-삭제-with-policy_id)
+ - [전체 카테고리 조회] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#전체-카테고리-조회)
+ - [카테고리 조회 (with category_id)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#카테고리-조회-with-category_id)
+ - [카테고리 생성] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#카테고리-생성)
+ - [카테고리 수정 (with category_id)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#카테고리-수정-with-category_id)
+ - [카테고리 삭제 (with category_id)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#카테고리-삭제-with-category_id)
  - [상품 주문] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#상품-주문)
 	- ground_shipping (택배 등)
 	- online
 - [Product] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#product)
  	- Product
  	- Category
- 	- PricingPolicy
 - [상품 종류] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#상품-종류)
 	 - RVOD
 	 - SVOD
@@ -40,8 +38,8 @@
 #### 개발 범위
 - API
 	- Product (상품 생성/조회/수정/삭제)
-	- PricingPolicy (가격정책 생성/조회/수정/삭제)
-	- ~~Category (카테고리 생성/조회/수정/삭제)~~
+	- ~~PricingPolicy (가격정책 생성/조회/수정/삭제)~~
+	- Category (카테고리 생성/조회/수정/삭제)
 - 상품 종류
 	- RVOD, SVOD, FOD, SVODPackage, Bundle, 광고, Clothing
 - ProtoType App
@@ -50,13 +48,13 @@
 	- springframework 3
 		- Spring-Data MongoDB
 	- mongoDB 3.2
-	- 상품/가격정책/~~카테고리~~의 CRUD가 가능한 app 개발 <br/><br/>
+	- 상품/~~가격정책~~/카테고리의 CRUD가 가능한 app 개발 <br/><br/>
 	- **개발 예상 MD: 5 MD**
 
 #### 현재 API 설계 진행률
 - 99%
 	- Product CRUD API 완료
-	- PricingPolicy CRUD API 완료
+	- ~~PricingPolicy CRUD API 완료~~
 	- Category CRUD API 완료
 
 #### proto-type ProductManager API
@@ -92,27 +90,30 @@
 {
   "productList":[
     {
-      "id":"AA00201201010001",
-      "name":"최종병기 활",
-      "type":"RVOD",
-      "created":"2012-01-01T13:55:10",
-      "modified":"2016-09-07T17:24:41",
-      "categories":[
-        {"category_id":11, "category_name":"액션"},
-        {"category_id":15, "category_name":"전쟁"}
-      ],
-      "price":"2500",
-      "pricing_policies":[
-        {"policy_id":1, "policy_name":"고정금액", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null},
-        {"policy_id":12, "policy_name":"[할인]박해일 특집", "policy_type":"fixed_discount", "amount":1000, "expiry_date":null}
-      ],
-      "image":"http://localhost:8080/ProductManager/PosterImage/war_of_the_arrows.png",
-      "description":"'[HD]최종병기 활' 입니다.",
-      "average_rating":7.9,
-      "rating_count":642,
-      "upsell_ids": [],
-      "cross_sell_ids": [],
-      "details":{
+	"id":"AA00201201010001",
+	"name":"최종병기 활",
+	"type":"RVOD",
+	"created":"2012-01-01T13:55:10",
+	"modified":"2016-09-07T17:24:41",
+	"categories":[
+	{"category_id":11, "category_name":"액션"},
+	{"category_id":15, "category_name":"전쟁"}
+	],
+	"price":"2500",
+	"sale_price":"",
+	"sale_start_date":"",
+	"sale_end_date":"",
+	"on_sale":false,
+	"payment_type":"one_off_payment",
+	"tax_status":"none",
+	"tax_class":"",
+	"image":"http://localhost:8080/ProductManager/PosterImage/war_of_the_arrows.png",
+	"description":"'[HD]최종병기 활' 입니다.",
+	"average_rating":7.9,
+	"rating_count":642,
+	"upsell_ids": [],
+	"cross_sell_ids": [],
+	"details":{
           "assets":[
             {"asset_id":"www.hchoice.co.kr|M0018210LFO157334201"}
           ],
@@ -126,26 +127,30 @@
        }
     },
     {
-      "id":"AA00201609080002",
-      "name":"부산행",
-      "type":"RVOD",
-      "created":"2016-09-08T18:01:12",
-      "modified":"2016-09-08T18:01:12",
-      "categories":[
-        {"category_id":11, "category_name":"액션"},
-        {"category_id":12, "category_name":"스릴러"}
-      ],
-      "price":"4500",
-      "pricing_policies":[
-        {"policy_id":1, "policy_name":"고정금액", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null}
-      ],
-      "image":"http://localhost:8080/ProductManager/PosterImage/train_to_busan.png",
-      "description":"'[HD]부산행' 입니다.",
-      "average_rating":8.5,
-      "rating_count":17,
-      "upsell_ids": [],
-      "cross_sell_ids": [],
-      "details":
+	"id":"AA00201609080002",
+	"name":"부산행",
+	"type":"RVOD",
+	"created":"2016-09-08T18:01:12",
+	"modified":"2016-09-08T18:01:12",
+	"categories":[
+		{"category_id":11, "category_name":"액션"},
+		{"category_id":12, "category_name":"스릴러"}
+	],
+	"price":"4500",
+	"sale_price":"",
+	"sale_start_date":"",
+	"sale_end_date":"",
+	"on_sale":false,
+	"payment_type":"one_off_payment",
+	"tax_status":"none",
+	"tax_class":"",
+	"image":"http://localhost:8080/ProductManager/PosterImage/train_to_busan.png",
+	"description":"'[HD]부산행' 입니다.",
+	"average_rating":8.5,
+	"rating_count":17,
+	"upsell_ids": [],
+	"cross_sell_ids": [],
+	"details":
         {
           "assets":[
             {"asset_id":"www.hchoice.co.kr|M0018210LFO116090701"}
@@ -182,9 +187,13 @@
     {"category_id":12, "category_name":"스릴러"}
   ],
   "price":"4500",
-  "pricing_policies":[
-    {"policy_id":1, "policy_name":"고정금액", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null}
-  ],
+  "sale_price":"",
+  "sale_start_date":"",
+  "sale_end_date":"",
+  "on_sale":false,
+  "payment_type":"one_off_payment",
+  "tax_status":"none",
+  "tax_class":"",
   "image":"http://localhost:8080/ProductManager/PosterImage/train_to_busan.png",
   "description":"'[HD]부산행' 입니다.",
   "average_rating":8.5,
@@ -228,9 +237,13 @@
 	    "category_name": "월정액"
 	  }],
 	  "price": "9900",
-	  "pricing_policies": [
-	    {"policy_id":2, "policy_name":"월정액", "policy_type":"monthly_subscription", "amount":-1, "expiry_date":null}
-	  ],
+	  "sale_price":"",
+	  "sale_start_date":"",
+	  "sale_end_date":"",
+	  "on_sale":false,
+	  "payment_type":"monthly_payment",
+	  "tax_status":"none",
+	  "tax_class":"",	
 	  "image": "http://localhost:8080/ProductManager/PosterImage/MBC.png",
 	  "description": "MBC 월정액 입니다.",
 	  "average_rating":9.1,
@@ -266,9 +279,9 @@
     {"category_id":17}
   ],
   "price":"4500",
-  "pricing_policies":[
-    {"policy_id":1}
-  ],
+  "on_sale":false,
+  "payment_type":"one_off_payment",
+  "tax_status":"none",
   "image":"http://localhost:8080/ProductManager/PosterImage/tunnel.png",
   "description":"'[HD]터널' 입니다."
 }
@@ -289,9 +302,9 @@
     {"category_id":3}
   ],
   "price":"25900",
-  "pricing_policies":[
-    {"policy_id":2}
-  ],
+  "on_sale":false,
+  "payment_type":"one_off_payment",
+  "tax_status":"none",
   "image":"http://localhost:8080/ProductManager/PosterImage/KBS_MBC_SBS.png",
   "description":"지상파 통합 월정액 입니다.",
   "related_products":[
@@ -308,11 +321,11 @@
 - **PUT** /ProductManager/v1/products/AA00201609080005
 
 ```json
-{
-  "price":"5500",
-  "pricing_policies":[
-        {"policy_id":13}
-  ]
+{  
+  "sale_price":"3500",
+  "sale_start_date":"2016-09-29T00:00:00",
+  "sale_end_date":"2016-10-31T23:59:59",
+  "on_sale":true
 }
 ```
 
@@ -322,94 +335,6 @@
 ### 상품 삭제 (with id)
 - **DELETE** /ProductManager/v1/products/:id
 - **DELETE** /ProductManager/v1/products/AA00201609080002
-
-- Response
- - 204 No Content
-
-
-
-### 전체 가격정책 조회
-- **GET** /ProductManager/v1/products/pricing-policies/
-- Response
- - 200 OK
-
-```json
-{
-	"pricingPolicyList":[
-		{"policy_id":1, "policy_name":"고정금액", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null},
-		{"policy_id":2, "policy_name":"월정액", "policy_type":"monthly_subscription", "amount":-1, "expiry_date":null},
-		{"policy_id":3, "policy_name":"무료VOD", "policy_type":"free", "amount":-1, "expiry_date":null},
-		{"policy_id":12, "policy_name":"[할인]박해일 특집", "policy_type":"fixed_discount", "amount":1000, "expiry_date":null},
-		{"policy_id":21, "policy_name":"[고정금액]추석할인", "policy_type":"fixed_amount", "amount":7500, "expiry_date":"2016-09-19T00:00:00"},
-		{"policy_id":27, "policy_name":"광고청약", "policy_type":"advertising_subscription", "amount":-1, "expiry_date":"2016-12-19T00:00:00"}
-	]
-}
-```
-
-### 가격정책 조회 (with policy_id)
-- **GET** /ProductManager/v1/products/pricing-policies/:policy_id
-- **GET** /ProductManager/v1/products/pricing-policies/12
-- Response
- - 200 OK
-
-```json
-{
-	"policy_id":12,
-	"policy_name":"[할인]박해일 특집",
-	"policy_type":"fixed_discount",
-	"amount":1000,
-	"expiry_date":null
-}
-```
-
-### 가격정책 조회 (with policy_type)
-- **GET** /ProductManager/v1/products/pricing-policies?policy_type=:policy_type
-- **GET** /ProductManager/v1/products/pricing-policies?policy_type=fixed_amount
-- Response
- - 200 OK
- 
-```json
-{
-	"pricingPolicyList":[
-		{"policy_id":1, "policy_name":"고정금액", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null},
-		{"policy_id":21, "policy_name":"[고정금액]추석할인", "policy_type":"fixed_amount", "amount":7500, "expiry_date":"2016-09-19T00:00:00"}
-	]
-}
-```
-
-### 가격정책 생성
-- **POST** /ProductManager/v1/products/pricing-policies/
-
-```json
-{
-	"policy_id":114,
-	"policy_name":"[할인]또 오해영, 또 할인",
-	"policy_type":"fixed_discount",
-	"amount":3000,
-	"expiry_date":"2016-10-15T00:00:00"
-}
-```
-
-- Response
- - 201 Created
-
-### 가격정책 수정 (with policy_id)
-- **PUT** /ProductManager/v1/products/pricing-policies/:policy_id
-- **PUT** /ProductManager/v1/products/pricing-policies/114
-
-```json
-{
-	"amount":2000,
-	"expiry_date":"2017-01-01T00:00:00"
-}
-```
-
-- Response
- - 200 OK
-
-### 가격정책 삭제 (with policy_id)
-- **DELETE** /ProductManager/v1/products/pricing-policies/:policy_id
-- **DELETE** /ProductManager/v1/products/pricing-policies/114
 
 - Response
  - 204 No Content
@@ -550,9 +475,13 @@
 | modified | String	 | 상품 수정 시각 | 'yyyy-MM-ddTHH:mm:ss'	|
 | categories	 | Category | 	카테고리 리스트 |	|
 | price	 | String | 	상품 가격 |	|
+| sale_price	 | String | 	할인 가격 |	|
+| sale_start_date	 | String | 	할인 시작 시각 |	|
+| sale_end_date	 | String | 	할인 종료 시각 |	|
+| on_sale	 | Boolean | 	상품 할인 여부 |	|
+| payment_type	 | String | 	가격 지불 방법 | one_off_payment(일시불), monthly_payment(월정액), <br/> subscription_payment(광고 청약), free(무료)	|
 | tax_status	 | String | 	상품 세금 상태 | taxable(과세 대상), shipping(배송만?), none(비과세)	|
 | tax_class	 | String | 	상품 세금 등급 |	|
-| pricing_policies	 | PricingPolicy | 	상품 가격 정책 |	|
 | image	 | String | 	상품 이미지 |	|
 | description	 | String | 	상품 설명 |	|
 | average_rating	 | Double | 	상품 평점 |	|
@@ -569,16 +498,6 @@
 | category_name	 | String	 | 카테고리명	 |
 | parent_category	 | Integer	 | 상위 카테고리	 |
 
-- **PricingPolicy**
-
-| 이름 | 타입 | 설명 |	|
-| --- | --- | --- | --- | --- |
-| policy_id	 | Integer | 	정책 ID |	|
-| policy_name	 | String	 | 정책명	 |	|
-| policy_type	 | String	 | 정책 타입 	 | free(무료), fixed_amount(고정금액), fixed_discount(고정금액 할인), <br/> rated_discount(비율 할인), monthly_subscription(월정액), <br/> advertising_subscription(광고청약) 	|
-| amount | Integer	 | 금액/비율  | -1: Product의 price 값을 따름	|
-| expiry_date | String	 | 정책 만료일 | 'yyyy-MM-ddTHH:mm:ss'	|
-
 ****
 
 ## 상품 종류
@@ -594,9 +513,13 @@
     {"category_id":87, "category_name":"무한도전"}
   ],
   "price":"1500",
-  "pricing_policies":[
-    {"policy_id":1, "policy_name":"고정금액", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null}
-  ],
+  "sale_price":"",
+  "sale_start_date":"",
+  "sale_end_date":"",
+  "on_sale":false,
+  "payment_type":"one_off_payment",
+  "tax_status":"none",
+  "tax_class":"",
   "image":"http://localhost:8080/ProductManager/PosterImage/infinite_challenge.png",
   "description":"무한도전 496회, 2016 무한상사",
   "average_rating":9.5,
@@ -633,9 +556,13 @@
     "category_name": "월정액"
   }],
   "price": "9900",
-  "pricing_policies": [
-    {"policy_id":2, "policy_name":"월정액", "policy_type":"monthly_subscription", "amount":-1, "expiry_date":null}
-  ],
+  "sale_price":"",
+  "sale_start_date":"",
+  "sale_end_date":"",
+  "on_sale":false,
+  "payment_type":"monthly_payment",
+  "tax_status":"none",
+  "tax_class":"",
   "image": "http://localhost:8080/ProductManager/PosterImage/MBC.png",
   "description": "MBC 월정액 입니다.",
   "average_rating":9.1,
@@ -666,9 +593,13 @@
     {"category_id":87, "category_name":"무한도전"}
   ],
   "price":"0",
-  "pricing_policies":[
-    {"policy_id":3, "policy_name":"무료VOD", "policy_type":"free", "amount":-1, "expiry_date":null}
-  ],
+  "sale_price":"",
+  "sale_start_date":"",
+  "sale_end_date":"",
+  "on_sale":false,
+  "payment_type":"free",
+  "tax_status":"none",
+  "tax_class":"",
   "image":"http://localhost:8080/ProductManager/PosterImage/2016_infinite_company.png",
   "description":"2016 무한상사 예고편",
   "average_rating":0.0,
@@ -701,9 +632,13 @@
     "category_name": "월정액묶음"
   }],
   "price": "25900",
-  "pricing_policies": [
-    {"policy_id":2, "policy_name":"월정액", "policy_type":"monthly_subscription", "amount":-1, "expiry_date":null}
-  ],
+  "sale_price":"",
+  "sale_start_date":"",
+  "sale_end_date":"",
+  "on_sale":false,
+  "payment_type":"monthly_payment",
+  "tax_status":"none",
+  "tax_class":"",
   "image": "http://localhost:8080/ProductManager/PosterImage/KBS_MBC_SBS.png",
   "description": "지상파 통합 월정액 입니다.",
   "average_rating":8.2,
@@ -743,9 +678,13 @@
     {"category_id":11, "category_name":"액션"}
   ],
   "price":"11900",
-  "pricing_policies":[
-    {"policy_id":1, "policy_name":"고정금액", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null}
-  ],
+  "sale_price":"",
+  "sale_start_date":"",
+  "sale_end_date":"",
+  "on_sale":false,
+  "payment_type":"one_off_payment",
+  "tax_status":"none",
+  "tax_class":"",
   "image":"http://localhost:8080/ProductManager/PosterImage/Avengers.png",
   "description":"아이언맨, 캡틴아메리카, 헐크, 토르",
   "average_rating":9.1,
@@ -780,9 +719,13 @@
     {"category_id":210, "category_name":"광고"}
   ],
   "price":"3000000",
-  "pricing_policies":[
-    {"policy_id":27, "policy_name":"광고청약", "policy_type":"advertising_subscription", "amount":-1, "expiry_date":"2016-12-19T00:00:00"}
-  ],
+  "sale_price":"",
+  "sale_start_date":"",
+  "sale_end_date":"",
+  "on_sale":false,
+  "payment_type":"subscription_payment",
+  "tax_status":"none",
+  "tax_class":"",
   "image":"http://localhost:8080/ProductManager/PosterImage/isultoktok.png",
   "description":"달의연인, 프로듀사 등을 재생하기 전에 광고로 나감",
   "average_rating":9.1,
@@ -813,9 +756,13 @@
     {"category_id":210, "category_name":"광고"}
   ],
   "price":"8000000",
-  "pricing_policies":[
-    {"policy_id":27, "policy_name":"광고청약", "policy_type":"advertising_subscription", "amount":-1, "expiry_date":"2016-12-19T00:00:00"}
-  ],
+  "sale_price":"",
+  "sale_start_date":"",
+  "sale_end_date":"",
+  "on_sale":false,
+  "payment_type":"subscription_payment",
+  "tax_status":"none",
+  "tax_class":"",
   "image":"http://localhost:8080/ProductManager/PosterImage/game_ad_bundle.png",
   "description":"온게임넷 콘텐트 시청 전에 광고로 나감",
   "average_rating":8.3,
@@ -846,9 +793,13 @@
     {"category_id":114, "category_name":"T-shirts"}
   ],
   "price":"11500",
-  "pricing_policies":[
-    {"policy_id":21, "policy_name":"[고정금액]추석할인", "policy_type":"fixed_amount", "amount":7500, "expiry_date":"2016-09-19T00:00:00"}
-  ],
+  "sale_price":"5000",
+  "sale_start_date":"2016-09-14T00:00:00",
+  "sale_end_date":"2016-09-18T23:59:59",
+  "on_sale":true,
+  "payment_type":"one_off_payment",
+  "tax_status":"taxable",
+  "tax_class":"",
   "image":"http://localhost:8080/ProductManager/PosterImage/t-shirts.png",
   "description":"2016 신상 티셔츠",
   "average_rating":9.5,
@@ -867,3 +818,103 @@
 ```
 
 [맨위로] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#productmanager)
+
+## 삭제해버림...
+
+- **PricingPolicy**
+
+| 이름 | 타입 | 설명 |	|
+| --- | --- | --- | --- | --- |
+| policy_id	 | Integer | 	정책 ID |	|
+| policy_name	 | String	 | 정책명	 |	|
+| policy_type	 | String	 | 정책 타입 	 | free(무료), fixed_amount(고정금액), fixed_discount(고정금액 할인), <br/> rated_discount(비율 할인), monthly_subscription(월정액), <br/> advertising_subscription(광고청약) 	|
+| amount | Integer	 | 금액/비율  | -1: Product의 price 값을 따름	|
+| expiry_date | String	 | 정책 만료일 | 'yyyy-MM-ddTHH:mm:ss'	|
+
+### 전체 가격정책 조회
+- **GET** /ProductManager/v1/products/pricing-policies/
+- Response
+ - 200 OK
+
+```json
+{
+	"pricingPolicyList":[
+		{"policy_id":1, "policy_name":"고정금액", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null},
+		{"policy_id":2, "policy_name":"월정액", "policy_type":"monthly_subscription", "amount":-1, "expiry_date":null},
+		{"policy_id":3, "policy_name":"무료VOD", "policy_type":"free", "amount":-1, "expiry_date":null},
+		{"policy_id":12, "policy_name":"[할인]박해일 특집", "policy_type":"fixed_discount", "amount":1000, "expiry_date":null},
+		{"policy_id":21, "policy_name":"[고정금액]추석할인", "policy_type":"fixed_amount", "amount":7500, "expiry_date":"2016-09-19T00:00:00"},
+		{"policy_id":27, "policy_name":"광고청약", "policy_type":"advertising_subscription", "amount":-1, "expiry_date":"2016-12-19T00:00:00"}
+	]
+}
+```
+
+### 가격정책 조회 (with policy_id)
+- **GET** /ProductManager/v1/products/pricing-policies/:policy_id
+- **GET** /ProductManager/v1/products/pricing-policies/12
+- Response
+ - 200 OK
+
+```json
+{
+	"policy_id":12,
+	"policy_name":"[할인]박해일 특집",
+	"policy_type":"fixed_discount",
+	"amount":1000,
+	"expiry_date":null
+}
+```
+
+### 가격정책 조회 (with policy_type)
+- **GET** /ProductManager/v1/products/pricing-policies?policy_type=:policy_type
+- **GET** /ProductManager/v1/products/pricing-policies?policy_type=fixed_amount
+- Response
+ - 200 OK
+ 
+```json
+{
+	"pricingPolicyList":[
+		{"policy_id":1, "policy_name":"고정금액", "policy_type":"fixed_amount", "amount":-1, "expiry_date":null},
+		{"policy_id":21, "policy_name":"[고정금액]추석할인", "policy_type":"fixed_amount", "amount":7500, "expiry_date":"2016-09-19T00:00:00"}
+	]
+}
+```
+
+### 가격정책 생성
+- **POST** /ProductManager/v1/products/pricing-policies/
+
+```json
+{
+	"policy_id":114,
+	"policy_name":"[할인]또 오해영, 또 할인",
+	"policy_type":"fixed_discount",
+	"amount":3000,
+	"expiry_date":"2016-10-15T00:00:00"
+}
+```
+
+- Response
+ - 201 Created
+
+### 가격정책 수정 (with policy_id)
+- **PUT** /ProductManager/v1/products/pricing-policies/:policy_id
+- **PUT** /ProductManager/v1/products/pricing-policies/114
+
+```json
+{
+	"amount":2000,
+	"expiry_date":"2017-01-01T00:00:00"
+}
+```
+
+- Response
+ - 200 OK
+
+### 가격정책 삭제 (with policy_id)
+- **DELETE** /ProductManager/v1/products/pricing-policies/:policy_id
+- **DELETE** /ProductManager/v1/products/pricing-policies/114
+
+- Response
+ - 204 No Content
+
+
