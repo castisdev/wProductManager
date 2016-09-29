@@ -42,8 +42,9 @@
                 ]
             },
             "pricing_plan_list" : {
-                "pring_plans" : [
+                "pricing_plans" : [
                     {
+                        "id":"plan01",
                         "name" : "기본가격정책",
                         "price":"1000",
                         "currency":"WON",
@@ -57,6 +58,7 @@
                             }
                     },
                     {
+                        "id":"plan02",
                         "name" : "가격정책",
                         "price":"500",
                         "currency":"WON",
@@ -136,8 +138,9 @@
                      ]
                  },
                  "pricing_plan_list" : {
-                     "pring_plans" : [
+                     "pricing_plans" : [
                          {
+                             "id":"plan03",
                              "name" : "기본가격정책",
                              "price":"1000",
                              "currency":"WON",
