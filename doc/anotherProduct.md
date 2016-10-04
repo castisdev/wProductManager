@@ -11,12 +11,13 @@
 {
   "id": "123/456",
   "name": "my product",
-  "type": "simple",
+  "type": "simple rental",
   "description" : "simple product for vod",
   "slogan" : "CHOO-SUK SALE",
   "category" : "vod",
   "lifeTimeStartDate" : "2016-09-05",
-  "lifeTimeEndDate" : "2016-09-06"
+  "lifeTimeEndDate" : "2016-09-06",
+  "sellingType" : "rental"
   
 }
 
@@ -68,6 +69,7 @@
   "saleFrom" : "2016-09-07",
   "saleTo" : "2016-10-07"
 }
+
 ```
 
 ## linking
@@ -81,6 +83,54 @@
 }
 ```
 
+## item
+
+``` json
+
+{
+ "type" : "title",
+ "itemId" : "www.abc.com/ACGD1204912402040",
+ "name" : "설리: 허드슨강의 기적 (SULLY, 2016)",
+ "details" : "http://www.abc.com/asset/details/ACGD1204912402040"
+},
+{
+ "type" : "advertisement",
+ "itemId" : "samsung_galaxy_note/AD10294180123",
+ "name" : "노트7",
+ "details" : "http://www.abc.com/ad/samsung_galaxy_note/AD10294180123"
+ }
+
+```
 
 
+
+
+## from others 
+
+* Features For Pro-version
+* Day basis price configuration
+* Monthly price configuration (Seasonal pricing)
+* Day ranges price configuration
+* Discount on day ranges pricing
+* General price configuration
+* Hourly price configuration
+* Availability control
+* European date format
+* American Date format
+* Asian Date format 
+* Date blocking
+* Choose how much you must have to pay during booking
+* Unlimited payable resources
+* Unlimited payable person.
+* Three type of date format.
+* Add unlimited product attributes.
+* Add unlimited product features.
+* pickup and return location added.
+* Add pickup and return location cost
+* Admin email notification during new order
+* Customers email notification during complete order, cancel order, or refund order
+* Developer friendly code
+* Font-awesome include 
+* Products global and local settings 
+* Multilingual
 
