@@ -187,6 +187,55 @@
 `POST` /v1/products/purchase
  - Parameters
  - Request Sample
+```
+{
+  "purchases":[
+    {
+      "order_id":"order01",
+      "sale_id":"sale01",
+      "transaction_currency":"WON",
+      "purchase_price":"3000",
+      "selling_price": "4000",
+      "included_shipping_fee":"true",
+      "customer_id":"cust01",
+      "product":{
+        "id":"p001",
+        "name":"상품1"
+      },
+      "shipping":{
+        "name":"bobmann",
+        "address":"seoul",
+        "fee":"3000"
+      },
+      "payments":[
+          {
+              "type":"credit_card",
+              "issuer":"bc",
+              "monthly_division_count":3,
+              "interest":"false",
+              "amount":"2000"
+          },
+          {
+              "type":"online_banker",
+              "issuer":"paypal",
+              "amount":"1000"
+          }
+      ],
+      "applied_promotions":[
+        {
+            "id":"pmo02",
+            "type":"discount",
+            "how":{
+              "type":"fix",
+              "amount":"1000"
+            },
+            "duplicable":"true"
+        }
+      ]
+    }
+  ]
+}
+```
  - Response Sample
 
 ####구매한 상품 조회
