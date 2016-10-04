@@ -94,10 +94,10 @@
  "details" : "http://www.abc.com/asset/details/ACGD1204912402040"
 },
 {
- "type" : "advertisement",
- "itemId" : "samsung_galaxy_note/AD10294180123",
- "name" : "노트7",
- "details" : "http://www.abc.com/ad/samsung_galaxy_note/AD10294180123"
+ "type" : "advertisement-inventory",
+ "itemId" : "cjhv/VOD201610AG0294012542322-204123",
+ "name" : "cjhv 의 tvn 카테고리:서울:성인:20-22시:2016-10-01,2016-10-30",
+ "details" : "http://www.abc.com/ad/inventory/cjhv/VOD201610AG0294012542322-204123"
  }
 
 ```
