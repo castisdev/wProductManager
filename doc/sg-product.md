@@ -492,7 +492,9 @@
 | --- | --- | --- | --- | --- |
 | id	 | String | 	상품 ID |	|
 | name	 | String	 | 상품명	 |	|
-| type	 | String	 | 상품 타입 	 | FOD(무료VOD), RVOD(편당보기VOD), SVOD(월정액VOD), <br/> SVODPackage(월정액 묶음), Bundle(묶음 상품), <br/> Advertisement(광고), Clothing(의류), ...	|
+| ~~type~~	 | ~~String~~	 | ~~상품 타입~~ 	 | ~~FOD(무료VOD), RVOD(편당보기VOD), SVOD(월정액VOD), <br/> SVODPackage(월정액 묶음), Bundle(묶음 상품), <br/> Advertisement(광고), Clothing(의류), ...~~	|
+| type	 | String	 | 상품 타입 	 | simple, bundle	|
+| item_type	 | String	 | 아이템 타입 	 | VOD, AD, Clothing, ...	|
 | created | String	 | 상품 생성 시각 | 'yyyy-MM-ddTHH:mm:ss'	|
 | modified | String	 | 상품 수정 시각 | 'yyyy-MM-ddTHH:mm:ss'	|
 | categories	 | Category | 	카테고리 리스트 |	|
