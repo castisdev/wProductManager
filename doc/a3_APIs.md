@@ -203,7 +203,7 @@
         "name":"상품1"
       },
       "shipping":{
-        "name":"bobmann",
+        "addressee":"bobmann",
         "address":"seoul",
         "fee":"3000"
       },
