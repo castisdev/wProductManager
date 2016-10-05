@@ -511,15 +511,16 @@
 | rating_count	 | Integer | 	상품 평점 참여수   |	|
 | upsell_ids	 | String[] | 	상위 상품 ID 목록 |	|
 | cross_sell_ids	 | String[] | 	교차판매 상품 ID 목록 |	|
-| details	 | Object | 	상품 상세 속성 |	|
+| ~~details~~	 | ~~Object~~ | 	~~상품 상세 속성~~ |	|
 
 - **Item**
+
 | 이름 | 타입 | 설명 |	|
 | --- | --- | --- | --- | --- |
 | item_id	 | String | 	아이템 ID |	|
 | item_name	 | String	 | 아이템명	 |	|
 | item_type	 | String	 | 아이템 타입  | VOD, AD, Clothing, Channel, Category ...	|
-| item_description	 | String	 | 아이템 설명	 |	|
+| item_details	 | Object	 | 아이템 상세	 |	|
 
 - **Category**
 
