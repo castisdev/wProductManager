@@ -201,12 +201,24 @@
 {
   "id":"AA00201609080002",
   "name":"부산행",
-  "type":"RVOD",
+  "type":"simple",
+  "items":[{
+  	"item_id":"www.hchoice.co.kr|M0018210LFO116090701",
+	"item_name":"부산행(Train to Busan, 2016)",
+	"item_type":"VOD",
+	"item_details":{
+		"release_year":"2016",
+		"actors":"공유,정유미,마동석,김수안,김의성",
+		"director":"연상호",
+		"summary":"정체불명의 바이러스가 전국으로 확산되고 대한민국 긴급재난경보령이 선포된 가운데, 열차에 몸을 실은 사람들은 단 하나의 안전한 도시 부산까지 살아가기 위한 치열한 사투를 벌이게 된다.",
+		"runtime":"118"
+	}
+  }],
   "created":"2016-09-08T18:01:12",
   "modified":"2016-09-08T18:01:12",
   "categories":[
-    {"category_id":11, "category_name":"액션"},
-    {"category_id":12, "category_name":"스릴러"}
+	{"category_id":11, "category_name":"액션"},
+	{"category_id":12, "category_name":"스릴러"}
   ],
   "price":"4500",
   "sale_price":"",
@@ -221,20 +233,7 @@
   "average_rating":8.5,
   "rating_count":17,
   "upsell_ids": [],
-  "cross_sell_ids": [],
-  "details":
-    {
-      "assets":[
-        {"asset_id":"www.hchoice.co.kr|M0018210LFO116090701"}
-      ],
-      "release_year":"2016",
-      "actors":"공유,정유미,마동석,김수안,김의성",
-      "director":"연상호",
-      "summary":"정체불명의 바이러스가 전국으로 확산되고 대한민국 긴급재난경보령이 선포된 가운데, 열차에 몸을 실은 사람들은 단 하나의 안전한 도시 부산까지 살아가기 위한 치열한 사투를 벌이게 된다.",
-      "runtime":"118",
-      "viewingLength":"001:00:00",
-      "viewablePeriodState":0
-    }
+  "cross_sell_ids": []
 }
 ```
 
@@ -275,7 +274,7 @@
 	  "details": {
 	    "viewingLength": "031:00:00",
 	    "viewablePeriodState": 0,
-	    "externalProductId": "SVOD_MBC",
+	    "external_product_id": "SVOD_MBC",
 	    "relatedCategories": [
 	      {
 	        "category_id": 52,
@@ -494,7 +493,7 @@
 | name	 | String	 | 상품명	 |	|
 | ~~type~~	 | ~~String~~	 | ~~상품 타입~~ 	 | ~~FOD(무료VOD), RVOD(편당보기VOD), SVOD(월정액VOD), <br/> SVODPackage(월정액 묶음), Bundle(묶음 상품), <br/> Advertisement(광고), Clothing(의류), ...~~	|
 | type	 | String	 | 상품 타입 	 | simple, bundle	|
-| item_type	 | String	 | 아이템 타입 	 | VOD, AD, Clothing, ...	|
+| items	 | List&lt;Item&gt;	 | 아이템 목록 	 | 	|
 | created | String	 | 상품 생성 시각 | 'yyyy-MM-ddTHH:mm:ss'	|
 | modified | String	 | 상품 수정 시각 | 'yyyy-MM-ddTHH:mm:ss'	|
 | categories	 | Category | 	카테고리 리스트 |	|
@@ -514,6 +513,14 @@
 | cross_sell_ids	 | String[] | 	교차판매 상품 ID 목록 |	|
 | details	 | Object | 	상품 상세 속성 |	|
 
+- **Item**
+| 이름 | 타입 | 설명 |	|
+| --- | --- | --- | --- | --- |
+| item_id	 | String | 	아이템 ID |	|
+| item_name	 | String	 | 아이템명	 |	|
+| item_type	 | String	 | 아이템 타입  | VOD, AD, Clothing, Channel, Category ...	|
+| item_description	 | String	 | 아이템 설명	 |	|
+
 - **Category**
 
 | 이름 | 타입 | 설명 |
@@ -530,7 +537,19 @@
 {
   "id":"AA00201609030001",
   "name":"무한도전 496회",
-  "type":"RVOD",
+  "type":"simple",
+  "items":[{
+  	"item_id":"www.hchoice.co.kr|M0018210LFO160903201",
+	"item_name":"무한도전.E496.160903",
+	"item_type":"VOD",
+	"item_details":{
+		"release_year":"2016",
+		"actors":"유재석,박명수,정준하,하하,황광희",
+		"director":"김태호",
+		"summary":"2016 무한상사",
+		"runtime":"80"
+	}
+  }],
   "created":"2016-09-03T19:55:10",
   "modified":"2016-09-03T19:55:41",
   "categories":[
@@ -545,26 +564,11 @@
   "tax_status":"none",
   "tax_class":"",
   "image":"http://localhost:8080/ProductManager/PosterImage/infinite_challenge.png",
-  "description":"무한도전 496회, 2016 무한상사",
+  "description":"무한도전 496회, 2016 무한상사 위기의 회사원",
   "average_rating":9.5,
   "rating_count":210,
   "upsell_ids": [],
-  "cross_sell_ids": [],
-  "details":
-    {
-      "assets":[
-        {"asset_id":"www.hchoice.co.kr|M0018210LFO160903201"}
-      ],
-      "release_year":"2016",
-      "actors":"유재석,박명수,정준하,하하,황광희",
-      "director":"김태호",
-      "summary":"2016 무한상사",
-      "runtime":"80",
-      "viewingLength":"001:00:00",
-      "viewablePeriodState":0,
-      "episode_name":"무한도전",
-      "episode_number":496
-    }
+  "cross_sell_ids": []
 }
 ```
 - **SVOD**
@@ -572,7 +576,15 @@
 {
   "id": "AA00201609120002",
   "name": "MBC 월정액",
-  "type": "SVOD",
+  "type": "simple",
+  "items":[{
+  	"item_id":"category_52",
+	"item_name":"MBC",
+	"item_type":"Category",
+	"item_details":{
+		"related_category":{88,89}
+	}
+  }],
   "created": "2016-09-12T18:01:12",
   "modified": "2016-09-12T18:01:12",
   "categories": [{
@@ -592,16 +604,7 @@
   "average_rating":9.1,
   "rating_count":80,
   "upsell_ids": [],
-  "cross_sell_ids": [],
-  "details":
-   {
-    "viewingLength": "031:00:00",
-    "viewablePeriodState": 0,
-    "externalProductId": "SVOD_MBC",
-    "related_categories": [
-      { "category_id": 52, "category_name": "MBC" }
-    ]
-   }
+  "cross_sell_ids": []
 }
 ```
 - **FOD**
@@ -609,7 +612,19 @@
 {
   "id":"AA00201201010001",
   "name":"2016 무한상사 예고편",
-  "type":"FOD",
+  "type":"simple",
+  "items":[{
+  	"item_id":"www.hchoice.co.kr|M0018210LFO160903112",
+	"item_name":"무한도전.E496.160903.preview",
+	"item_type":"VOD",
+	"item_details":{
+		"release_year":"2016",
+		"actors":"유재석,박명수,정준하,하하,황광희",
+		"director":"김태호",
+		"summary":"2016 무한상사 예고편",
+		"runtime":"1"
+	}
+  }],
   "created":"2012-09-03T13:55:10",
   "modified":"2016-09-03T17:24:41",
   "categories":[
@@ -629,18 +644,7 @@
   "average_rating":0.0,
   "rating_count":0,
   "upsell_ids": [],
-  "cross_sell_ids": [],
-  "details":
-    {
-      "assets":[
-        {"asset_id":"www.hchoice.co.kr|M0018210LFO160903112"}
-      ],
-      "release_year":"2016",
-      "summary":"2016 무한상사, 위기의 회사원",
-      "runtime":"1",
-      "viewingLength":"001:00:00",
-      "viewablePeriodState":0
-    }
+  "cross_sell_ids": []
 }
 ```
 - **SVOD Package**
@@ -648,7 +652,31 @@
 {
   "id": "AA00201609120006",
   "name": "지상파 통합 월정액",
-  "type": "SVODPackage",
+  "type": "bundle",
+  "items":[
+  {
+  	"item_id":"category_51",
+	"item_name":"KBS",
+	"item_type":"Category",
+	"item_details":{
+		"related_category":{77,78}
+	}
+  },{
+  	"item_id":"category_52",
+	"item_name":"MBC",
+	"item_type":"Category",
+	"item_details":{
+		"related_category":{88,89}
+	}
+  },{
+  	"item_id":"category_53",
+	"item_name":"SBS",
+	"item_type":"Category",
+	"item_details":{
+		"related_category":{97,98,99}
+	}
+  }
+  ],
   "created": "2016-09-12T18:01:12",
   "modified": "2016-09-12T18:01:12",
   "categories": [{
@@ -668,26 +696,7 @@
   "average_rating":8.2,
   "rating_count":15,
   "upsell_ids": [],
-  "cross_sell_ids": [],
-  "details": {
-    "viewingLength": "031:00:00",
-    "viewablePeriodState": 0,
-    "externalProductId": "SVODPackage_1",
-    "related_products": [
-      {
-        "id": "AA00201609120001",
-        "name": "KBS 월정액"
-      },
-      {
-        "id": "AA00201609120002",
-        "name": "MBC 월정액"
-      },
-      {
-        "id": "AA00201609120003",
-        "name": "SBS 월정액"
-      }
-    ]
-  }
+  "cross_sell_ids": []
 }
 ```
 - **Bundle**
@@ -695,7 +704,31 @@
 {
   "id":"AA00201607010001",
   "name":"어벤저스 몰아보기",
-  "type":"Bundle",
+  "type":"bundle",
+  "items":[
+  {
+  	"item_id":"www.hchoice.co.kr|M0018210LFO161005001",
+	"item_name":"아이언맨.",
+	"item_type":"VOD",
+	"item_details":{
+		"related_category":{77,78}
+	}
+  },{
+  	"item_id":"www.hchoice.co.kr|M0018210LFO161005002",
+	"item_name":"MBC",
+	"item_type":"Category",
+	"item_details":{
+		"related_category":{88,89}
+	}
+  },{
+  	"item_id":"www.hchoice.co.kr|M0018210LFO161005003",
+	"item_name":"SBS",
+	"item_type":"Category",
+	"item_details":{
+		"related_category":{97,98,99}
+	}
+  }
+  ],
   "created":"2016-07-01T19:55:10",
   "modified":"2016-07-01T19:55:41",
   "categories":[
@@ -719,7 +752,7 @@
     {
       "viewingLength" : "001:00:00",
       "viewablePeriodState" : 0,
-      "externalProductId" : "Bundle_1",
+      "external_product_id" : "Bundle_1",
       "related_products" : [
             {"id":"AA00201609190001", "name":"아이언맨"},
             {"id":"AA00201609190002", "name":"아이언맨2"},
@@ -736,7 +769,16 @@
 {
   "id":"AA00201609130211",
   "name":"이슬톡톡 광고",
-  "type":"Advertisement",
+  "type":"simple",
+  "items":[{
+  	"item_id":"www.hchoice.co.kr|M0018210ADO161005001",
+	"item_name":"이슬톡톡(CF)",
+	"item_type":"AD",
+	"item_details":{
+		"summary":"기분좋게 발그레 이슬톡톡",
+		"runtime":"1"
+	}
+  }],
   "created":"2016-09-13T19:55:10",
   "modified":"2016-09-13T19:55:41",
   "categories":[
@@ -755,16 +797,7 @@
   "average_rating":9.1,
   "rating_count":4,
   "upsell_ids": [],
-  "cross_sell_ids": [],
-  "details":
-    {
-      "advertisement_type":"Single",
-      "assets":[
-        {"asset_id":"www.hchoice.co.kr|M0018210LFO1609130101"}
-      ],
-      "summary":"기분좋게 발그레 이슬톡톡",
-      "runtime":"1"
-    }
+  "cross_sell_ids": []
 }
 ```
 
@@ -772,8 +805,27 @@
 ```json
 {
   "id":"AA00201609200201",
-  "name":"게임 광고 묶음",
-  "type":"Advertisement",
+  "name":"모바일게임 광고 묶음",
+  "type":"bundle",
+  "items":[
+  {
+  	"item_id":"www.hchoice.co.kr|M0018210ADO161005002",
+	"item_name":"리니지2 레볼루션(CF)",
+	"item_type":"AD",
+	"item_details":{
+		"summary":"거부할 수 없는 감동! 리니지2 레볼루션",
+		"runtime":"1"
+	}
+  },{
+  	"item_id":"www.hchoice.co.kr|M0018210ADO161005003",
+	"item_name":"해전1942(CF)",
+	"item_type":"AD",
+	"item_details":{
+		"summary":"끝없이 펼쳐지는 해상전투! 한계를 뒤어넘는 리얼함을 느껴라! 해전1942",
+		"runtime":"1"
+	}
+  }
+  ],
   "created":"2016-09-19T19:55:10",
   "modified":"2016-09-19T19:55:41",
   "categories":[
@@ -792,17 +844,7 @@
   "average_rating":8.3,
   "rating_count":7,
   "upsell_ids": [],
-  "cross_sell_ids": [],
-  "details":
-    {
-      "advertisement_type":"Bundle",
-      "summary":"거부할 수 없는 감동! 리니지2 레볼루션, 끝없이 펼쳐지는 해상전투! 한계를 뒤어넘는 리얼함을 느껴라! 해전1942",
-      "runtime":"3",
-      "related_products" : [
-            {"id":"AA00201609200204", "name":"리니지2 레볼루션"},
-            {"id":"AA00201609200205", "name":"해전1942"}
-      ]
-    }
+  "cross_sell_ids": []
 }
 ```
 - **Clothing**
@@ -810,7 +852,16 @@
 {
   "id":"AA00201609130001",
   "name":"T-shirts",
-  "type":"Clothing",
+  "type":"simple",
+  "items":[{
+  	"item_id":"www.hchoice.co.kr|M0018210ADO161005002",
+	"item_name":"T-shirts_2016_summer",
+	"item_type":"Clothing",
+	"item_details":{
+		"in_stock":true,
+		"stock_qty":50
+	}
+  }],
   "created":"2016-09-13T11:55:10",
   "modified":"2016-09-13T11:55:41",
   "categories":[
@@ -829,15 +880,7 @@
   "average_rating":9.5,
   "rating_count":210,
   "upsell_ids": [],
-  "cross_sell_ids": [],
-  "details":
-   {
-      "attributes":[
-      		{ "id":6, "name":"Color", "options":["Black","White","Blue"] },
-      		{ "id":1, "name":"Size", "options":["S","M","L","XL"] }
-	     ],
-      "in_stock":true
-   }
+  "cross_sell_ids": []
 }
 ```
 
