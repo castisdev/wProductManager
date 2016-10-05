@@ -83,7 +83,7 @@
 }
 ```
 
-## item
+## good
 
 ``` json
 
@@ -92,6 +92,12 @@
  "itemId" : "www.abc.com/ACGD1204912402040",
  "name" : "설리: 허드슨강의 기적 (SULLY, 2016)",
  "details" : "http://www.abc.com/asset/details/ACGD1204912402040"
+},
+{
+ "type" : "channel",
+ "itemId" : "cj/TVN/123",
+ "name" : "TVN",
+ "details" : "http://www.abc.com/channel/cj/TVN/123"
 },
 {
  "type" : "advertisement-inventory",
