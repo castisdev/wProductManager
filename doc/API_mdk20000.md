@@ -27,7 +27,7 @@
 - 상품 아이템 정보 조회
 - 상품과 상품 아이템 맵핑
 
-## 웹버전 상품매니저 예상 UI
+## 웹버전 상품매니저 예상 UI 시나리오
 
 ### 카테고리
 ![카테고리](./mdk20000/img/1.png)
@@ -88,6 +88,10 @@
 
 <table>
   <tr><td>이름</td><td>타입</td><td>설명</td></tr>
+  <tr><td>id</td><td>int</td><td>id</td></tr>
+  <tr><td>name</td><td>string</td><td>아이템의 이름<br>- 필요할까?<br>- 필요는 할 것 같고 직접 입력하지 않을 수도 있을 것 같음</td></tr>
+  <tr><td>type</td><td>string</td><td>아이템의 유형<br>- type보다 domain이라는 이름이 어울릴까?</td></tr>
+  <tr><td>itemId</td><td>string</td><td>아이템의 id. type과 itemId 쌍으로 유니크해야 함</td></tr>
 </table>
 
 #### CategoryProductMapping
