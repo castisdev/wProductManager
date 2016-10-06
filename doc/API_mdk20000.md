@@ -53,6 +53,7 @@
   <tr><td>description</td><td>string</td><td>카테고리의 설명</td></tr>
   <tr><td>type</td><td>string</td><td>카테고리의 유형. 기존 C3 카테고리는 VODMenu 타입이라고 할 수 있음</td></tr>
   <tr><td>parentCategory</td><td>int</td><td>부모 카테고리의 id. 최상위 카테고리는 정보 없음</td></tr>
+  <tr><td>leaf</td><td>boolean</td><td>최하위 여부<br>- 의미가 있는 정보일까?</td></tr>
 </table>
 
 #### Product
@@ -67,6 +68,7 @@
   <tr><td>price</td><td>int</td><td>상품의 가격. 기본가격</td></tr>
   <tr><td>image</td><td>string?</td><td>상품의 이미지<br>- 이미지 경로 정보일까?<br>- 사이즈 별로 정보가 필요할까?</td></tr>
   <tr><td>externalId</td><td>string</td><td>상품의 외부 연동용 id</tr>
+  <tr><td>bundle</td><td>boolean</td><td>묶음 상품 여부<br>- 필요한 값일까?</tr>
   <tr><td>category</td><td>string</td><td>상품의 범주. 카테고리는 타입의 상위 개념. 흔히 이야기하는 대분류, 소분류. 일괄적용같은 기능이 있다면 기준이 될 수 있는 항목(물론 타입도 되겠지만)</td></tr>
 </table>
 
@@ -91,7 +93,7 @@
   <tr><td>id</td><td>int</td><td>id</td></tr>
   <tr><td>name</td><td>string</td><td>아이템의 이름<br>- 필요할까?<br>- 필요는 할 것 같고 직접 입력하지 않을 수도 있을 것 같음</td></tr>
   <tr><td>type</td><td>string</td><td>아이템의 유형<br>- type보다 domain이라는 이름이 어울릴까?</td></tr>
-  <tr><td>itemId</td><td>string</td><td>아이템의 id. type과 itemId 쌍으로 유니크해야 함</td></tr>
+  <tr><td>itemId</td><td>string</td><td>아이템의 id. type과 itemId 쌍으로 유니크해야 함<br>- 대상은 다시 상품이 될 수도 있을까?</td></tr>
 </table>
 
 #### CategoryProductMapping
