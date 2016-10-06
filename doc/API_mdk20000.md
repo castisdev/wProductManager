@@ -41,6 +41,8 @@
 
 ### Model
 
+![모델](./mdk20000/img/model.png)
+
 #### Category
 - 상품의 분류를 위한 정보
 
@@ -82,13 +84,29 @@
 </table>
 
 #### ProductItem
-- 상품의 대상?물건?개념은 C3.Good과 비슷한 것 같음
+- 상품의 대상?물건?개념은 C3.Good과 비슷한 것 같음. 각기 다른 특징을 가진 물건의 랩핑 모델. 
+
+<table>
+  <tr><td>이름</td><td>타입</td><td>설명</td></tr>
+</table>
 
 #### CategoryProductMapping
 
+<table>
+  <tr><td>이름</td><td>타입</td><td>설명</td></tr>
+</table>
+
 #### ProductProductPolicyMapping
 
+<table>
+  <tr><td>이름</td><td>타입</td><td>설명</td></tr>
+</table>
+
 #### ProductProductItemMapping
+
+<table>
+  <tr><td>이름</td><td>타입</td><td>설명</td></tr>
+</table>
 
 ### API
 
