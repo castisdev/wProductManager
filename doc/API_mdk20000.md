@@ -4,6 +4,8 @@
 - ...
 
 ## 예상 일정
+- 일단 일반 상품(Common Product)만 대상으로 함
+
 1. 데이터 모델 설계
 2. API 설계
 3. 프로토 타입 개발
@@ -37,13 +39,11 @@
 
 ![상품과 가격정책 맵핑](./mdk20000/img/2.png)
 
-## 일반 상품(Common Product)
-
-### Model
+## Model
 
 ![모델](./mdk20000/img/model.png)
 
-#### Category
+### Category
 - 상품의 분류를 위한 정보
 
 <table>
@@ -56,7 +56,7 @@
   <tr><td>leaf</td><td>boolean</td><td>최하위 여부<br>- 의미가 있는 정보일까?</td></tr>
 </table>
 
-#### Product
+### Product
 - 상품의 일반 정보
 
 <table>
@@ -72,7 +72,7 @@
   <tr><td>category</td><td>string</td><td>상품의 범주. 카테고리는 타입의 상위 개념. 흔히 이야기하는 대분류, 소분류. 일괄적용같은 기능이 있다면 기준이 될 수 있는 항목(물론 타입도 되겠지만)</td></tr>
 </table>
 
-#### Pricing Policy
+### Pricing Policy
 - 가격 정책 정보. 직접 가격을 정하거나 할인률을 설정하기 위한 정보. 상품과는 별개 정보이고 관계는 n:m. SO 같은 개념이 들어간다면 맵핑 모델에서 처리
 
 <table>
@@ -85,7 +85,7 @@
   <tr><td>licenseEnd</td><td>date</td><td>정책 라이선스 종료일</td></tr>
 </table>
 
-#### ProductItem
+### ProductItem
 - 상품의 대상?물건?개념은 C3.Good과 비슷한 것 같음. 각기 다른 특징을 가진 물건의 랩핑 모델. 
 
 <table>
@@ -96,92 +96,92 @@
   <tr><td>itemId</td><td>string</td><td>아이템의 id. type과 itemId 쌍으로 유니크해야 함<br>- 대상은 다시 상품이 될 수도 있을까?</td></tr>
 </table>
 
-#### CategoryProductMapping
+### CategoryProductMapping
 
 <table>
   <tr><td>이름</td><td>타입</td><td>설명</td></tr>
 </table>
 
-#### ProductProductPolicyMapping
+### ProductProductPolicyMapping
 
 <table>
   <tr><td>이름</td><td>타입</td><td>설명</td></tr>
 </table>
 
-#### ProductProductItemMapping
+### ProductProductItemMapping
 
 <table>
   <tr><td>이름</td><td>타입</td><td>설명</td></tr>
 </table>
 
-### API
+## API
 
-#### GetCategoryInfo
+### GetCategoryInfo
 - 단일 카테고리의 정보 요청. 매니저에서 필요?
 
-#### GetCategoryList
+### GetCategoryList
 - 상품 카테고리의 정보 요청
 
-#### AddCategoryInfo
+### AddCategoryInfo
 - 카테고리 정보 입력
 
-#### UpdateCategoryInfo
+### UpdateCategoryInfo
 - 카테고리 정보 수정
 
-#### DeleteCategoryInfo
+### DeleteCategoryInfo
 - 카테고리 정보 삭제
 
-#### GetProductInfo
+### GetProductInfo
 - 단일 상품의 정보 요청. 매니저에서 필요?
 
-#### GetProductList
+### GetProductList
 - 상품 목록의 정보 요청
 
-#### AddProductInfo
+### AddProductInfo
 - 상품 정보 입력
 
-#### UpdateProductInfo
+### UpdateProductInfo
 - 상품 정보 수정
 
-#### DeleteProductInfo
+### DeleteProductInfo
 - 상품 정보 삭제
 
-#### AddCategoryProductMappingInfo
+### AddCategoryProductMappingInfo
 - 카테고리와 상품 맵핑 정보 입력
 
-#### GetPricePolicyInfo
+### GetPricePolicyInfo
 - 단일 가격 정책의 정보 요청. 매니저에서 필요?
 
-#### GetPricePolicytList
+### GetPricePolicytList
 - 가격 정책 목록의 정보 요청
 
-#### AddPricePolicyInfo
+### AddPricePolicyInfo
 - 가격 정책 정보 입력
 
-#### UpdatePricePolicyInfo
+### UpdatePricePolicyInfo
 - 가격 정책 정보 수정
 
-#### DeletePricePolicyInfo
+### DeletePricePolicyInfo
 - 가격 정책 정보 삭제
 
-#### AddProductPricePolicyMappingInfo
+### AddProductPricePolicyMappingInfo
 - 상품과 가격 정책 맵핑 정보 입력
 
-#### GetProductItenInfo
+### GetProductItenInfo
 - 단일 상품 아이템의 정보 조회. 매니저에서 필요?
 
-#### GetProductItenList
+### GetProductItenList
 - 상품 아이템 목록의 정보 조회
 
-#### SearchProductItenInfo
+### SearchProductItenInfo
 - 특정 조건의 상품 정보 조회
 
-#### AddProductProductItemMappingInfo
+### AddProductProductItemMappingInfo
 - 상품과 상품 아이템 맵핑 정보 입력
 
 
-### 개발 명세
+## 개발 명세
 
 
-### 기타
+## 기타
 
