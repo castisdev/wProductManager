@@ -32,12 +32,16 @@
 ### 카테고리
 ![카테고리](./mdk20000/img/1.png) 
 
+### 상품과 가격정책 맵핑
+
+
 ## 일반 상품(Common Product)
 
 ### Model
 
 #### Category
 - 상품의 분류를 위한 정보
+
 <table>
   <tr><td>이름</td><td>타입</td><td>설명</td></tr>  
   <tr><td>id</td><td>int</td><td>카테고리의 id</td></tr>
