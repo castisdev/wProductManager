@@ -12,6 +12,7 @@
 # CONCEPTS
 
 ## item	
-* item 타입 다양화
+
+
   
 
