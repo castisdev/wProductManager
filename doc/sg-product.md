@@ -114,7 +114,14 @@
     {
 	"id":"AA00201201010001",
 	"name":"최종병기 활",
-	"type":"RVOD",
+	"type":"simple",
+	"items":[{
+	    "item_id":"IT00201201010001",
+	    "item_name":"최종병기 활(2011)",
+	    "item_type":"VOD",
+	    "linkage_id":"www.hchoice.co.kr|M0018210LFO120101001",
+	    "item_description":"[HD]최종병기 활"
+	}],
 	"created":"2012-01-01T13:55:10",
 	"modified":"2016-09-07T17:24:41",
 	"categories":[
@@ -134,24 +141,19 @@
 	"average_rating":7.9,
 	"rating_count":642,
 	"upsell_ids": [],
-	"cross_sell_ids": [],
-	"details":{
-          "assets":[
-            {"asset_id":"www.hchoice.co.kr|M0018210LFO157334201"}
-          ],
-          "release_year":"2011",
-          "actors":"박해일,류승룡,김무열,문재원,이한위",
-          "director":"김한민",
-          "summary":"50만 포로가 끌려간 병자호란, 치열했던 전쟁의 한 복판에 역사가 기록하지 못한 위대한 신궁이 있었다.",
-          "runtime":"122",
-          "viewingLength":"001:00:00",
-          "viewablePeriodState":0
-       }
+	"cross_sell_ids": []
     },
     {
 	"id":"AA00201609080002",
 	"name":"부산행",
-	"type":"RVOD",
+	"type":"simple",
+	"items":[{
+  		"item_id":"IT00201609070001",
+		"item_name":"부산행(Train to Busan, 2016)",
+		"item_type":"VOD",
+		"linkage_id":"www.hchoice.co.kr|M0018210LFO160101001",
+		"item_description":"[HD]부산행"
+	}],
 	"created":"2016-09-08T18:01:12",
 	"modified":"2016-09-08T18:01:12",
 	"categories":[
@@ -171,20 +173,7 @@
 	"average_rating":8.5,
 	"rating_count":17,
 	"upsell_ids": [],
-	"cross_sell_ids": [],
-	"details":
-        {
-          "assets":[
-            {"asset_id":"www.hchoice.co.kr|M0018210LFO116090701"}
-          ],
-          "release_year":"2016",
-          "actors":"공유,정유미,마동석,김수안,김의성",
-          "director":"연상호",
-          "summary":"정체불명의 바이러스가 전국으로 확산되고 대한민국 긴급재난경보령이 선포된 가운데, 열차에 몸을 실은 사람들은 단 하나의 안전한 도시 부산까지 살아가기 위한 치열한 사투를 벌이게 된다.",
-          "runtime":"118",
-          "viewingLength":"001:00:00",
-          "viewablePeriodState":0
-        }
+	"cross_sell_ids": []
     }
   ]
 }
@@ -203,16 +192,11 @@
   "name":"부산행",
   "type":"simple",
   "items":[{
-  	"item_id":"www.hchoice.co.kr|M0018210LFO116090701",
+	"item_id":"IT00201609070001",
 	"item_name":"부산행(Train to Busan, 2016)",
 	"item_type":"VOD",
-	"item_details":{
-		"release_year":"2016",
-		"actors":"공유,정유미,마동석,김수안,김의성",
-		"director":"연상호",
-		"summary":"정체불명의 바이러스가 전국으로 확산되고 대한민국 긴급재난경보령이 선포된 가운데, 열차에 몸을 실은 사람들은 단 하나의 안전한 도시 부산까지 살아가기 위한 치열한 사투를 벌이게 된다.",
-		"runtime":"118"
-	}
+	"linkage_id":"www.hchoice.co.kr|M0018210LFO160101001",
+	"item_description":"[HD]부산행"
   }],
   "created":"2016-09-08T18:01:12",
   "modified":"2016-09-08T18:01:12",
@@ -248,9 +232,16 @@
 {
   "productList":[
     {
-	  "id": "AA00201609120001",
+	  "id": "AA00201609120002",
 	  "name": "MBC 월정액",
-	  "type": "SVOD",
+	  "type": "simple",
+  	  "items":[{
+    		"item_id":"IT00201609030002",
+    		"item_name":"MBC",
+    		"item_type":"Category",
+    		"linkage_id":"category_52",
+    		"item_description":"MBC 카테고리"
+  	  }],
 	  "created": "2016-09-12T18:01:12",
 	  "modified": "2016-09-12T18:01:12",
 	  "categories": [{
@@ -270,18 +261,7 @@
 	  "average_rating":9.1,
 	  "rating_count":80,
 	  "upsell_ids": [],
-	  "cross_sell_ids": [],
-	  "details": {
-	    "viewingLength": "031:00:00",
-	    "viewablePeriodState": 0,
-	    "external_product_id": "SVOD_MBC",
-	    "relatedCategories": [
-	      {
-	        "category_id": 52,
-	        "category_name": "MBC"
-	      }
-	    ]
-	 }
+	  "cross_sell_ids": []
     }
   ]
 }
@@ -295,7 +275,10 @@
 {
   "id":"AA00201609080005",
   "name":"터널",
-  "type":"RVOD",
+  "type":"simple",
+  "items":[{
+    "item_id":"IT00201609080001"
+  }],
   "categories":[
     {"category_id":17}
   ],
@@ -318,19 +301,19 @@
 {
   "id": "AA00201609120006",
   "name": "지상파 통합 월정액",
-  "type": "SVODPackage",
+  "type": "bundle",
+  "items":[
+  	{"item_id":"IT00201609030004"},{"item_id":"IT00201609030005"},{"item_id":"IT00201609030006"}
+  ],
   "categories":[
-    {"category_id":3}
+	{"category_id":3}
   ],
   "price":"25900",
   "on_sale":false,
   "payment_type":"one_off_payment",
   "tax_status":"none",
   "image":"http://localhost:8080/ProductManager/PosterImage/KBS_MBC_SBS.png",
-  "description":"지상파 통합 월정액 입니다.",
-  "related_products":[
-    {"id":"AA00201609120001"},{"id":"AA00201609120002"},{"id":"AA00201609120003"}
-  ]
+  "description":"지상파 통합 월정액 입니다."
 }
 ```
 
@@ -544,7 +527,7 @@
   	"item_id":"IT00201609030001",
 	"item_name":"무한도전.E496.160903",
 	"item_type":"VOD",
-	"linkage_id":"www.hchoice.co.kr|M0018210LFO160903201"
+	"linkage_id":"www.hchoice.co.kr|M0018210LFO160903201",
 	"item_description":"2016 무한상사, 위기의 회사원"
   }],
   "created":"2016-09-03T19:55:10",
@@ -698,19 +681,19 @@
   	"item_id":"IT00201609030007",
 	"item_name":"아이언맨(Iron Man, 2008)",
 	"item_type":"VOD",
-	"linkage_id":"www.hchoice.co.kr|M0018210LFO161005001"
+	"linkage_id":"www.hchoice.co.kr|M0018210LFO161005001",
 	"item_description":"아이언맨1"
   },{
   	"item_id":"IT00201609030008",
 	"item_name":"캡틴 아메리카:퍼스트 어벤져(Captain America: The First Avenger, 2011)",
 	"item_type":"VOD",
-	"linkage_id":"www.hchoice.co.kr|M0018210LFO161005002"
+	"linkage_id":"www.hchoice.co.kr|M0018210LFO161005002",
 	"item_description":"캡틴아메리카1"
   },{
   	"item_id":"IT00201609030009",
 	"item_name":"토르: 천둥의 신(Thor, 2011)",
 	"item_type":"VOD",
-	"linkage_id":"www.hchoice.co.kr|M0018210LFO161005003"
+	"linkage_id":"www.hchoice.co.kr|M0018210LFO161005003",
 	"item_description":"토르1"
   }
   ],
