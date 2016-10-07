@@ -5,10 +5,10 @@
  - [현재 API 설계 진행률] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#현재-api-설계-진행률)
 - [Reference] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#reference)
 - [API] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#api)
- - [상품 API] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#Product-API)
- - [카테고리 API] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#Category-API)
- - [아이템 API] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#Item-API)
- - [주문 API] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#Order-API)
+ - [상품 API] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#product-API)
+ - [카테고리 API] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#category-API)
+ - [아이템 API] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#item-API)
+ - [주문 API] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#order-API)
 - [Product] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#product)
  	- Product
  	- Category
