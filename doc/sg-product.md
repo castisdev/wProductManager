@@ -5,34 +5,17 @@
  - [현재 API 설계 진행률] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#현재-api-설계-진행률)
 - [Reference] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#reference)
 - [API] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#api)
- - [전체 상품 조회] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#전체-상품-조회)
- - [단일 상품 조회 (with id)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#단일-상품-조회-with-id)
- - [상품 조회 (with type)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#상품-조회-with-type)
- - [상품 생성] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#상품-생성)
- - [묶음 상품 생성 (SVODPackage, Bundle, Advertisement(Bundle))] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#묶음-상품-생성-svodpackage-bundle-advertisementbundle)
- - [상품 수정 (with id)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#상품-수정-with-id)
- - [상품 삭제 (with id)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#상품-삭제-with-id)
- - [전체 카테고리 조회] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#전체-카테고리-조회)
- - [카테고리 조회 (with category_id)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#카테고리-조회-with-category_id)
- - [카테고리 생성] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#카테고리-생성)
- - [카테고리 수정 (with category_id)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#카테고리-수정-with-category_id)
- - [카테고리 삭제 (with category_id)] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#카테고리-삭제-with-category_id)
- - [상품 주문] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#상품-주문)
-	- ground_shipping (택배 등)
-	- online
+ - [상품 API] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#Product-API)
+ - [카테고리 API] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#Category-API)
+ - [아이템 API] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#Item-API)
+ - [주문 API] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#Order-API)
 - [Product] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#product)
  	- Product
  	- Category
+	- Item
 - [상품 종류] (https://github.com/castisdev/wProductManager/blob/master/doc/sg-product.md#상품-종류)
-	 - RVOD
-	 - SVOD
-	 - FOD
-	 - SVOD Package
-	 - Bundle
-	 - 광고
-		  - 단일 광고
-		  - 광고 묶음
-	 - Clothing
+	 - simple
+	 - bundle
 
 ## ProductManager 설계 및 개발
 #### 개발 범위
@@ -40,8 +23,9 @@
 	- Product (상품 생성/조회/수정/삭제)
 	- ~~PricingPolicy (가격정책 생성/조회/수정/삭제)~~
 	- Category (카테고리 생성/조회/수정/삭제)
+	- Item (아이템 생성/조회/수정/삭제)
 - 상품 종류
-	- RVOD, SVOD, FOD, SVODPackage, Bundle, 광고, Clothing
+	- simple, bundle
 - ProtoType App
 	- jdk 1.7
 	- tomcat 7
@@ -102,7 +86,8 @@
 
 ## API
 
-### 전체 상품 조회
+### Product API
+#### 전체 상품 조회
 - **GET** /ProductManager/v1/products
 
 - Response
@@ -179,7 +164,7 @@
 }
 ```
 
-### 단일 상품 조회 (with id)
+#### 단일 상품 조회 (with id)
 - **GET** /ProductManager/v1/products/:id
 - **GET** /ProductManager/v1/products/AA00201609080002
 
@@ -221,7 +206,7 @@
 }
 ```
 
-### 상품 조회 (with type)
+#### 상품 조회 (with type)
 - **GET** /ProductManager/v1/products?type=:type
 - **GET** /ProductManager/v1/products?type=SVOD
 
@@ -268,7 +253,7 @@
 
 ```
 
-### 상품 생성
+#### 상품 생성
 - **POST** /ProductManager/v1/products/
 
 ```json
@@ -294,7 +279,7 @@
 - Response
  - 201 Created
 
-### 묶음 상품 생성 (SVODPackage, Bundle, Advertisement(Bundle))
+#### 묶음 상품 생성 (SVODPackage, Bundle, Advertisement(Bundle))
 - **POST** /ProductManager/v1/products/
 
 ```json
@@ -320,7 +305,7 @@
 - Response
  - 201 Created
 
-### 상품 수정 (with id)
+#### 상품 수정 (with id)
 - **PUT** /ProductManager/v1/products/:id
 - **PUT** /ProductManager/v1/products/AA00201609080005
 
@@ -336,7 +321,7 @@
 - Response
  - 200 OK
 
-### 상품 삭제 (with id)
+#### 상품 삭제 (with id)
 - **DELETE** /ProductManager/v1/products/:id
 - **DELETE** /ProductManager/v1/products/AA00201609080002
 
@@ -344,8 +329,8 @@
  - 204 No Content
 
 
-
-### 전체 카테고리 조회
+### Category API
+#### 전체 카테고리 조회
 - **GET** /ProductManager/v1/products/categories/
 - Response
  - 200 OK
@@ -361,7 +346,7 @@
 }
 ```
 
-### 카테고리 조회 (with category_id)
+#### 카테고리 조회 (with category_id)
 - **GET** /ProductManager/v1/products/categories/:category_id
 - **GET** /ProductManager/v1/products/categories/87
 - Response
@@ -373,7 +358,7 @@
 }
 ```
 
-### 카테고리 생성
+#### 카테고리 생성
 - **POST** /ProductManager/v1/products/categories/
 
 ```json
@@ -385,7 +370,7 @@
 - Response
  - 201 Created
 
-### 카테고리 수정 (with category_id)
+#### 카테고리 수정 (with category_id)
 - **PUT** /ProductManager/v1/products/categories/:category_id
 - **PUT** /ProductManager/v1/products/categories/255
 
@@ -398,15 +383,132 @@
 - Response
  - 200 OK
 
-### 카테고리 삭제 (with category_id)
+#### 카테고리 삭제 (with category_id)
 - **DELETE** /ProductManager/v1/products/categories/:category_id
 - **DELETE** /ProductManager/v1/products/categories/255
 
 - Response
  - 204 No Content
 
+### Item API
+#### 전체 아이템 조회
+- **GET** /ProductManager/v1/products/items/
+- Response
+ - 200 OK
+ 
+```json
+{
+	"itemList":[
+		{
+			"item_id":"IT00201609030001",
+			"item_name":"무한도전.E496.160903",
+			"item_type":"VOD",
+			"linkage_id":"www.hchoice.co.kr|M0018210LFO160903201",
+			"item_description":"2016 무한상사, 위기의 회사원"
+		},{
+			"item_id":"IT00201609030002",
+			"item_name":"MBC",
+			"item_type":"Category",
+			"linkage_id":"category_52",
+			"item_description":"MBC 카테고리"
+		},{
+			"item_id":"IT00201610050001",
+			"item_name":"이슬톡톡(CF)",
+			"item_type":"AD",
+			"linkage_id":"www.hchoice.co.kr|M0018210ADO161005001",
+			"item_description":"기분좋게 발그레 이슬톡톡"
+		}
+	]
+}
+```
 
-### 상품 주문
+#### 아이템 조회 (with item_id)
+- **GET** /ProductManager/v1/products/items/:item_id
+- **GET** /ProductManager/v1/products/items/IT00201609030007
+- Response
+ - 200 OK
+ 
+```json
+{
+	"item_id":"IT00201609030007",
+	"item_name":"아이언맨(Iron Man, 2008)",
+	"item_type":"VOD",
+	"linkage_id":"www.hchoice.co.kr|M0018210LFO161005001",
+	"item_description":"아이언맨1"
+}
+```
+
+#### 아이템 조회 (with item_type)
+- **GET** /ProductManager/v1/products/items?type=:item_type
+- **GET** /ProductManager/v1/products/items/type=Category
+- Response
+ - 200 OK
+ 
+```json
+{
+	"itemList":[
+		{
+			"item_id":"IT00201609030004",
+			"item_name":"KBS",
+			"item_type":"Category",
+			"linkage_id":"category_51",
+			"item_description":"KBS 카테고리"
+		},{
+			"item_id":"IT00201609030005",
+			"item_name":"MBC",
+			"item_type":"Category",
+			"linkage_id":"category_52",
+			"item_description":"MBC 카테고리"
+		},{
+			"item_id":"IT00201609030006",
+			"item_name":"SBS",
+			"item_type":"Category",
+			"linkage_id":"category_53",
+			"item_description":"SBS 카테고리"
+		}
+	]
+}
+```
+
+#### 아이템 생성
+- **POST** /ProductManager/v1/products/items/
+
+```json
+{
+	"item_id":"IT00201610070001",
+	"item_name":"tvN",
+	"item_type":"Category",
+	"linkage_id":"category_70",
+	"item_description":"tvN 카테고리"
+}
+```
+
+- Response
+ - 201 Created
+
+#### 아이템 수정 (with item_id)
+- **PUT** /ProductManager/v1/products/items/:item_id
+- **PUT** /ProductManager/v1/products/items/IT00201610070001
+
+```json
+{
+	"item_description":"tvN 카테고리 설명 수정"
+}
+```
+
+- Response
+ - 200 OK
+
+#### 아이템 삭제 (with item_id)
+- **DELETE** /ProductManager/v1/products/items/:item_id
+- **DELETE** /ProductManager/v1/products/items/IT00201610070001
+
+- Response
+ - 204 No Content
+
+
+### Order API
+#### 상품 주문
 - **POST** /ProductManager/v1/orders/
 
 - ground_shipping (택배 등)
@@ -726,9 +828,10 @@
   "name":"이슬톡톡 광고",
   "type":"simple",
   "items":[{
-  	"item_id":"www.hchoice.co.kr|M0018210ADO161005001",
+  	"item_id":"IT00201610050001",
 	"item_name":"이슬톡톡(CF)",
 	"item_type":"AD",
+	"linkage_id":"www.hchoice.co.kr|M0018210ADO161005001",
 	"item_description":"기분좋게 발그레 이슬톡톡"
   }],
   "created":"2016-09-13T19:55:10",
