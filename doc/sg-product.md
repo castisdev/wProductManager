@@ -864,14 +864,16 @@
   "type":"bundle",
   "items":[
   {
-  	"item_id":"www.hchoice.co.kr|M0018210ADO161005002",
+  	"item_id":"IT00201610050002",
 	"item_name":"리니지2 레볼루션(CF)",
 	"item_type":"AD",
+	"linkage_id":"www.hchoice.co.kr|M0018210ADO161005002",
 	"item_description":"거부할 수 없는 감동! 리니지2 레볼루션"
   },{
-  	"item_id":"www.hchoice.co.kr|M0018210ADO161005003",
+  	"item_id":"IT00201610050003",
 	"item_name":"해전1942(CF)",
 	"item_type":"AD",
+	"linkage_id":"www.hchoice.co.kr|M0018210ADO161005003"
 	"item_description":"끝없이 펼쳐지는 해상전투! 한계를 뒤어넘는 리얼함을 느껴라! 해전1942"
   }
   ],
@@ -903,9 +905,10 @@
   "name":"T-shirts",
   "type":"simple",
   "items":[{
-  	"item_id":"www.hchoice.co.kr|M0018210ADO161005002",
+  	"item_id":"IT00201610050005",
 	"item_name":"T-shirts_2016_summer",
 	"item_type":"Clothing",
+	"linkage_id":"www.hchoice.co.kr|M0018210ADO161005005",
 	"item_description":"2016 여름 신상"
   }],
   "created":"2016-09-13T11:55:10",
