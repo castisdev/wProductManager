@@ -119,6 +119,23 @@
 ### GetCategoryInfo
 - 단일 카테고리의 정보 요청. 매니저에서 필요?
 
+[GET] http://serverIP:port/ProductManager/v1/product/{id}/
+#### Request
+
+#### Response
+```json
+{
+  "id" : 1,
+  "name" : "product",
+  "description" : "...",
+  "type" : "vod",
+  "price" : 1000,
+  "image" : "a.jpg",
+  "externalId" : "a-b-c-d",
+  "bundle" : false,
+  "category" : 1
+}
+```
 ### GetCategoryList
 - 상품 카테고리의 정보 요청
 
