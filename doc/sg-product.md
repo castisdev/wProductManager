@@ -520,7 +520,8 @@
 | item_id	 | String | 	아이템 ID |	|
 | item_name	 | String	 | 아이템명	 |	|
 | item_type	 | String	 | 아이템 타입  | VOD, AD, Clothing, Channel, Category ...	|
-| item_details	 | Object	 | 아이템 상세	 |	|
+| linkage_id	 | String	 | 아이템 연결된 ID  | 	 |
+| item_description	 | String	 | 아이템 상세설명	 |	|
 
 - **Category**
 
@@ -540,16 +541,11 @@
   "name":"무한도전 496회",
   "type":"simple",
   "items":[{
-  	"item_id":"www.hchoice.co.kr|M0018210LFO160903201",
+  	"item_id":"IT00201609030001",
 	"item_name":"무한도전.E496.160903",
 	"item_type":"VOD",
-	"item_details":{
-		"release_year":"2016",
-		"actors":"유재석,박명수,정준하,하하,황광희",
-		"director":"김태호",
-		"summary":"2016 무한상사",
-		"runtime":"80"
-	}
+	"linkage_id":"www.hchoice.co.kr|M0018210LFO160903201"
+	"item_description":"2016 무한상사, 위기의 회사원"
   }],
   "created":"2016-09-03T19:55:10",
   "modified":"2016-09-03T19:55:41",
@@ -579,12 +575,11 @@
   "name": "MBC 월정액",
   "type": "simple",
   "items":[{
-  	"item_id":"category_52",
+  	"item_id":"IT00201609030002",
 	"item_name":"MBC",
 	"item_type":"Category",
-	"item_details":{
-		"related_category":{88,89}
-	}
+	"linkage_id":"category_52",
+	"item_description":"MBC 카테고리"
   }],
   "created": "2016-09-12T18:01:12",
   "modified": "2016-09-12T18:01:12",
@@ -615,16 +610,11 @@
   "name":"2016 무한상사 예고편",
   "type":"simple",
   "items":[{
-  	"item_id":"www.hchoice.co.kr|M0018210LFO160903112",
+  	"item_id":"IT00201609030003",
 	"item_name":"무한도전.E496.160903.preview",
 	"item_type":"VOD",
-	"item_details":{
-		"release_year":"2016",
-		"actors":"유재석,박명수,정준하,하하,황광희",
-		"director":"김태호",
-		"summary":"2016 무한상사 예고편",
-		"runtime":"1"
-	}
+	"linkage_id":"www.hchoice.co.kr|M0018210LFO160903112",
+	"item_description":"무한상사 예고편"
   }],
   "created":"2012-09-03T13:55:10",
   "modified":"2016-09-03T17:24:41",
@@ -656,26 +646,23 @@
   "type": "bundle",
   "items":[
   {
-  	"item_id":"category_51",
+  	"item_id":"IT00201609030004",
 	"item_name":"KBS",
 	"item_type":"Category",
-	"item_details":{
-		"related_category":{77,78}
-	}
+	"linkage_id":"category_51",
+	"item_description":"KBS 카테고리"
   },{
-  	"item_id":"category_52",
+  	"item_id":"IT00201609030005",
 	"item_name":"MBC",
 	"item_type":"Category",
-	"item_details":{
-		"related_category":{88,89}
-	}
+	"linkage_id":"category_52",
+	"item_description":"MBC 카테고리"
   },{
-  	"item_id":"category_53",
+  	"item_id":"IT00201609030006",
 	"item_name":"SBS",
 	"item_type":"Category",
-	"item_details":{
-		"related_category":{97,98,99}
-	}
+	"linkage_id":"category_53",
+	"item_description":"SBS 카테고리"
   }
   ],
   "created": "2016-09-12T18:01:12",
@@ -708,26 +695,23 @@
   "type":"bundle",
   "items":[
   {
-  	"item_id":"www.hchoice.co.kr|M0018210LFO161005001",
-	"item_name":"아이언맨.",
+  	"item_id":"IT00201609030007",
+	"item_name":"아이언맨(Iron Man, 2008)",
 	"item_type":"VOD",
-	"item_details":{
-		"related_category":{77,78}
-	}
+	"linkage_id":"www.hchoice.co.kr|M0018210LFO161005001"
+	"item_description":"아이언맨1"
   },{
-  	"item_id":"www.hchoice.co.kr|M0018210LFO161005002",
-	"item_name":"MBC",
-	"item_type":"Category",
-	"item_details":{
-		"related_category":{88,89}
-	}
+  	"item_id":"IT00201609030008",
+	"item_name":"캡틴 아메리카:퍼스트 어벤져(Captain America: The First Avenger, 2011)",
+	"item_type":"VOD",
+	"linkage_id":"www.hchoice.co.kr|M0018210LFO161005002"
+	"item_description":"캡틴아메리카1"
   },{
-  	"item_id":"www.hchoice.co.kr|M0018210LFO161005003",
-	"item_name":"SBS",
-	"item_type":"Category",
-	"item_details":{
-		"related_category":{97,98,99}
-	}
+  	"item_id":"IT00201609030009",
+	"item_name":"토르: 천둥의 신(Thor, 2011)",
+	"item_type":"VOD",
+	"linkage_id":"www.hchoice.co.kr|M0018210LFO161005003"
+	"item_description":"토르1"
   }
   ],
   "created":"2016-07-01T19:55:10",
@@ -748,20 +732,7 @@
   "average_rating":9.1,
   "rating_count":124,
   "upsell_ids": [],
-  "cross_sell_ids": [],
-  "details":
-    {
-      "viewingLength" : "001:00:00",
-      "viewablePeriodState" : 0,
-      "external_product_id" : "Bundle_1",
-      "related_products" : [
-            {"id":"AA00201609190001", "name":"아이언맨"},
-            {"id":"AA00201609190002", "name":"아이언맨2"},
-            {"id":"AA00201609190003", "name":"캡틴아메리카:퍼스트 어벤져"},
-            {"id":"AA00201609190004", "name":"인크레더블 헐크"},
-            {"id":"AA00201609190005", "name":"토르:천둥의 신"}
-        ]
-    }
+  "cross_sell_ids": []
 }
 ```
 - **광고**
@@ -775,10 +746,7 @@
   	"item_id":"www.hchoice.co.kr|M0018210ADO161005001",
 	"item_name":"이슬톡톡(CF)",
 	"item_type":"AD",
-	"item_details":{
-		"summary":"기분좋게 발그레 이슬톡톡",
-		"runtime":"1"
-	}
+	"item_description":"기분좋게 발그레 이슬톡톡"
   }],
   "created":"2016-09-13T19:55:10",
   "modified":"2016-09-13T19:55:41",
@@ -813,18 +781,12 @@
   	"item_id":"www.hchoice.co.kr|M0018210ADO161005002",
 	"item_name":"리니지2 레볼루션(CF)",
 	"item_type":"AD",
-	"item_details":{
-		"summary":"거부할 수 없는 감동! 리니지2 레볼루션",
-		"runtime":"1"
-	}
+	"item_description":"거부할 수 없는 감동! 리니지2 레볼루션"
   },{
   	"item_id":"www.hchoice.co.kr|M0018210ADO161005003",
 	"item_name":"해전1942(CF)",
 	"item_type":"AD",
-	"item_details":{
-		"summary":"끝없이 펼쳐지는 해상전투! 한계를 뒤어넘는 리얼함을 느껴라! 해전1942",
-		"runtime":"1"
-	}
+	"item_description":"끝없이 펼쳐지는 해상전투! 한계를 뒤어넘는 리얼함을 느껴라! 해전1942"
   }
   ],
   "created":"2016-09-19T19:55:10",
@@ -858,10 +820,7 @@
   	"item_id":"www.hchoice.co.kr|M0018210ADO161005002",
 	"item_name":"T-shirts_2016_summer",
 	"item_type":"Clothing",
-	"item_details":{
-		"in_stock":true,
-		"stock_qty":50
-	}
+	"item_description":"2016 여름 신상"
   }],
   "created":"2016-09-13T11:55:10",
   "modified":"2016-09-13T11:55:41",
