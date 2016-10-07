@@ -259,7 +259,7 @@
 ```
 #### 선택 상품 조회 (type)
 - **GET** /ProductManager/v1/products?type=:type&detailed_type=:detailed_type
-- Ex. /ProductManager/v1/products?type='VOD'&detailed_type='RVOD' </br></br>
+- Ex. /ProductManager/v1/products?type=VOD&detailed_type=RVOD </br></br>
 - response
 ```json
 [
