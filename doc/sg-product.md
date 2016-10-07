@@ -873,7 +873,7 @@
   	"item_id":"IT00201610050003",
 	"item_name":"해전1942(CF)",
 	"item_type":"AD",
-	"linkage_id":"www.hchoice.co.kr|M0018210ADO161005003"
+	"linkage_id":"www.hchoice.co.kr|M0018210ADO161005003",
 	"item_description":"끝없이 펼쳐지는 해상전투! 한계를 뒤어넘는 리얼함을 느껴라! 해전1942"
   }
   ],
@@ -941,6 +941,7 @@
 ## 삭제해버림...
 
 - **PricingPolicy**
+
 
 | 이름 | 타입 | 설명 |	|
 | --- | --- | --- | --- | --- |
