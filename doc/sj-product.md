@@ -138,6 +138,7 @@
 		{
 			"id":"RVD100000000",
 			"name":"밀정",
+			"class":"simple",
 			"type":"VOD",
 			"detailed_type":"RVOD",
 			"regular_price":10000,
@@ -181,6 +182,7 @@
 		{
 			"id":"RVD100023450",
 			"name":"매그니피센트7",
+			"class":"simple",
 			"type":"VOD",
 			"detailed_type":"RVOD",
 			"regular_price":12000,
@@ -209,6 +211,7 @@
 		{
 			"id":"SVD222222222",
 			"name":"MBC 월정액",
+			"class":"simple",
 			"type":"VOD",
 			"detailed_type":"SVOD",
 			"regular_price":5000,
@@ -238,6 +241,7 @@
 {
 			"id":"SVD222222222",
 			"name":"MBC 월정액",
+			"class":"simple",
 			"type":"VOD",
 			"detailed_type":"SVOD",
 			"regular_price":5000,
@@ -267,6 +271,7 @@
 		{
 			"id":"RVD100023450",
 			"name":"매그니피센트7",
+			"class":"simple",
 			"type":"VOD",
 			"detailed_type":"RVOD",
 			"regular_price":12000,
@@ -295,6 +300,7 @@
 		{
 			"id":"RVD100000000",
 			"name":"밀정",
+			"class":"simple",
 			"type":"VOD",
 			"detailed_type":"RVOD",
 			"regular_price":10000,
@@ -358,7 +364,46 @@
 
 ---
 
-### 상품 타입 별 상품
+### 복합 상품 예
+```json
+{
+	"products":[
+		{
+			"id":"CPP100000000",
+			"name":"[복합상품] 밀정",
+			"class":"grouped",
+			"regular_price":30000,
+			"description":"영화 밀정의 VOD + OST 복합상품",
+			"categories":[
+			  {"category_id":12, "category_name":"최신영화"},
+			  {"category_id":5, "category_name":"액션"}
+			],
+			"policies":[
+			  {
+			    "type":"fixedPrice",
+			    "price":25000, 
+			    "policy_start_date":"2016-10-10T00:00:00",
+			    "policy_end_date":"2016-10-31T11:59:59"
+			  }
+			],
+			"creation_date":"2016-10-10T13:30:00",
+			"related_product":[
+			  {
+			    "product_id":"RVD100000000",
+			    "product_name":"밀정"
+			  },
+			  {
+			    "product_id":"MSC100000000",
+			    "product_name":"밀정 OST"
+			  }
+			]
+		}
+	]
+}
+```
+
+### 단일 상품 예시
+#### 상품 타입 별 상품
  상품 타입 | 
  --- | 
  RVOD | 
@@ -376,6 +421,7 @@
 		{
 			"id":"RVD100000000",
 			"name":"밀정",
+			"class":"simple",
 			"type":"VOD",
 			"detailed_type":"RVOD",
 			"regular_price":10000,
@@ -426,6 +472,7 @@
 		{
 			"id":"SVD222222222",
 			"name":"MBC 월정액",
+			"class":"simple",
 			"type":"VOD",
 			"detailed_type":"SVOD",
 			"regular_price":5000,
@@ -456,6 +503,7 @@
 		{
 			"id":"SVP111111111",
 			"name":"지상파 월정액",
+			"class":"simple",
 			"type":"VOD",
 			"detailed_type":"SVODPackage",
 			"regular_price":13000,
@@ -493,6 +541,7 @@
 		{
 			"id":"BDL100000232",
 			"name":"[추석특집] 최신 액션 모아보기",
+			"class":"simple",
 			"type":"VOD",
 			"detailed_type":"bundle",
 			"regular_price":25000,
@@ -531,6 +580,7 @@
 		{
 			"id":"FOD100000097",
 			"name":"[예고편] 미스 페레그린과 이상한 아이들의 집",
+			"class":"simple",
 			"type":"VOD",
 			"detailed_type":"FOD",
 			"regular_price":0,
@@ -566,6 +616,7 @@
 		{
 			"id":"AD1000000000",
 			"name":"광고",
+			"class":"simple",
 			"type":"VOD",
 			"detailed_type":"AD",
 			"regular_price":30000000,
@@ -596,6 +647,7 @@
 		{
 			"id":"ADB100000000",
 			"name":"광고 묶음",
+			"class":"simple",
 			"type":"VOD",
 			"detailed_type":"AD-bundle",
 			"regular_price":50000000,
