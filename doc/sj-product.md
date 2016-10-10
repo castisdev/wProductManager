@@ -40,6 +40,12 @@
  policies | **array** | 상품 정책 리스트. &nbsp; **policy**의 list
  creation_date | date | 상품 생성일
  related_products | **array** | 관련 상품 정보 리스트.  &nbsp; **related_product** 의 list
+> 상품은 크게 class로 분류
+>> 단일상품 과 복합상품
+>>> 단일상품(simple)은 VOD, Clothes, Music ... 등 단일상품을 나타낸다 </br>
+>>> 복합상품(grouped)은 단일상품(simple)들의 집합 
+>>>> 복합상품에 포함된 단일상품 정보는 related_products에 표시
+</br>
 > 상품의 각 type 별 detailed_type 지정 가능
 >> 현재는 비디오상품의 상세 타입만 예시
 
