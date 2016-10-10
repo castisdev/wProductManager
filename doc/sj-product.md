@@ -31,8 +31,8 @@
  id | string | 상품 id
  name | string | 상품 이름
  class | string | 상품 분류 </br> simple (단일상품) &nbsp; grouped (복합상품)
- type | string | 상품 타입 </br> VOD (비디오) &nbsp; Clothes (옷) &nbsp; Music (음원) ...
- detailed_type | string | 상품 상세 타입 </br> FOD (무료VOD) </br> RVOD (VOD) &nbsp;  bundle (묶음상품) </br> SVOD (월정액) &nbsp; SVODPackage (월정액묶음) </br> AD (광고상품) &nbsp; AD-bundle (광고상품묶음)
+ type | string | 상품 타입 </br> VOD (비디오) &nbsp; Clothes (옷) &nbsp; Music (음원) &nbsp; AD (광고) ...
+ detailed_type | string | 상품 상세 타입 </br> FOD (무료VOD) </br> RVOD (VOD) &nbsp;  bundle (묶음상품) </br> SVOD (월정액) &nbsp; SVODPackage (월정액묶음) </br> AD-single (단일광고상품) &nbsp; AD-bundle (광고상품묶음)
  reqular_price | integer | 상품 정규가격 </br> (실제가격은 polices에 의해 변동 가능)
  description | string | 상품 개요
  details | **details** | 상품 상세정보
@@ -46,7 +46,9 @@
   2) 복합상품(grouped)은 단일상품(simple)들의 집합 </br>
 >> 2. 복합상품에 포함된 단일상품 정보는 related_products에 표시 </br>
 >> 3. 단일상품은 각 type 별 detailed_type 지정 가능 </br>
-  1) 현재는 비디오상품의 상세 타입만 예시 </br>
+  1) 현재는 비디오상품과 광고상품의 상세 타입만 예시 </br>
+  2) 비디오상품 의 상세타입 : VOD, &nbsp; RVOD, &nbsp;  bundle, &nbsp; SVOD, &nbsp; SVODPackage </br>
+  3) 광고상품 의 상세타입 : AD-single, &nbsp; AD-bundle </br>
 
 - **details** 
 
