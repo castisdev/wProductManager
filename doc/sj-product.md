@@ -33,6 +33,7 @@
  class | string | 상품 분류 </br> simple (단일상품) &nbsp; grouped (복합상품)
  type | string | 상품 타입 </br> VOD (비디오) &nbsp; Clothes (옷) &nbsp; Music (음원) &nbsp; AD (광고) ...
  detailed_type | string | 상품 상세 타입 </br> FOD (무료VOD) </br> RVOD (VOD) &nbsp;  bundle (묶음상품) </br> SVOD (월정액) &nbsp; SVODPackage (월정액묶음) </br> AD-single (단일광고상품) &nbsp; AD-bundle (광고상품묶음)
+ target | **array** | 상품 타겟 </br> STB (셋탑) &nbsp; CH (채널) &nbsp; Mobile (모바일) &nbsp; clientUI (clientUI)
  reqular_price | integer | 상품 정규가격 </br> (실제가격은 polices에 의해 변동 가능)
  description | string | 상품 개요
  details | **details** | 상품 상세정보
@@ -626,6 +627,7 @@
 			"class":"simple",
 			"type":"AD",
 			"detailed_type":"AD-single",
+			"target":{ "STB", "Mobile" }
 			"regular_price":30000000,
 			"description":"최신 영화 10개 송출 전, 10% 확률로 해당 광고가 송출",
 			"details":{
