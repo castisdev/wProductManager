@@ -9,6 +9,18 @@
 * VOD 월정액/ 유료채널 시간제 상품
 * 평생소장 상품 해지 기능
 
+* 단일 광고 상품 ( single )	
+	* stb vod 광고 상품
+	* 채널 광고 상품
+	* 모바일 vod 광고 상품
+	* vod 클라이언트 ui 광고 상품
+  
+* 통합 상품 : 단일 광고 상품의 묶음 상품 ( bundle )	
+	* stb vod 광고 상품 + 모바일 vod 광고 상품
+	* stb vod 광고 상품 + 모바일 vod 광고 상품 + vod 클라이언트 ui 광고 상품
+	* stb vod 광고 상품 + 모바일 vod 광고 상품 + 채널 광고 상품
+  
+
 # CONCEPTS
 
 ## item	
