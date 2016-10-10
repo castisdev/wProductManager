@@ -30,6 +30,7 @@
  --- | --- | --- 
  id | string | 상품 id
  name | string | 상품 이름
+ class | string | 상품 분류 </br> simple (단일상품) &nbsp; grouped (복합상품)
  type | string | 상품 타입 </br> VOD (비디오) &nbsp; Clothes (옷) &nbsp; Music (음원) ...
  detailed_type | string | 상품 상세 타입 </br> FOD (무료VOD) </br> RVOD (VOD) &nbsp;  bundle (묶음상품) </br> SVOD (월정액) &nbsp; SVODPackage (월정액묶음) </br> AD (광고상품) &nbsp; AD-bundle (광고상품묶음)
  reqular_price | integer | 상품 정규가격 </br> (실제가격은 polices에 의해 변동 가능)
