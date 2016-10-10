@@ -32,54 +32,54 @@ public class ProductServiceImpl implements IProductService{
 		productDao.deleteBasicProduct(bp);
 	}
 	
-	// PurcaseProduct
+	// PurchaseProduct
 	public void insertPurchaseProduct(PurchaseProduct pp) throws Exception{
-		
+		productDao.insertPurchaseProduct(pp);
 	}
 	
 	public void updatePurchaseProduct(PurchaseProduct pp) throws Exception{
-		
+		productDao.updatePurchaseProduct(pp);
 	}
 	
-	public void getPurchaseProduct(String purchaseId) throws Exception{
-	
+	public PurchaseProduct getPurchaseProduct(String purchaseId) throws Exception{
+		return productDao.getPurchaseProduct(purchaseId);
 	}
 	
-	public void deletePurchaseProduct(String purchaseId) throws Exception{
-		
+	public void deletePurchaseProduct(PurchaseProduct pp) throws Exception{
+		productDao.deletePurchaseProduct(pp);
 	}
 
 	// SaleProduct
 	public void insertSaleProduct(SaleProduct sp) throws Exception{
-		
+		productDao.insertSaleProduct(sp);
 	}
 	
 	public void updateSaleProduct(SaleProduct sp) throws Exception{
-		
+		productDao.updateSaleProduct(sp);
 	}
 	
-	public void getSaleProduct(String saleId) throws Exception{
-		
+	public SaleProduct getSaleProduct(String saleId) throws Exception{
+		return productDao.getSaleProduct(saleId);
 	}
 	
-	public void deleteSaleProduct(String saleId) throws Exception{
-		
+	public void deleteSaleProduct(SaleProduct sp) throws Exception{
+		productDao.deleteSaleProduct(sp);
 	}
 
 	// FavoriteProduct
 	public void insertFavoriteProduct(FavoriteProduct fp) throws Exception{
-		
+		productDao.insertFavoriteProduct(fp);
 	}
 	
 	public void updateFavoriteProduct(FavoriteProduct fp) throws Exception{
-		
+		productDao.updateFavoriteProduct(fp);
 	}
 	
-	public void getFavoriteProduct(String favoriteId) throws Exception{
-		
+	public FavoriteProduct getFavoriteProduct(String favoriteId) throws Exception{
+		return productDao.getFavoriteProduct(favoriteId);
 	}
 	
-	public void deleteFavoriteProduct(String favoriteId) throws Exception{
-		
+	public void deleteFavoriteProduct(FavoriteProduct fp) throws Exception{
+		productDao.deleteFavoriteProduct(fp);
 	}
 }

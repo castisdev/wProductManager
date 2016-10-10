@@ -16,31 +16,31 @@ public interface IProductService {
 	
 	public void deleteBasicProduct(BasicProduct bp) throws Exception;
 	
-	// PurcaseProduct
+	// PurchaseProduct
 	public void insertPurchaseProduct(PurchaseProduct pp) throws Exception;
 	
 	public void updatePurchaseProduct(PurchaseProduct pp) throws Exception;
 	
-	public void getPurchaseProduct(String purchaseId) throws Exception;
+	public PurchaseProduct getPurchaseProduct(String purchaseId) throws Exception;
 	
-	public void deletePurchaseProduct(String purchaseId) throws Exception;
+	public void deletePurchaseProduct(PurchaseProduct pp) throws Exception;
 
 	// SaleProduct
 	public void insertSaleProduct(SaleProduct sp) throws Exception;
 	
 	public void updateSaleProduct(SaleProduct sp) throws Exception;
 	
-	public void getSaleProduct(String saleId) throws Exception;
+	public SaleProduct getSaleProduct(String saleId) throws Exception;
 	
-	public void deleteSaleProduct(String saleId) throws Exception;
+	public void deleteSaleProduct(SaleProduct sp) throws Exception;
 
 	// FavoriteProduct
 	public void insertFavoriteProduct(FavoriteProduct fp) throws Exception;
 	
 	public void updateFavoriteProduct(FavoriteProduct fp) throws Exception;
 	
-	public void getFavoriteProduct(String favoriteId) throws Exception;
+	public FavoriteProduct getFavoriteProduct(String favoriteId) throws Exception;
 	
-	public void deleteFavoriteProduct(String favoriteId) throws Exception;
+	public void deleteFavoriteProduct(FavoriteProduct fp) throws Exception;
 
 }

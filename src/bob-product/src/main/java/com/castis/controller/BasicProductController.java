@@ -68,8 +68,7 @@ public class BasicProductController {
 			return new ResponseEntity<BasicProduct>(HttpStatus.CONFLICT);
 		}
 		
-		existsBP.setName(bp.getName());
-		existsBP.setDescription(bp.getDescription());
+		BasicProduct.copyBasicProduct(bp, existsBP);
 			
 		try{
 			ps.updateBasicProduct(existsBP);

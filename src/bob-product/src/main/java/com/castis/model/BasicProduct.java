@@ -115,6 +115,16 @@ public class BasicProduct {
 				+ description + "]";
 	}
 	
-	
+	public static void copyBasicProduct(BasicProduct src, BasicProduct dest){
+		dest.setName(src.getName());
+		dest.setDescription(src.getDescription());
+		dest.setIsPackage(src.getIsPackage());
+		dest.setClassifications(src.getClassifications());
+		dest.setImage(src.getImage());
+		dest.setCreationTime(src.getCreationTime());
+		dest.setSpecifications(src.getSpecifications());
+		dest.setItemList(src.getItemList());
+		dest.setPricingPlanList(src.getPricingPlanList());
+	}
 	
 }

@@ -32,54 +32,54 @@ public class ProductDaoImpl implements IProductDao {
 		mongo.remove(bp);
 	}
 	
-	// PurcaseProduct
+	// PurchaseProduct
 	public void insertPurchaseProduct(PurchaseProduct pp) throws Exception{
-		
+		mongo.insert(pp);
 	}
 	
 	public void updatePurchaseProduct(PurchaseProduct pp) throws Exception{
-		
+		mongo.save(pp);
 	}
 	
-	public void getPurchaseProduct(String purchaseId) throws Exception{
-	
+	public PurchaseProduct getPurchaseProduct(String purchaseId) throws Exception{
+		return mongo.findById(purchaseId, PurchaseProduct.class);
 	}
 	
-	public void deletePurchaseProduct(String purchaseId) throws Exception{
-		
+	public void deletePurchaseProduct(PurchaseProduct pp) throws Exception{
+		mongo.remove(pp);
 	}
 
 	// SaleProduct
 	public void insertSaleProduct(SaleProduct sp) throws Exception{
-		
+		mongo.insert(sp);
 	}
 	
 	public void updateSaleProduct(SaleProduct sp) throws Exception{
-		
+		mongo.save(sp);
 	}
 	
-	public void getSaleProduct(String saleId) throws Exception{
-		
+	public SaleProduct getSaleProduct(String saleId) throws Exception{
+		return mongo.findById(saleId, SaleProduct.class);
 	}
 	
-	public void deleteSaleProduct(String saleId) throws Exception{
-		
+	public void deleteSaleProduct(SaleProduct sp) throws Exception{
+		mongo.remove(sp);
 	}
 
 	// FavoriteProduct
 	public void insertFavoriteProduct(FavoriteProduct fp) throws Exception{
-		
+		mongo.insert(fp);
 	}
 	
 	public void updateFavoriteProduct(FavoriteProduct fp) throws Exception{
-		
+		mongo.save(fp);
 	}
 	
-	public void getFavoriteProduct(String favoriteId) throws Exception{
-		
+	public FavoriteProduct getFavoriteProduct(String favoriteId) throws Exception{
+		return mongo.findById(favoriteId, FavoriteProduct.class);
 	}
 	
-	public void deleteFavoriteProduct(String favoriteId) throws Exception{
-		
+	public void deleteFavoriteProduct(FavoriteProduct fp) throws Exception{
+		mongo.remove(fp);
 	}
 }
