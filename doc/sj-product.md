@@ -371,7 +371,7 @@
 
 ---
 
-### 복합 상품 예
+### 복합 상품 예시
 ```json
 {
 	"products":[
@@ -624,8 +624,8 @@
 			"id":"AD1000000000",
 			"name":"광고",
 			"class":"simple",
-			"type":"VOD",
-			"detailed_type":"AD",
+			"type":"AD",
+			"detailed_type":"AD-single",
 			"regular_price":30000000,
 			"description":"최신 영화 10개 송출 전, 10% 확률로 해당 광고가 송출",
 			"details":{
@@ -655,7 +655,7 @@
 			"id":"ADB100000000",
 			"name":"광고 묶음",
 			"class":"simple",
-			"type":"VOD",
+			"type":"AD",
 			"detailed_type":"AD-bundle",
 			"regular_price":50000000,
 			"description":"최신 영화 10개 송출 전, 10% 확률로 해당 광고가 연속해서 송출",
