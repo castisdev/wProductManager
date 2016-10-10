@@ -37,10 +37,10 @@
  reqular_price | integer | 상품 정규가격 </br> (실제가격은 polices에 의해 변동 가능)
  description | string | 상품 개요
  details | **details** | 상품 상세정보
- categories | **array** | 상품 카테고리 리스트. &nbsp; **category**의 list
- policies | **array** | 상품 정책 리스트. &nbsp; **policy**의 list
+ categories | **Category LIST** | 상품 카테고리 리스트. &nbsp; **category**의 list
+ policies | **Policy LIST** | 상품 정책 리스트. &nbsp; **policy**의 list
  creation_date | date | 상품 생성일
- related_products | **array** | 관련 상품 정보 리스트.  &nbsp; **related_product** 의 list
+ related_products | **Related_products LIST** | 관련 상품 정보 리스트.  &nbsp; **related_product** 의 list
 > 상품은 크게 class로 분류 </br>
 >> 1. 단일상품 과 복합상품 </br>
   1) 단일상품(simple)은 VOD, Clothes, Music ... 등 단일상품을 나타낸다 </br>
@@ -627,7 +627,7 @@
 			"class":"simple",
 			"type":"AD",
 			"detailed_type":"AD-single",
-			"target":{ "STB", "Mobile" }
+			"target":[ "STB", "Mobile" ],
 			"regular_price":30000000,
 			"description":"최신 영화 10개 송출 전, 10% 확률로 해당 광고가 송출",
 			"details":{
