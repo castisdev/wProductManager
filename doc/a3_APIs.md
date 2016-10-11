@@ -413,6 +413,24 @@
 `POST` /v1/products/favorite
  - Parameters
  - Request Sample
+ ```
+ {
+  "favorites":[
+    {
+      "id":"fav03",
+      "name":"좋아하는 것",
+      "customer_id":"cust01",
+      "creation_time":"2016-10-10T09:00:00",
+      "product": {
+        "id":"product01",
+        "name":"상품1",
+        "now_price":"1600",
+        "currency":"WON"
+      }
+    }
+  ]
+}
+```
  - Response Sample
 
 #### 관심 상품 삭제
