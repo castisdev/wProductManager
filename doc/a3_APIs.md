@@ -413,18 +413,18 @@
 `POST` /v1/products/favorite
  - Parameters
  - Request Sample
- ```
- {
+```
+{
   "favorites":[
     {
-      "id":"fav03",
+      "id":"fav01",
       "name":"좋아하는 것",
       "customer_id":"cust01",
       "creation_time":"2016-10-10T09:00:00",
       "product": {
         "id":"product01",
         "name":"상품1",
-        "now_price":"1600",
+        "now_price":"600",
         "currency":"WON"
       }
     }
