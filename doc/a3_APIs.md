@@ -274,7 +274,7 @@
           "id": "test12",
           "name": "텐트01",
           "description": "백패킹용 텐트",
-          "isPackage": false,
+          "is_package": false,
           "classifications": {
             "large": "여행",
             "medium": "캠핑",
