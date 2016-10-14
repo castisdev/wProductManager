@@ -1,4 +1,9 @@
 
+### Generalization of Product
+![Generalization of Product] (https://github.com/bobmann98/commonProduct/blob/master/%EC%83%81%ED%92%88%EA%B3%A0%EB%8F%84%ED%99%94.png?raw=true)
+
+### API for Product
+![API for Product] (https://github.com/bobmann98/commonProduct/blob/master/Product.png?raw=true)
 
 ###상품 기본 정보 (Basic)
 #### 상품 정보 생성 (Create a Product)
