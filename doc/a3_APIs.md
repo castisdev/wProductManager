@@ -5,6 +5,10 @@
 ### API for Product
 ![API for Product] (https://github.com/bobmann98/commonProduct/blob/master/Product.png?raw=true)
 
+### * 동일한 상품 이란?
+     상품안에 구성되어 있는 item{id, type}이 동일한 경우 같은 상품이라고 봄. 
+     가격조건은 동일 상품 기준에서 제외. 
+     동일한 상품을 매니저상에서 구성할 수 없도록 제약조건 필요.
 ###상품 기본 정보 (Basic)
 #### 상품 정보 생성 (Create a Product)
 `POST` /v1/products/product
