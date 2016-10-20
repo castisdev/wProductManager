@@ -15,6 +15,9 @@
 ~~~
  상품의 찜기능 정보
 ~~~
+#### Fields
+ * product
+
 
 ## APIs
 ###상품 기본 정보 (Basic)
