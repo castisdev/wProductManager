@@ -74,6 +74,8 @@
 
 ### Pricing Policy
 - 가격 정책 정보. 직접 가격을 정하거나 할인률을 설정하기 위한 정보. 상품과는 별개 정보이고 관계는 1:m. SO 같은 개념이 들어간다면 맵핑 모델에서 처리. 일괄적용 기능 등을 위해 템플릿(?) 모델도 필요함
+- 상품에 따라 아이템에 연결될 수 있음
+- 타게팅 정보에 따라 가격이 달라질 수 있음
 
 <table>
   <tr><td>이름</td><td>타입</td><td>설명</td></tr>
@@ -94,6 +96,13 @@
   <tr><td>name</td><td>string</td><td>아이템의 이름<br>- 필요할까?<br>- 필요는 할 것 같고 직접 입력하지 않을 수도 있을 것 같음</td></tr>
   <tr><td>type</td><td>string</td><td>아이템의 유형<br>- type보다 domain이라는 이름이 어울릴까?</td></tr>
   <tr><td>itemId</td><td>string</td><td>아이템의 id. type과 itemId 쌍으로 유니크해야 함<br>- 대상은 다시 상품이 될 수도 있을까?</td></tr>
+</table>
+
+### Target
+- 대상 정보. 유저그룹이거나 디바이스그룹 
+
+<table>
+  <tr><td>이름</td><td>타입</td><td>설명</td></tr>
 </table>
 
 ### CategoryProductMapping
