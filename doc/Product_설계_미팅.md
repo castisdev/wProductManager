@@ -81,3 +81,9 @@
  -> 타겟팅으로 지정하여 할인을 해주면 되는 것이 아닌가.
 
 ~~~
+
+### Item Model
+![Item Model] (https://github.com/bobmann98/commonProduct/blob/master/Item_model.png?raw=true)
+
+### PricingPlan Model
+![PricingPlan Model] (https://github.com/bobmann98/commonProduct/blob/master/PricingPlan_model.png?raw=true)
