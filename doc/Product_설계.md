@@ -27,7 +27,7 @@ CJ 에서 상품 고도화의 목적으로 프로젝트화가 될 가능성이 �
 
 ### 설계
 #### 모델링
-##### Item Model
+##### __Item__ __Model__
 ![Item Model] (https://github.com/bobmann98/commonProduct/blob/master/Item_model.png?raw=true)
 
 ##### PricingPlan Model
