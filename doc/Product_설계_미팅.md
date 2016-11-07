@@ -98,3 +98,25 @@
 
 ### PricingPlan Model
 ![PricingPlan Model] (https://github.com/bobmann98/commonProduct/blob/master/PricingPlan_model.png?raw=true)
+
+```
+2016.11.07(박준석, 이영주, 이재근) - 6층 생각방
+ - 동일 컨텐츠의 노출 단일화
+   - 상품 기능보다는 전시기능에 가까워 보임
+   - 클라이언트 UI에서 아이템 기준으로 연결된 상품 목록을 보여주면 되지 않을까 함.(RVOD를 선택하면 Bundle, SVOD 상품을 보여줌)
+ - UHD/HD 컨텐츠 묶음
+   - 이것 역시 전시 기능에 가까워 보임
+   - 새롭게 모델링한 상품이 기존 전시기능(CG)에 적용 가능해야 할 것으로 보임 
+ - VOD 가격 탄력적 관리
+   - 한 상품에 여러 개의 PricingPlan을 가질 수 있는 구조로 모델링을 했기 때문에 반영할 수 있을 것으로 보임
+ - 결합상품 구조 (유/무형 상품 결합 체계)
+   - 한 상품에 여러 개의 아이템을 가질 수 있는 구조인데, 유형/무형에 상관없이 반영가능 함.
+ - 멀티룸(패밀리) 상품
+   - 초기 논의 시에는 User에 종속 되어야 하나, Device에 종속 되어야 하나는 등의 고민을 하며, UserGroup과 DeviceGroup 중 하나 만 존재하는 게 맞지 않을 까 했었음.
+   - 추후 UserGroup과 DeviceGroup 을 생성하여 서로 N:N 구조로 모델링 하면 확장성까지 고려되지 않을 까 함.
+   - 상품 정보에는 멀티 User/멀티 Device 적용 가능한 지에 대한 flag만 존재하도록 하고, 구매 시 판단하여 상품의 가격을 달리 보여주도록 하는 시나리오를 구상함.
+ - 명일 의논할 내용
+   - UserGroup/DerviceGroup 모델링
+   - VOD 전용 상품
+   - VOD 월정액/유료 채널 시간제 상품
+```
