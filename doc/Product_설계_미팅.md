@@ -115,7 +115,7 @@
    - 초기 논의 시에는 User에 종속 되어야 하나, Device에 종속 되어야 하나는 등의 고민을 하며, UserGroup과 DeviceGroup 중 하나 만 존재하는 게 맞지 않을 까 했었음.
    - 추후 UserGroup과 DeviceGroup 을 생성하여 서로 N:N 구조로 모델링 하면 확장성까지 고려되지 않을 까 함.
    - 상품 정보에는 멀티 User/멀티 Device 적용 가능한 지에 대한 flag만 존재하도록 하고, 구매 시 판단하여 상품의 가격을 달리 보여주도록 하는 시나리오를 구상함.
- - 명일 의논할 내용
+ - 명일 논의할 내용
    - UserGroup/DerviceGroup 모델링
    - VOD 전용 상품
    - VOD 월정액/유료 채널 시간제 상품
