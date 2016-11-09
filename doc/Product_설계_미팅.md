@@ -93,6 +93,9 @@
   * 가격정책과 판매정책의 정의를 분명히 할 필요성이 있다. (가격은 결정 짓는 요소 중 시간/지역은 판매를 결정 짓는 요소일 가능성이 있다)
  * 가격정책 대신 판매정책으로 바꾸는 것은 어떨까?
 ```
+### Product Model
+![Product Model] (https://raw.githubusercontent.com/bobmann98/commonProduct/master/Product_basic.png)
+
 ### Item Model
 ![Item Model] (https://github.com/bobmann98/commonProduct/blob/master/Item_model.png?raw=true)
 
