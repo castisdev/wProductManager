@@ -9,7 +9,7 @@
   <properties>
   	<spring.version>4.3.0.RELEASE</spring.version>
   	<hibernate.version>5.0.1.Final</hibernate.version>
-  	<jackson.library>2.9.8</jackson.library>
+  	<jackson.library>2.9.9</jackson.library>
   </properties>
   
   <dependencies>
